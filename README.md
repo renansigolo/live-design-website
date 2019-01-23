@@ -1,14 +1,14 @@
 # Live Design
 
-## Source Code
+> Use `npm` to install the dependencies
+
+## Website
 
 Live Design source code.
 
-# Live Design - Email Cloud Function
+## Email Cloud Function
 
 Sends email from Live Design website from Firebase Cloud functions
-
-> Use `yarn` to install the dependencies
 
 ## License
 
