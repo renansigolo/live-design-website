@@ -1,0 +1,24 @@
+//Materialize
+@import 'node_modules/materialize-css/sass/materialize';
+
+//Google Icons
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// Web Styles
+// Configuration
+@import 'web/base/variables';
+
+//Plugins
+@import 'web/plugins/typed';
+@import 'web/plugins/particles';
+
+// Components
+@import 'web/components/scaffolding';
+@import 'web/components/typography';
+@import 'web/components/navigation';
+@import 'web/components/layout';
+@import 'web/components/buttons';
+@import 'web/components/forms';
+
+// App Styles
+@import 'app/app';

@@ -1,0 +1,33 @@
+/* Typography
+  =============== */
+@font-face {
+  font-family: Champagne-Limousines;
+  src: url('/assets/fonts/Champagne-Limousines.ttf');
+}
+@font-face {
+  font-family: Champagne-Limousines-Italic;
+  src: url('/assets/fonts/Champagne-Limousines-Italic.ttf');
+  font-style: italic;
+}
+@font-face {
+  font-family: Champagne-Limousines-Bold;
+  src: url('/assets/fonts/Champagne-Limousines-Bold.ttf');
+  font-weight: bold;
+}
+
+html {
+  @media only screen and (min-width: 0) {
+    font-size: 1.125rem;
+  }
+  @media only screen and (min-width: $small-screen) {
+    font-size: 1.1875rem;
+  }
+  @media only screen and (min-width: $large-screen) {
+    font-size: 1.375rem;
+  }
+  font-family: Champagne-Limousines, helvetica, sans-serif;
+}
+// Header Styles
+h1 {
+  font-size: $h1-fontsize;
+}

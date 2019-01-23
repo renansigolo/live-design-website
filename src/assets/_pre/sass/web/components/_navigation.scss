@@ -1,0 +1,18 @@
+/* Navigation Web
+  =============== */
+// Navbar
+
+#nav-index {
+  background: $live-black $bg-live-white;
+  background-blend-mode: overlay;
+  background-size: 100%;
+}
+@media #{$large-and-up} {
+  nav .brand-logo {
+    padding-left: 25px;
+  }
+}
+
+#mobile-icon {
+  margin: 0;
+}

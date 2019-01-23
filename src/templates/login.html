@@ -1,0 +1,59 @@
+<!-- Login Section -->
+<section>
+  <div class="card-content grey lighten-4" id="login">
+    <div class="card">
+      <form>
+        <div class="row">
+          <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input id="email" type="email" class="validate" required />
+              <label>Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input id="password" type="password" class="validate" required />
+              <label>Senha</label>
+            </div>
+          </div>
+          <div class="row">
+            <button class="btn waves-effect waves-light blue" id="btnSignIn">
+              Entrar
+            </button>
+          </div>
+        </div>
+      </form>
+      <!-- Password Reset Link -->
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4 right-align"
+          >Esqueçeu sua senha...<i class="material-icons right"
+            >vpn_key</i
+          ></span
+        >
+      </div>
+      <!-- Password Reset Card Info -->
+      <div class="card-reveal" ng-controller="PasswordController">
+        <span class="card-title grey-text text-darken-4"
+          >Esqueceu sua senha ?<i class="material-icons right">close</i></span
+        >
+        <p>Digite seu e-mail para lhe enviarmos um e-mail de recuperação</p>
+        <div class="row">
+          <div class="input-field col s10 offset-s1">
+            <input id="verifyEmail" type="email" class="validate" required />
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <button
+            class="btn waves-effect waves-light blue"
+            id="btnPasswordReset"
+            type="submit"
+            name="verifyEmail"
+          >
+            Recuperar Senha<i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

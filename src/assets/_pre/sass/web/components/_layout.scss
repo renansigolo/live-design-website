@@ -1,0 +1,193 @@
+/* Layout Web
+  =============== */
+// Main Section
+#main-section img {
+  margin-top: 1.125rem;
+  max-width: 88%;
+}
+// Design & Web Section
+#design-e-web {
+  margin-bottom: 0;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-image: linear-gradient(90deg, $live-red 50%, $live-blue 50%),
+    $bg-live-white;
+
+  .carousel {
+    height: 250px;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+  @media #{$large-and-up} {
+    ul {
+      height: 48vh;
+    }
+  }
+}
+
+#design,
+#web {
+  h1,
+  li,
+  p {
+    color: $live-white;
+  }
+}
+@media #{$medium-and-down} {
+  #design {
+    background-image: $bg-live-red;
+    background-size: cover;
+    // Handle below 360px screen
+    @media only screen and (max-width: 360px) {
+      .design-layout {
+        padding: 0 27px;
+      }
+    }
+  }
+
+  #web {
+    background-image: $bg-live-blue;
+    background-size: cover;
+  }
+}
+// How Section
+#how {
+  .carousel {
+    @media #{$medium-and-down} {
+      height: 525px;
+    }
+    @media #{$large-and-up} {
+      height: 630px;
+    }
+  }
+
+  #how01 {
+    background-image: url('../../../../images/how/how-bg01.jpg');
+    background-size: cover;
+    @media #{$medium-and-down} {
+      background-image: $bg-live-white;
+      background-size: cover;
+    }
+  }
+
+  #how02 {
+    background-image: url('../../../../images/how/how-bg02.jpg');
+    background-size: cover;
+    @media #{$medium-and-down} {
+      background-image: $bg-live-white;
+      background-size: cover;
+    }
+  }
+
+  #how03 {
+    background-image: url('../../../../images/how/how-bg03.jpg');
+    background-size: cover;
+    @media #{$medium-and-down} {
+      background-image: $bg-live-red;
+      background-size: cover;
+    }
+  }
+
+  #how04 {
+    background-image: url('../../../../images/how/how-bg04.jpg');
+    background-size: cover;
+    @media #{$medium-and-down} {
+      background-image: $bg-live-white;
+      background-size: cover;
+    }
+  }
+
+  #how05 {
+    background-image: url('../../../../images/how/how-bg05.jpg');
+    background-size: cover;
+    @media #{$medium-and-down} {
+      background-image: $bg-live-blue;
+      background-size: cover;
+    }
+  }
+
+  #how06 {
+    background-image: url('../../../../images/how/how-bg06.jpg');
+    background-size: cover;
+    @media #{$medium-and-down} {
+      background-image: $bg-live-white;
+      background-size: cover;
+    }
+  }
+}
+// Team Section
+#team {
+  margin-top: $section-margin-top;
+
+  img {
+    border-width: 5px;
+    border-style: solid;
+
+    &.circle {
+      @extend .circle;
+      width: 42%;
+    }
+  }
+
+  hr {
+    border-width: 6px;
+    border-style: solid;
+  }
+
+  h5,
+  p {
+    margin-bottom: $text-margin-bottom;
+  }
+}
+
+#joao {
+  hr,
+  img {
+    border-color: $live-red;
+  }
+  @media #{$medium-only} {
+    p {
+      height: 27vh;
+    }
+  }
+  @media #{$large-and-up} {
+    p {
+      height: 13vh;
+    }
+  }
+}
+
+#renan {
+  @media #{$small-and-down} {
+    margin-top: $section-margin-top;
+  }
+
+  hr,
+  img {
+    border-color: $live-blue;
+  }
+  @media #{$medium-only} {
+    p {
+      height: 27vh;
+    }
+  }
+  @media #{$large-and-up} {
+    p {
+      height: 13vh;
+    }
+  }
+}
+// Footer Section
+#contato {
+  h1 {
+    margin-top: $section-margin-top;
+  }
+}
+// Modal Email Error
+#modalEmailErr {
+  display: none;
+  position: fixed;
+  top: 25%;
+}

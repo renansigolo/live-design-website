@@ -1,0 +1,57 @@
+/* Web Form
+  =============== */
+/* Text inputs */
+input:not([type]),
+input[type='email']:not(.browser-default),
+input[type='number']:not(.browser-default),
+input[type='password']:not(.browser-default),
+input[type='tel']:not(.browser-default),
+input[type='text']:not(.browser-default),
+textarea.materialize-textarea {
+  // General Styles
+  // Focused input style
+  &:focus:not([readonly]) {
+    border-bottom: 1px solid $live-blue;
+    -webkit-box-shadow: 0 1px 0 0 $live-blue;
+    box-shadow: 0 1px 0 0 $live-blue;
+  }
+  // Focused label style
+  &:focus:not([readonly]) + label {
+    color: $live-blue;
+  }
+  // Valid Input Style
+  &.valid,
+  &:focus.valid {
+    border-bottom: 1px solid $live-blue;
+    -webkit-box-shadow: 0 1px 0 0 $live-blue;
+    box-shadow: 0 1px 0 0 $live-blue;
+  }
+  // Custom Success Message
+  &.valid + label::after,
+  &:focus.valid + label::after {
+    color: $live-blue;
+  }
+  // Invalid Input Style
+  &.invalid,
+  &:focus.invalid {
+    -webkit-box-shadow: 0 1px 0 0 $live-red;
+    box-shadow: 0 1px 0 0 $live-red;
+  }
+  // Custom Error message
+  &.invalid + label::after,
+  &:focus.invalid + label::after {
+    color: $live-red;
+  }
+}
+
+.error {
+  color: $live-red;
+}
+
+.materialize-textarea {
+  margin-left: 2px;
+}
+
+.main-section-thanks {
+  height: 100vh;
+}

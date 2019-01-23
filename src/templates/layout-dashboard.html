@@ -1,0 +1,41 @@
+<!-- Navbar Section -->
+<header>
+  <div class="navbar" ng-controller="LogoutController">
+    <nav>
+      <div class="nav-wrapper" id="dashboard-navbar">
+        <a href="#!" class="brand-logo left hide-on-small-only">Dashboard</a>
+        <ul class="right">
+          <li>
+            <a ui-sref="dashboard.main"><i class="material-icons">home</i></a>
+          </li>
+          <li>
+            <a ui-sref="dashboard.orders"
+              ><i class="material-icons">shopping_basket</i></a
+            >
+          </li>
+          <li>
+            <a ui-sref="dashboard.payments"
+              ><i class="material-icons">payment</i></a
+            >
+          </li>
+          <li>
+            <a ui-sref="dashboard.documents"
+              ><i class="material-icons">save</i></a
+            >
+          </li>
+          <li>
+            <a ui-sref="dashboard.contacts"
+              ><i class="material-icons">forum</i></a
+            >
+          </li>
+          <li>
+            <a class="waves-effect" id="btnLogout" ng-click="logout()">Sair</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- UI View -->
+<ui-view></ui-view>
