@@ -1,6 +1,6 @@
 # Live Design
 
-> Use `npm` to install the dependencies
+> Use `npm i` to install the dependencies
 
 ## Website
 
