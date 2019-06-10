@@ -19,8 +19,8 @@
 	"scripts": {
 		"preinstall": "npm run clean",
 		"clean": "rm -rf package-lock.json node_modules dist",
-		"build:prod": "gulp",
-		"build": "gulp build",
+		"build": "gulp",
+		"build:test": "gulp build",
 		"start": "gulp start",
 		"clean:install": "rm -rf .firebase package-lock.json node_modules dist && npm i",
 		"prettier": "prettier --config ./.prettierrc.json --write '**/*.{html,scss,js,json,yml,md}'"
