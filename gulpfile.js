@@ -1,39 +1,34 @@
 'use strict'
 
-//GLOBAL
-var gulp = require('gulp')
-var browserSync = require('browser-sync').create()
+/**************** Global Imports ****************/
 
-//VARIABLES FOR WATCH
-var sass = require('gulp-sass')
-var cssnano = require('gulp-cssnano')
-var sourcemaps = require('gulp-sourcemaps')
-var autoprefixer = require('gulp-autoprefixer')
-var rename = require('gulp-rename')
-var eslint = require('gulp-eslint')
-var uglify = require('gulp-uglify')
-var concat = require('gulp-concat')
-var babel = require('gulp-babel')
+const {series, parallel, watch, src, dest} = require('gulp')
+const browserSync = require('browser-sync').create()
 
-//VARIABLES FOR PRODUCTION
-var del = require('del')
-var htmlmin = require('gulp-htmlmin')
-var sitemap = require('gulp-sitemap')
-var imagemin = require('gulp-imagemin')
-var imageminPngquant = require('imagemin-pngquant')
-var imageminGuetzli = require('imagemin-guetzli')
+const sass = require('gulp-sass')
+const cssnano = require('gulp-cssnano')
+const autoprefixer = require('gulp-autoprefixer')
+const rename = require('gulp-rename')
+const uglify = require('gulp-uglify')
+const concat = require('gulp-concat')
+const babel = require('gulp-babel')
 
-//TASKS FOR WATCH
+const del = require('del')
+const htmlmin = require('gulp-htmlmin')
+const sitemap = require('gulp-sitemap')
+const imagemin = require('gulp-imagemin')
+const imageminPngquant = require('imagemin-pngquant')
+const imageminGuetzli = require('imagemin-guetzli')
 
-//Watch SCSS files -> sourcemap, autroprefixer, minify with cssnano, rename .css to .min.css
-gulp.task('scss', function() {
-  return gulp
-    .src('src/assets/_pre/sass/*.scss')
-    .pipe(sourcemaps.init())
+/**************** Functions ****************/
+
+// Watch SCSS files -> sourcemap, autroprefixer, minify with cssnano, rename .css to .min.css
+const scss = () => {
+  return src('src/assets/_pre/sass/*.scss', {sourcemaps: true})
     .pipe(sass().on('error', sass.logError))
     .pipe(
       autoprefixer({
-        browsers: ['last 2 versions'],
+        browsers: ['defaults'],
         cascade: false
       })
     )
@@ -50,20 +45,13 @@ gulp.task('scss', function() {
         }
       })
     )
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('src/assets/css/'))
+    .pipe(dest('src/assets/css/', {sourcemaps: true}))
     .pipe(browserSync.stream())
-})
+}
 
-//TASKS FOR THE WEB
-
-//Watch JS files -> sourcemap, minifiy with uglify, concat for the website
-var jsFilesWeb = ['src/assets/_pre/js/web/**/*.js']
-
-gulp.task('jsWeb', function() {
-  return gulp
-    .src(jsFilesWeb)
-    .pipe(sourcemaps.init())
+// Watch JS files -> sourcemap, minifiy with uglify, concat
+const jsFiles = () => {
+  return src('src/assets/_pre/js/web/**/*.js', {sourcemaps: true})
     .pipe(
       babel({
         presets: ['@babel/env']
@@ -78,23 +66,21 @@ gulp.task('jsWeb', function() {
         }
       })
     )
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('src/assets/js/'))
+    .pipe(dest('src/assets/js/', {sourcemaps: true}))
     .pipe(browserSync.stream())
-})
+}
 
-//Watch Libs -> concat JS libraries for the website
-var libPathsWeb = [
-  'node_modules/jquery/dist/jquery.min.js',
-  'node_modules/materialize-css/dist/js/materialize.min.js',
-  'node_modules/typed.js/lib/typed.min.js',
-  'node_modules/particles.js/particles.js',
-  'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js'
-]
+// Concat Minified JS libraries
+const jsLibsWeb = () => {
+  const libPathsWeb = [
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/materialize-css/dist/js/materialize.min.js',
+    'node_modules/typed.js/lib/typed.min.js',
+    'node_modules/particles.js/particles.js',
+    'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js'
+  ]
 
-gulp.task('jsLibsWeb', function() {
-  return gulp
-    .src(libPathsWeb)
+  return src(libPathsWeb)
     .pipe(concat('libsWeb.js'))
     .pipe(
       rename(function(path) {
@@ -103,42 +89,18 @@ gulp.task('jsLibsWeb', function() {
         }
       })
     )
-    .pipe(gulp.dest('src/assets/js/'))
-})
+    .pipe(dest('src/assets/js/'))
+}
 
-//TASKS FOR THE APP
+const jsLibsApp = () => {
+  const libPaths = [
+    'node_modules/angular/angular.min.js',
+    'node_modules/@uirouter/angularjs/release/angular-ui-router.min.js',
+    'node_modules/firebase/firebase.js',
+    'node_modules/angularfire/dist/angularfire.min.js'
+  ]
 
-//Watch JS files -> sourcemap, minifiy with uglify, concat for the app
-var jsFilesApp = ['src/assets/_pre/js/app/**/*.js']
-
-gulp.task('jsApp', function() {
-  return gulp
-    .src(jsFilesApp)
-    .pipe(sourcemaps.init())
-    .pipe(concat('scriptsApp.js'))
-    .pipe(
-      rename(function(path) {
-        if (path.extname === '.js') {
-          path.basename += '.min'
-        }
-      })
-    )
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('src/assets/js/'))
-    .pipe(browserSync.stream())
-})
-
-//Watch Libs -> concat JS libraries for the App
-var libPathsApp = [
-  'node_modules/angular/angular.min.js',
-  'node_modules/@uirouter/angularjs/release/angular-ui-router.min.js',
-  'node_modules/firebase/firebase.js',
-  'node_modules/angularfire/dist/angularfire.min.js'
-]
-
-gulp.task('jsLibsApp', function() {
-  return gulp
-    .src(libPathsApp)
+  return src(libPaths)
     .pipe(concat('libsApp.js'))
     .pipe(
       rename(function(path) {
@@ -147,46 +109,42 @@ gulp.task('jsLibsApp', function() {
         }
       })
     )
-    .pipe(gulp.dest('src/assets/js/'))
-})
+    .pipe(dest('src/assets/js/'))
+}
 
-//TASKS FOR DISTRIBUTION
+// Delete all files in the dist folder
+const clean = () => {
+  del.sync(['dist/**/*'])
+  return Promise.resolve()
+}
 
-//Delete all files in the dist folder
-gulp.task('clean', function() {
-  return del.sync(['dist/**/*'])
-})
-
-//Minify HTML files
-gulp.task('htmlmin', function() {
-  return gulp
-    .src('src/**/*.html')
+// Minify HTML files
+const minifyHtml = () => {
+  return src('src/**/*.html')
     .pipe(
       htmlmin({
         collapseWhitespace: true
       })
     )
-    .pipe(gulp.dest('dist'))
-})
+    .pipe(dest('dist'))
+}
 
-//Create sitemap.xml
-gulp.task('sitemap', function() {
-  gulp
-    .src('src/**/*.html', {
-      read: false
-    })
+// Create sitemap.xml
+const generateSitemap = () => {
+  return src('src/**/*.html', {
+    read: false
+  })
     .pipe(
       sitemap({
-        siteUrl: 'https://www.livedesign.com.br'
+        siteUrl: 'https://livedesign.com.br'
       })
     )
-    .pipe(gulp.dest('dist'))
-})
+    .pipe(dest('dist'))
+}
 
-//Optimize Images - GIF, SVG and ICO
-gulp.task('imagemin', function() {
-  gulp
-    .src('src/**/*.{gif,svg,ico}')
+// Optimize Images - GIF, SVG and ICO
+const optimizeGif = () => {
+  return src('src/**/*.{gif,svg,ico}')
     .pipe(
       imagemin([
         imagemin.gifsicle({
@@ -195,113 +153,72 @@ gulp.task('imagemin', function() {
         })
       ])
     )
-    .pipe(gulp.dest('dist'))
-})
+    .pipe(dest('dist/'))
+}
 
-//Optimize Images - PNG
-gulp.task('imageminPngquant', function() {
-  gulp
-    .src('src/**/*.png')
+// Optimize Images - PNG
+const optimizePng = () => {
+  return src('src/**/*.png')
     .pipe(imagemin([imageminPngquant()]))
-    .pipe(gulp.dest('dist'))
-})
+    .pipe(dest('dist/'))
+}
 
-//Optimize Images - JPG ang JPEG
-gulp.task('imageminGuetzli', function() {
-  gulp
-    .src('src/**/*.{jpg,jpeg}')
+// Optimize Images - JPG ang JPEG
+const optimizeJpg = () => {
+  return src('src/**/*.{jpg,jpeg}')
     .pipe(imagemin([imageminGuetzli()]))
-    .pipe(gulp.dest('dist'))
-})
+    .pipe(dest('dist/'))
+}
 
-//Copy remaining files to dist
-gulp.task(
-  'copy',
-  ['scss', 'jsWeb', 'jsLibsWeb', 'jsApp', 'jsLibsApp'],
-  function() {
-    return gulp
-      .src([
-        'src/**/*.{pdf,htm,xml,txt,eot,ttf,woff,woff2,otf,ttf,php,css,js,json,map}',
-        '!src/assets/_pre/**/*'
-      ])
-      .pipe(gulp.dest('dist'))
-  }
+// Copy remaining files to dist
+const copy = () => {
+  return src([
+    'src/**/*.{pdf,htm,xml,txt,eot,ttf,woff,woff2,otf,ttf,php,css,js,json,map}',
+    '!src/assets/_pre/**/*'
+  ]).pipe(dest('dist/'))
+}
+
+// Watch
+const watchFiles = () => {
+  watch('src/**/*.html').on('change', browserSync.reload)
+  watch('src/assets/_pre/sass/**/*.scss', scss)
+  watch('src/assets/_pre/js/**/*.js', jsFiles)
+  watch('node_modules/**/*', jsLibsWeb)
+  watch('node_modules/**/*', jsLibsApp)
+}
+
+// Serve
+const serve = () => {
+  browserSync.init({
+    server: {
+      baseDir: './src/'
+    }
+  })
+
+  watchFiles()
+}
+
+/**************** Gulp Commands ****************/
+
+// Start
+exports.start = serve
+
+// Build
+exports.build = parallel(scss, jsFiles, jsLibsWeb, jsLibsApp)
+
+// Build Production
+exports.default = series(
+  clean,
+  parallel(
+    minifyHtml,
+    scss,
+    jsFiles,
+    jsLibsWeb,
+    jsLibsApp,
+    generateSitemap,
+    optimizeGif,
+    optimizePng,
+    optimizeJpg,
+    copy
+  )
 )
-
-//TASKS FOR DEBUGGING
-
-//Watch JS files -> sourcemap, lint with eslint, minifiy with uglify, concat for the website
-gulp.task('jsDebug', function() {
-  return gulp
-    .src(jsFilesWeb)
-    .pipe(sourcemaps.init())
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(uglify())
-    .pipe(concat('scriptsWeb.js'))
-    .pipe(
-      rename(function(path) {
-        if (path.extname === '.js') {
-          path.basename += '.min'
-        }
-      })
-    )
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('src/assets/js/'))
-    .pipe(browserSync.stream())
-})
-
-//GULP TASKS
-
-// Static server
-gulp.task('serve', ['scss', 'jsWeb', 'jsApp'], function() {
-  browserSync.init({
-    server: {
-      baseDir: './src/'
-    }
-  })
-  gulp.watch('src/assets/_pre/sass/**/*.scss', ['scss'])
-  gulp.watch('src/assets/_pre/js/web/**/*.js', ['jsWeb'])
-  gulp.watch('src/assets/_pre/js/app/**/*.js', ['jsApp'])
-  gulp.watch('src/**/*.html').on('change', browserSync.reload)
-})
-
-// Static server for debugging
-gulp.task('serveDebug', ['scss', 'jsDebug', 'jsApp'], function() {
-  browserSync.init({
-    server: {
-      baseDir: './src/'
-    }
-  })
-  gulp.watch('src/assets/_pre/sass/**/*.scss', ['scss'])
-  gulp.watch('src/assets/_pre/js/web/**/*.js', ['jsDebug'])
-  gulp.watch('src/assets/_pre/js/app/**/*.js', ['jsApp'])
-  gulp.watch('src/**/*.html').on('change', browserSync.reload)
-})
-
-//Watch task
-gulp.task('watch', function() {
-  gulp.watch('src/assets/_pre/sass/**/*.scss', ['scss'])
-  gulp.watch('src/assets/_pre/js/web/**/*.js', ['jsWeb'])
-  gulp.watch('src/assets/_pre/js/app/**/*.js', ['jsApp'])
-  gulp.watch('node_modules/**/*', ['jsLibsWeb', 'jsLibsApp'])
-})
-
-//Compile task
-gulp.task('compile', ['scss', 'jsWeb', 'jsLibsWeb', 'jsApp', 'jsLibsApp'])
-
-//Distribution task
-gulp.task('default', [
-  'clean',
-  'htmlmin',
-  'scss',
-  'jsLibsWeb',
-  'jsWeb',
-  'jsLibsApp',
-  'jsApp',
-  'sitemap',
-  'imagemin',
-  'imageminPngquant',
-  'imageminGuetzli',
-  'copy'
-])

@@ -12,7 +12,7 @@ before_script:
   - cd functions && npm i && cd ..
 
 script:
-  - npm run build
+  - npm run build:prod
 
 after_success:
   - test $TRAVIS_BRANCH = "master" && firebase deploy --token $FIREBASE_TOKEN
