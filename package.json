@@ -18,18 +18,18 @@
 	},
 	"scripts": {
 		"preinstall": "npm run clean",
-		"clean": "rm -rf package-lock.json node_modules dist",
-		"build": "gulp",
-		"build:test": "gulp build",
+		"clean": "rm -rf .firebase package-lock.json node_modules dist",
+		"build:prod": "gulp",
+		"build": "gulp build",
 		"start": "gulp start",
-		"clean:install": "rm -rf .firebase package-lock.json node_modules dist && npm i",
+		"deploy": "npm run build:prod && firebase deploy",
 		"prettier": "prettier --config ./.prettierrc.json --write '**/*.{html,scss,js,json,yml,md}'"
 	},
 	"dependencies": {
 		"@uirouter/angularjs": "~1.0.22",
 		"angular": "~1.7.8",
 		"angularfire": "~2.3.0",
-		"firebase": "^6.1.1",
+		"firebase": "^6.3.1",
 		"jquery": "^3.4.1",
 		"jquery-mask-plugin": "^1.14.15",
 		"materialize-css": "~1.0.0",
@@ -37,8 +37,8 @@
 		"typed.js": "^2.0.10"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.4.5",
-		"@babel/preset-env": "^7.4.5",
+		"@babel/core": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
 		"browser-sync": "^2.26.7",
 		"del": "^4.1.1",
 		"gulp": "^4.0.2",
@@ -51,7 +51,7 @@
 		"gulp-imagemin": "~6.0.0",
 		"gulp-rename": "~1.4.0",
 		"gulp-sass": "~4.0.2",
-		"gulp-sitemap": "^7.1.0",
+		"gulp-sitemap": "^7.4.0",
 		"gulp-sourcemaps": "~2.6.5",
 		"gulp-uglify": "~3.0.2",
 		"imagemin-guetzli": "~2.0.0",
