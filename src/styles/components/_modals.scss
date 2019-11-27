@@ -1,0 +1,34 @@
+/* Modals Web
+  =============== */
+
+// Modal Email Error
+#modalEmailErr {
+  display: none;
+  position: fixed;
+  top: 25%;
+}
+
+.modal {
+  max-height: 78%;
+
+  a {
+    align-items: center;
+    display: inline-flex;
+
+    i {
+      padding-left: 8px;
+    }
+  }
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 70%;
+    border-radius: 5px;
+    margin: 5px 0;
+  }
+}

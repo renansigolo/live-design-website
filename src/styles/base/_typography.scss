@@ -1,0 +1,50 @@
+/* Typography
+  =============== */
+
+@font-face {
+  font-family: Mosk;
+  src: url('/assets/fonts/mosk-normal.ttf');
+}
+
+@font-face {
+  font-family: Mosk;
+  src: url('/assets/fonts/mosk-light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Mosk;
+  src: url('/assets/fonts/mosk-medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Mosk;
+  src: url('/assets/fonts/mosk-semi-bold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Mosk;
+  src: url('/assets/fonts/mosk-bold.ttf');
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 140%;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.2rem;
+}

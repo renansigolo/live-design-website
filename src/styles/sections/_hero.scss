@@ -1,0 +1,77 @@
+/* Hero Section
+  =============== */
+.bg-hero {
+  background-image: var(--bg-header);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.hero {
+  min-height: 85vh;
+  color: #fff;
+
+  .container {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    min-height: 29vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media #{$large-and-up} {
+      max-width: 80%;
+    }
+
+    .btn {
+      position: relative;
+      padding: 0 2em;
+      border: none;
+      background: none;
+      outline: none;
+      color: black;
+      mix-blend-mode: screen;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      font-weight: 700;
+      @include scale-on-hover;
+    }
+
+    .btn::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #fff;
+      border-radius: 50%;
+      content: '';
+      mix-blend-mode: color-burn;
+    }
+  }
+}
+
+.arrow-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 0;
+  color: var(--grey);
+  cursor: default;
+
+  div {
+    display: inline-flex;
+    flex-direction: column;
+    color: var(--grey);
+  }
+
+  img {
+    transform: rotate(180deg);
+  }
+}

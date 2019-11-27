@@ -9,10 +9,9 @@ branches:
 before_script:
   - npm i -g firebase-tools
   - npm i -g gulp-cli
-  - cd functions && npm i && cd ..
 
 script:
-  - npm run build
+  - npm run build:prod
 
 after_success:
   - test $TRAVIS_BRANCH = "master" && firebase deploy --token $FIREBASE_TOKEN

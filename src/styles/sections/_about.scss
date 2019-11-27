@@ -1,0 +1,43 @@
+/* About Section
+  =============== */
+
+.about {
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: fit-content;
+
+    span {
+      font-size: 1.5rem;
+      color: var(--grey);
+      font-weight: 500;
+      padding-bottom: 2rem;
+    }
+
+    p {
+      color: var(--grey);
+      font-weight: 600;
+    }
+    @media #{$large-and-up} {
+      h2 {
+        white-space: nowrap;
+      }
+    }
+
+    @media #{$small-and-down} {
+      br {
+        content: ' ';
+      }
+      br:after {
+        content: ' ';
+      }
+    }
+  }
+}

@@ -12,3 +12,5 @@ functions/firebase-debug.log
 
 .DS_Store
 .firebase
+
+src/assets

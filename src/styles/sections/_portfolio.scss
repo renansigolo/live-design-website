@@ -1,0 +1,14 @@
+/* Portfolio Section
+  =============== */
+
+.portfolio {
+  &__cases {
+    img {
+      padding: 10px;
+      &:hover {
+        @include scale-on-hover(1.01);
+        @extend .z-depth-2;
+      }
+    }
+  }
+}

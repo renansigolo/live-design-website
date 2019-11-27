@@ -1,0 +1,49 @@
+/* Scaffolding
+  =============== */
+
+// Variables
+:root {
+  // --red: #e40046;
+  // --blue: #3498db;
+  --grey: #808080;
+  --green: #00cdc2;
+  --bg-header: url('../images/backgrounds/bg-header.svg');
+  --bg-footer: url('../images/backgrounds/bg-footer.svg');
+}
+
+// Mixins
+$default-size: 1.1 !default;
+@mixin scale-on-hover($size: $default-size) {
+  &:hover {
+    transform: scale($size);
+    transition: all 0.5s;
+  }
+}
+
+// Global Elements
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  margin-bottom: 12vh;
+}
+
+// Global Classes
+.move-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
+.arrow-down {
+  img {
+    transform: rotate(180deg);
+  }
+}
