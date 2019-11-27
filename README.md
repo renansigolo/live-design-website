@@ -1,10 +1,42 @@
 # Live Design
 
-> Use `npm i` to install the dependencies
+Source code of the Live Design website
 
-## Website
+## Usage
 
-Live Design source code.
+### Install Dependencies
+
+```bash
+npm i
+```
+
+### Development server
+
+```bash
+npm start
+```
+
+## Testing
+
+```bash
+npm run build:prod
+
+npm run server
+```
+
+## Build and Deploy
+
+- Staging
+
+  `npm run deploy`
+
+- Production
+
+  `npm version <[major | minor | patch]>`
+
+## Author
+
+- [Renan Sigolo](https://www.renansigolo.com/)
 
 ## License
 
