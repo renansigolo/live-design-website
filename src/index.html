@@ -1,427 +1,777 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Design - Projetos de Identidade Visual</title>
+    <meta name="author" content="Renan Sigolo" />
+    <meta
+      name="description"
+      content="Live Design - Projetos de Identidade Visual"
+    />
 
-  <title>Live Design - Projetos de Identidade Visual</title>
-  <meta name="author" content="Renan Sigolo" />
-  <meta name="description" content="Live Design - Projetos de Identidade Visual" />
+    <link rel="stylesheet" href="assets/styles.min.css" />
 
-  <link rel="stylesheet" href="assets/styles.min.css" />
+    <script defer src="assets/libs.min.js"></script>
+    <script defer src="assets/scripts.min.js"></script>
 
-  <script defer src="assets/libs.min.js"></script>
-  <script defer src="assets/scripts.min.js"></script>
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00cdc2" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Live Design" />
 
-  <!-- Icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00cdc2" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="manifest" href="/manifest.json" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="Live Design" />
+    <!-- Google Tag Manager -->
+    <script>
+      ;(function(w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-PVDSLZ9')
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
 
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-    w[l] = w[l] || []; w[l].push({
-      'gtm.start':
-        new Date().getTime(), event: 'gtm.js'
-    }); var f = d.getElementsByTagName(s)[0],
-      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-PVDSLZ9');</script>
-  <!-- End Google Tag Manager -->
-</head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PVDSLZ9"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVDSLZ9" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <div class="fixed-action-btn" id="btn-fixed">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#">
-      <i class="large material-icons">arrow_upward</i>
-    </a>
-  </div>
-
-  <!-- Navbar -->
-  <header class="container" id="header">
-    <div class="valign-wrapper">
-      <nav id="navbar">
-        <div class="nav-wrapper">
-          <div class="navbar-logo">
-            <img src="images/branding/icon-live-design.svg" height="25px" alt="Live Design Icon" />
-            <strong class="navbar-logo__label black-text">
-              Traga vida à sua ideia!
-            </strong>
-          </div>
-
-          <a id="menu-toggler" href="#" data-target="mobile-menu" class="sidenav-trigger black-text">
-            <i class="material-icons">menu</i>
-          </a>
-          <ul class="right hide-on-med-and-down">
-            <li>
-              <a href="#main-section">Home</a>
-            </li>
-            <li>
-              <a href="#about">Sobre</a>
-            </li>
-            <li>
-              <a href="#portfolio">Portfólio</a>
-            </li>
-            <li>
-              <a class="btn-orcamento" href="https://form.jotformz.com/92974452958677" target="_blank"
-                rel="noopener noreferrer">
-                Orçamento
-              </a>
-            </li>
-            <li class="social-icons">
-              <a href="https://instagram.com/live.dsgn" target="_blank" rel="noopener noreferrer">
-                <img src="images/social-media/instagram.svg" height="20px" alt="Social Media Icon" />
-              </a>
-              <a href="https://facebook.com/livedsgn" target="_blank" rel="noopener noreferrer">
-                <img src="images/social-media/facebook.svg" height="20px" alt="Social Media Icon" />
-              </a>
-              <a href="https://behance.net/joaojoaotx" target="_blank" rel="noopener noreferrer">
-                <img src="images/social-media/behance.svg" height="17px" alt="Social Media Icon" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <div class="fixed-action-btn" id="btn-fixed">
+      <a class="btn-floating btn-large waves-effect waves-light" href="#">
+        <i class="large material-icons">arrow_upward</i>
+      </a>
     </div>
 
-    <ul class="sidenav" id="mobile-menu">
-      <li>
-        <a href="#main-section">Home</a>
-      </li>
-      <li>
-        <a href="#about">Sobre</a>
-      </li>
-      <li>
-        <a href="#portfolio">Portfólio</a>
-      </li>
-      <li>
-        <a class="btn-orcamento" href="https://form.jotformz.com/92974452958677" target="_blank"
-          rel="noopener noreferrer">
-          Orçamento
-        </a>
-      </li>
-      <li class="social-icons valign-wrapper">
-        <a href="https://instagram.com/live.dsgn" target="_blank" rel="noopener noreferrer">
-          <img src="images/social-media/instagram.svg" height="20px" alt="Social Media Icon" />
-        </a>
-        <a href="https://facebook.com/livedsgn" target="_blank" rel="noopener noreferrer">
-          <img src="images/social-media/facebook.svg" height="20px" alt="Social Media Icon" />
-        </a>
-        <a href="https://behance.net/joaojoaotx" target="_blank" rel="noopener noreferrer">
-          <img src="images/social-media/behance.svg" height="17px" alt="Social Media Icon" />
-        </a>
-      </li>
-    </ul>
-  </header>
+    <!-- Navbar -->
+    <header class="container" id="header">
+      <div class="valign-wrapper">
+        <nav id="navbar">
+          <div class="nav-wrapper">
+            <div class="navbar-logo">
+              <img
+                src="images/branding/icon-live-design.svg"
+                height="25px"
+                alt="Live Design Icon"
+              />
+              <strong class="navbar-logo__label black-text">
+                Traga vida à sua ideia!
+              </strong>
+            </div>
 
-  <main>
-    <div class="bg-hero">
-      <section id="hero" class="hero">
-        <div class="container">
-          <div class="row">
-            <div class="col s12 l6">
-              <div class="hero__content">
-                <h1>
-                  Somos um estúdio de design especializado em projetos de
-                  <b>Identidade&nbsp;Visual.</b>
-                  <img src="images/branding/icon-live-design-white.svg" height="40px" alt="Live Design Logo" />
-                </h1>
-                <br />
-                <a href="https://form.jotformz.com/92974452958677" target="_blank" rel="noopener noreferrer"
-                  class="btn btn-large waves-effect white btn-orcamento">
+            <a
+              id="menu-toggler"
+              href="#"
+              data-target="mobile-menu"
+              class="sidenav-trigger black-text"
+            >
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="#main-section">Home</a>
+              </li>
+              <li>
+                <a href="#about">Sobre</a>
+              </li>
+              <li>
+                <a href="#portfolio">Portfólio</a>
+              </li>
+              <li>
+                <a
+                  class="btn-orcamento"
+                  href="https://form.jotformz.com/92974452958677"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Orçamento
                 </a>
+              </li>
+              <li class="social-icons">
+                <a
+                  href="https://instagram.com/live.dsgn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="images/social-media/instagram.svg"
+                    height="20px"
+                    alt="Social Media Icon"
+                  />
+                </a>
+                <a
+                  href="https://facebook.com/livedsgn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="images/social-media/facebook.svg"
+                    height="20px"
+                    alt="Social Media Icon"
+                  />
+                </a>
+                <a
+                  href="https://behance.net/joaojoaotx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="images/social-media/behance.svg"
+                    height="17px"
+                    alt="Social Media Icon"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <ul class="sidenav" id="mobile-menu">
+        <li>
+          <a href="#main-section">Home</a>
+        </li>
+        <li>
+          <a href="#about">Sobre</a>
+        </li>
+        <li>
+          <a href="#portfolio">Portfólio</a>
+        </li>
+        <li>
+          <a
+            class="btn-orcamento"
+            href="https://form.jotformz.com/92974452958677"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Orçamento
+          </a>
+        </li>
+        <li class="social-icons valign-wrapper">
+          <a
+            href="https://instagram.com/live.dsgn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="images/social-media/instagram.svg"
+              height="20px"
+              alt="Social Media Icon"
+            />
+          </a>
+          <a
+            href="https://facebook.com/livedsgn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="images/social-media/facebook.svg"
+              height="20px"
+              alt="Social Media Icon"
+            />
+          </a>
+          <a
+            href="https://behance.net/joaojoaotx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="images/social-media/behance.svg"
+              height="17px"
+              alt="Social Media Icon"
+            />
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <div class="bg-hero">
+        <section id="hero" class="hero">
+          <div class="container">
+            <div class="row">
+              <div class="col s12 l6">
+                <div class="hero__content">
+                  <h1>
+                    Somos um estúdio de design especializado em projetos de
+                    <b>Identidade&nbsp;Visual.</b>
+                    <img
+                      src="images/branding/icon-live-design-white.svg"
+                      height="40px"
+                      alt="Live Design Logo"
+                    />
+                  </h1>
+                  <br />
+                  <a
+                    href="https://form.jotformz.com/92974452958677"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-large waves-effect white btn-orcamento"
+                  >
+                    Orçamento
+                  </a>
+                </div>
+              </div>
+              <div class="col s12 l6 hide-on-med-and-down">
+                <img
+                  class="hero-img"
+                  loading="eager"
+                  src="images/banners/banner-hero.svg"
+                  alt="Banner Hero"
+                />
               </div>
             </div>
-            <div class="col s12 l6 hide-on-med-and-down">
-              <img class="hero-img" loading="eager" src="images/banners/banner-hero.svg" alt="Banner Hero" />
+          </div>
+          <div>
+            <div class="arrow-down">
+              <span>Saiba mais</span>
+              <img
+                src="images/icons/arrow-upward.svg"
+                height="40px"
+                alt="Arrow Down"
+              />
             </div>
           </div>
-        </div>
-        <div>
-          <div class="arrow-down">
-            <span>Saiba mais</span>
-            <img src="images/icons/arrow-upward.svg" height="40px" alt="Arrow Down" />
+        </section>
+      </div>
+      <section id="about" class="about">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 l6 hide-on-small-and-down">
+              <img
+                class="responsive-img"
+                loading="eager"
+                src="images/banners/banner-about.svg"
+                alt="Banner About"
+              />
+            </div>
+            <div class="col s12 l6 about__content">
+              <span>Sobre nós</span>
+              <h2>
+                A Live Design cria projetos de
+                <br />
+                identidade  visual com o objetivo
+                <br />
+                de agregar valor à  marca e se
+                <br />
+                conectar ao seu público alvo.
+              </h2>
+              <p>
+                Todo o projeto é baseado em pesquisas e feito
+                <br />
+                estratégicamente para transmitir a essência
+                <br />
+                da sua marca ao seu público alvo.
+              </p>
+            </div>
           </div>
         </div>
       </section>
-    </div>
-    <section id="about" class="about">
-      <div class="container">
-        <div class="row">
-          <div class="col s12 l6 hide-on-small-and-down">
-            <img class="responsive-img" loading="eager" src="images/banners/banner-about.svg" alt="Banner About" />
-          </div>
-          <div class="col s12 l6 about__content">
-            <span>Sobre nós</span>
-            <h2>
-              A Live Design cria projetos de
-              <br />
-              identidade  visual com o objetivo
-              <br />
-              de agregar valor à  marca e se
-              <br />
-              conectar ao seu público alvo.
-            </h2>
-            <p>
-              Todo o projeto é baseado em pesquisas e feito
-              <br />
-              estratégicamente para transmitir a essência
-              <br />
-              da sua marca ao seu público alvo.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <h2>Portfólio</h2>
-        <div class="portfolio__cases">
-          <div class="row">
-            <div class="col s12 m6">
-              <a href="#modal-olivier" class="modal-trigger">
-                <img class="responsive-img" loading="lazy" height="512" width="512"
-                  src="images/portfolio/olivier/thumbnail.png" alt="Portfolio Image Placeholder" />
-              </a>
-              <a href="#modal-vovo-veth" class="modal-trigger">
-                <img class="responsive-img" loading="lazy" height="512" width="512"
-                  src="images/portfolio/vovo-veth/thumbnail.png" alt="Portfolio Image Placeholder" />
-              </a>
-              <a href="#modal-assuncao-vet" class="modal-trigger">
-                <img class="responsive-img" loading="lazy" height="512" width="512"
-                  src="images/portfolio/assuncao-vet/thumbnail.png" alt="Portfolio Image Placeholder" />
-              </a>
-            </div>
-            <div class="col s12 m6">
-              <a href="#modal-robinpack" class="modal-trigger">
-                <img class="responsive-img" loading="lazy" height="512" width="512"
-                  src="images/portfolio/robinpack/thumbnail.jpg" alt="Portfolio Image Placeholder" />
-              </a>
-              <a href="#modal-live-design" class="modal-trigger">
-                <img class="responsive-img" loading="lazy" height="512" width="512"
-                  src="images/portfolio/live-design/thumbnail.png" alt="Portfolio Image Placeholder" />
-              </a>
-              <a href="#modal-instituto-cv" class="modal-trigger">
-                <img class="responsive-img" loading="lazy" height="512" width="512"
-                  src="images/portfolio/instituto-cv/thumbnail.png" alt="Portfolio Image Placeholder" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="center-align">
-      <div class="footer">
-        <img src="images/branding/icon-live-design-white.svg" height="90px" alt="Live Design Logo" />
-        <div class="footer__content">
-          <h5>Traga vida à sua ideia!</h5>
-          <a class="btn-orcamento" href="https://form.jotformz.com/92974452958677" target="_blank"
-            rel="noopener noreferrer">
-            Solicite um orçamento
-          </a>
-          <ul class="row-social-icons">
-            <li>
-              <a href="https://instagram.com/live.dsgn" target="_blank" rel="noopener noreferrer">
-                <img src="images/social-media/instagram-wht.svg" alt="Social Media Icon" height="20px" />
-              </a>
-            </li>
-            <li>
-              <a href="https://facebook.com/livedsgn" target="_blank" rel="noopener noreferrer">
-                <img src="images/social-media/facebook-wht.svg" alt="Social Media Icon" height="20px" />
-              </a>
-            </li>
-            <li>
-              <a href="https://behance.net/joaojoaotx" target="_blank" rel="noopener noreferrer">
-                <img src="images/social-media/behance-wht.svg" alt="Social Media Icon" height="19px" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__copyright hide-on-med-and-down">
+      <section id="portfolio" class="portfolio">
         <div class="container">
-          <img src="images/branding/logo-live-design-white.svg" height="25px" alt="Live Design Logo" />
+          <h2>Portfólio</h2>
+          <div class="portfolio__cases">
+            <div class="row">
+              <div class="col s12 m6">
+                <a href="#modal-olivier" class="modal-trigger">
+                  <img
+                    class="responsive-img"
+                    loading="lazy"
+                    height="512"
+                    width="512"
+                    src="images/portfolio/olivier/thumbnail.png"
+                    alt="Portfolio Image Placeholder"
+                  />
+                </a>
+                <a href="#modal-vovo-veth" class="modal-trigger">
+                  <img
+                    class="responsive-img"
+                    loading="lazy"
+                    height="512"
+                    width="512"
+                    src="images/portfolio/vovo-veth/thumbnail.png"
+                    alt="Portfolio Image Placeholder"
+                  />
+                </a>
+                <a href="#modal-assuncao-vet" class="modal-trigger">
+                  <img
+                    class="responsive-img"
+                    loading="lazy"
+                    height="512"
+                    width="512"
+                    src="images/portfolio/assuncao-vet/thumbnail.png"
+                    alt="Portfolio Image Placeholder"
+                  />
+                </a>
+              </div>
+              <div class="col s12 m6">
+                <a href="#modal-robinpack" class="modal-trigger">
+                  <img
+                    class="responsive-img"
+                    loading="lazy"
+                    height="512"
+                    width="512"
+                    src="images/portfolio/robinpack/thumbnail.jpg"
+                    alt="Portfolio Image Placeholder"
+                  />
+                </a>
+                <a href="#modal-live-design" class="modal-trigger">
+                  <img
+                    class="responsive-img"
+                    loading="lazy"
+                    height="512"
+                    width="512"
+                    src="images/portfolio/live-design/thumbnail.png"
+                    alt="Portfolio Image Placeholder"
+                  />
+                </a>
+                <a href="#modal-instituto-cv" class="modal-trigger">
+                  <img
+                    class="responsive-img"
+                    loading="lazy"
+                    height="512"
+                    width="512"
+                    src="images/portfolio/instituto-cv/thumbnail.png"
+                    alt="Portfolio Image Placeholder"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-          <ul class="footer__copyright__links">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#about">Sobre</a>
-            </li>
-            <li>
-              <a href="#portfolio">Portfólio</a>
-            </li>
-            <li>
-              <a class="btn-orcamento" href="https://form.jotformz.com/92974452958677">
-                Orçamento
-              </a>
-            </li>
-          </ul>
+    <footer>
+      <div class="center-align">
+        <div class="footer">
+          <img
+            src="images/branding/icon-live-design-white.svg"
+            height="90px"
+            alt="Live Design Logo"
+          />
+          <div class="footer__content">
+            <h5>Traga vida à sua ideia!</h5>
+            <a
+              class="btn-orcamento"
+              href="https://form.jotformz.com/92974452958677"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Solicite um orçamento
+            </a>
+            <ul class="row-social-icons">
+              <li>
+                <a
+                  href="https://instagram.com/live.dsgn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="images/social-media/instagram-wht.svg"
+                    alt="Social Media Icon"
+                    height="20px"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://facebook.com/livedsgn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="images/social-media/facebook-wht.svg"
+                    alt="Social Media Icon"
+                    height="20px"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://behance.net/joaojoaotx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="images/social-media/behance-wht.svg"
+                    alt="Social Media Icon"
+                    height="19px"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright hide-on-med-and-down">
+          <div class="container">
+            <img
+              src="images/branding/logo-live-design-white.svg"
+              height="25px"
+              alt="Live Design Logo"
+            />
+
+            <ul class="footer__copyright__links">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#about">Sobre</a>
+              </li>
+              <li>
+                <a href="#portfolio">Portfólio</a>
+              </li>
+              <li>
+                <a
+                  class="btn-orcamento"
+                  href="https://form.jotformz.com/92974452958677"
+                >
+                  Orçamento
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Modal Structure -->
-  <div id="modal-olivier" class="modal">
-    <div class="modal-content">
-      <h4>Olivier Semijoias</h4>
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/olivier/thumbnail.png"
-        alt="Olivier Semijoias Image" />
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/olivier/modal-1.png"
-        alt="Olivier Semijoias Image 01" />
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/olivier/modal-2.png"
-        alt="Olivier Semijoias Image 02" />
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/olivier/modal-3.png"
-        alt="Olivier Semijoias Image 03" />
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/olivier/modal-4.png"
-        alt="Olivier Semijoias Image 04" />
+    <!-- Modal Structure -->
+    <div id="modal-olivier" class="modal">
+      <div class="modal-content">
+        <h4>Olivier Semijoias</h4>
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/olivier/thumbnail.png"
+          alt="Olivier Semijoias Image"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/olivier/modal-1.png"
+          alt="Olivier Semijoias Image 01"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/olivier/modal-2.png"
+          alt="Olivier Semijoias Image 02"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/olivier/modal-3.png"
+          alt="Olivier Semijoias Image 03"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/olivier/modal-4.png"
+          alt="Olivier Semijoias Image 04"
+        />
+      </div>
+      <div class="modal-footer">
+        <a
+          href="https://www.behance.net/gallery/92522585/Olivier-Semijoias-Identidade-Visual"
+          class="modal-close btn-flat"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver mais
+          <i class="material-icons">
+            open_in_new
+          </i>
+        </a>
+      </div>
     </div>
-    <div class="modal-footer">
-      <a href="https://www.behance.net/gallery/92522585/Olivier-Semijoias-Identidade-Visual" class="modal-close btn-flat"
-        target="_blank" rel="noopener noreferrer">
-        Ver mais
-        <i class="material-icons">
-          open_in_new
-        </i>
-      </a>
-    </div>
-  </div>
 
-  <div id="modal-robinpack" class="modal">
-    <div class="modal-content">
-      <h4>Robinpack</h4>
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/robinpack/thumbnail.jpg"
-        alt="Robinpack Image" />
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/robinpack/modal-1.jpg"
-        alt="Robinpack Image 01" />
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/robinpack/modal-2.jpg"
-        alt="Robinpack Image 02" />
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/robinpack/modal-3.jpg"
-        alt="Robinpack Image 03" />
+    <div id="modal-robinpack" class="modal">
+      <div class="modal-content">
+        <h4>Robinpack</h4>
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/robinpack/thumbnail.jpg"
+          alt="Robinpack Image"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/robinpack/modal-1.jpg"
+          alt="Robinpack Image 01"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/robinpack/modal-2.jpg"
+          alt="Robinpack Image 02"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/robinpack/modal-3.jpg"
+          alt="Robinpack Image 03"
+        />
+      </div>
+      <div class="modal-footer">
+        <a
+          href="https://www.behance.net/gallery/90808651/Robinpack-Identidade-Visual"
+          class="modal-close btn-flat"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver mais
+          <i class="material-icons">
+            open_in_new
+          </i>
+        </a>
+      </div>
     </div>
-    <div class="modal-footer">
-      <a href="https://www.behance.net/gallery/90808651/Robinpack-Identidade-Visual" class="modal-close btn-flat"
-        target="_blank" rel="noopener noreferrer">
-        Ver mais
-        <i class="material-icons">
-          open_in_new
-        </i>
-      </a>
-    </div>
-  </div>
 
-  <div id="modal-vovo-veth" class="modal">
-    <div class="modal-content">
-      <h4>Vovo Veth</h4>
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/vovo-veth/thumbnail.png"
-        alt="Vovo Veth Image" />
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/vovo-veth/modal-1.png"
-        alt="Vovo Veth Image 01" />
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/vovo-veth/modal-2.png"
-        alt="Vovo Veth Image 02" />
+    <div id="modal-vovo-veth" class="modal">
+      <div class="modal-content">
+        <h4>Vovo Veth</h4>
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/vovo-veth/thumbnail.png"
+          alt="Vovo Veth Image"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/vovo-veth/modal-1.png"
+          alt="Vovo Veth Image 01"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/vovo-veth/modal-2.png"
+          alt="Vovo Veth Image 02"
+        />
+      </div>
+      <div class="modal-footer">
+        <a
+          href="https://www.behance.net/gallery/70319225/Vovo-Veth-Logotipo-e-Aplicacoes"
+          class="modal-close btn-flat"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver mais
+          <i class="material-icons">
+            open_in_new
+          </i>
+        </a>
+      </div>
     </div>
-    <div class="modal-footer">
-      <a href="https://www.behance.net/gallery/70319225/Vovo-Veth-Logotipo-e-Aplicacoes" class="modal-close btn-flat"
-        target="_blank" rel="noopener noreferrer">
-        Ver mais
-        <i class="material-icons">
-          open_in_new
-        </i>
-      </a>
-    </div>
-  </div>
 
-  <div id="modal-live-design" class="modal">
-    <div class="modal-content">
-      <h4>Live Design</h4>
-      <img class="responsive-img" loading="lazy" width="512" height="512"
-        src="images/portfolio/live-design/thumbnail.png" alt="Live Design Image" />
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/live-design/modal-1.png"
-        alt="Live Design Image 01" />
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/live-design/modal-2.png"
-        alt="Live Design Image 02" />
-      <img class="responsive-img" loading="lazy" width="512" height="512" src="images/portfolio/live-design/modal-3.png"
-        alt="Live Design Image 03" />
+    <div id="modal-live-design" class="modal">
+      <div class="modal-content">
+        <h4>Live Design</h4>
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/live-design/thumbnail.png"
+          alt="Live Design Image"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/live-design/modal-1.png"
+          alt="Live Design Image 01"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/live-design/modal-2.png"
+          alt="Live Design Image 02"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/live-design/modal-3.png"
+          alt="Live Design Image 03"
+        />
+      </div>
+      <div class="modal-footer">
+        <a
+          href="https://www.behance.net/gallery/83715107/Live-Design-Identidade-Visual"
+          class="modal-close btn-flat"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver mais
+          <i class="material-icons">
+            open_in_new
+          </i>
+        </a>
+      </div>
     </div>
-    <div class="modal-footer">
-      <a href="https://www.behance.net/gallery/83715107/Live-Design-Identidade-Visual" class="modal-close btn-flat"
-        target="_blank" rel="noopener noreferrer">
-        Ver mais
-        <i class="material-icons">
-          open_in_new
-        </i>
-      </a>
-    </div>
-  </div>
 
-  <div id="modal-assuncao-vet" class="modal">
-    <div class="modal-content">
-      <h4>Assunção Laboratório Veterinário</h4>
-      <img class="responsive-img" loading="lazy" width="512" height="512"
-        src="images/portfolio/assuncao-vet/thumbnail.png" alt="Assuncao Laboratorio Veterinario Image" />
-      <img class="responsive-img" loading="lazy" width="512" height="512"
-        src="images/portfolio/assuncao-vet/modal-1.png" alt="Assuncao Laboratorio Veterinario Image 01" />
-      <img class="responsive-img" loading="lazy" width="512" height="512"
-        src="images/portfolio/assuncao-vet/modal-2.png" alt="Assuncao Laboratorio Veterinario Image 02" />
-      <img class="responsive-img" loading="lazy" width="512" height="512"
-        src="images/portfolio/assuncao-vet/modal-3.png" alt="Assuncao Laboratorio Veterinario Image 03" />
+    <div id="modal-assuncao-vet" class="modal">
+      <div class="modal-content">
+        <h4>Assunção Laboratório Veterinário</h4>
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/assuncao-vet/thumbnail.png"
+          alt="Assuncao Laboratorio Veterinario Image"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/assuncao-vet/modal-1.png"
+          alt="Assuncao Laboratorio Veterinario Image 01"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/assuncao-vet/modal-2.png"
+          alt="Assuncao Laboratorio Veterinario Image 02"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/assuncao-vet/modal-3.png"
+          alt="Assuncao Laboratorio Veterinario Image 03"
+        />
+      </div>
+      <div class="modal-footer">
+        <a
+          href="https://www.behance.net/gallery/82375253/Laboratorio-Veterinario-Assuncao-Logotipo"
+          class="modal-close btn-flat"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver mais
+          <i class="material-icons">
+            open_in_new
+          </i>
+        </a>
+      </div>
     </div>
-    <div class="modal-footer">
-      <a href="https://www.behance.net/gallery/82375253/Laboratorio-Veterinario-Assuncao-Logotipo"
-        class="modal-close btn-flat" target="_blank" rel="noopener noreferrer">
-        Ver mais
-        <i class="material-icons">
-          open_in_new
-        </i>
-      </a>
-    </div>
-  </div>
 
-  <div id="modal-instituto-cv" class="modal">
-    <div class="modal-content">
-      <h4>Instituto Coluna Vertebral</h4>
-      <img class="responsive-img" loading="lazy" width="512" height="512"
-        src="images/portfolio/instituto-cv/thumbnail.png" alt="Instituto Coluna Vertebral Image" />
-      <img class="responsive-img" loading="lazy" width="512" height="512"
-        src="images/portfolio/instituto-cv/modal-1.png" alt="Instituto Coluna Vertebral Image 01" />
-      <img class="responsive-img" loading="lazy" width="512" height="512"
-        src="images/portfolio/instituto-cv/modal-2.png" alt="Instituto Coluna Vertebral Image 02" />
-      <img class="responsive-img" loading="lazy" width="512" height="512"
-        src="images/portfolio/instituto-cv/modal-3.png" alt="Instituto Coluna Vertebral Image 03" />
-      <img class="responsive-img" loading="lazy" width="512" height="512"
-        src="images/portfolio/instituto-cv/modal-4.png" alt="Instituto Coluna Vertebral Image 04" />
+    <div id="modal-instituto-cv" class="modal">
+      <div class="modal-content">
+        <h4>Instituto Coluna Vertebral</h4>
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/instituto-cv/thumbnail.png"
+          alt="Instituto Coluna Vertebral Image"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/instituto-cv/modal-1.png"
+          alt="Instituto Coluna Vertebral Image 01"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/instituto-cv/modal-2.png"
+          alt="Instituto Coluna Vertebral Image 02"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/instituto-cv/modal-3.png"
+          alt="Instituto Coluna Vertebral Image 03"
+        />
+        <img
+          class="responsive-img"
+          loading="lazy"
+          width="512"
+          height="512"
+          src="images/portfolio/instituto-cv/modal-4.png"
+          alt="Instituto Coluna Vertebral Image 04"
+        />
+      </div>
+      <div class="modal-footer">
+        <a
+          href="https://www.behance.net/gallery/69101613/JCF-Servicos"
+          class="modal-close btn-flat"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver mais
+          <i class="material-icons">
+            open_in_new
+          </i>
+        </a>
+      </div>
     </div>
-    <div class="modal-footer">
-      <a href="https://www.behance.net/gallery/69101613/JCF-Servicos" class="modal-close btn-flat" target="_blank"
-        rel="noopener noreferrer">
-        Ver mais
-        <i class="material-icons">
-          open_in_new
-        </i>
-      </a>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
