@@ -29,8 +29,22 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Live Design" />
 
-    <!-- Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Ads: 840306545 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-840306545"
+    ></script>
     <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'AW-840306545')
+    </script>
+
+    <!-- Google Tag Manager -->
+    <!-- <script>
       ;(function(w, d, s, l, i) {
         w[l] = w[l] || []
         w[l].push({
@@ -44,20 +58,37 @@
         j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
         f.parentNode.insertBefore(j, f)
       })(window, document, 'script', 'dataLayer', 'GTM-PVDSLZ9')
-    </script>
+    </script> -->
     <!-- End Google Tag Manager -->
+
+    <!-- Event snippet for Solicitações de Orçamento conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function() {
+          if (typeof url != 'undefined') {
+            window.location = url
+          }
+        }
+
+        gtag('event', 'conversion', {
+          send_to: 'AW-840306545/jF4gCLidy7UBEPGe2JAD',
+          event_callback: callback
+        })
+        return false
+      }
+    </script>
   </head>
 
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript>
+    <!-- <noscript>
       <iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-PVDSLZ9"
         height="0"
         width="0"
         style="display: none; visibility: hidden;"
       ></iframe>
-    </noscript>
+    </noscript> -->
     <!-- End Google Tag Manager (noscript) -->
 
     <div class="fixed-action-btn" id="btn-fixed">
@@ -101,11 +132,7 @@
                 <a href="#portfolio">Portfólio</a>
               </li>
               <li>
-                <a
-                  class="btn-orcamento"
-                  href="https://form.jotformz.com/92974452958677"
-                  target="_blank"
-                >
+                <a href="#footer">
                   Orçamento
                 </a>
               </li>
@@ -161,7 +188,7 @@
         </li>
         <li>
           <a
-            class="btn-orcamento"
+            onclick="return gtag_report_conversion('https://form.jotformz.com/92974452958677');"
             href="https://form.jotformz.com/92974452958677"
             target="_blank"
           >
@@ -222,14 +249,6 @@
                       alt="Live Design Logo"
                     />
                   </h1>
-                  <br />
-                  <a
-                    href="https://form.jotformz.com/92974452958677"
-                    target="_blank"
-                    class="btn btn-large waves-effect white btn-orcamento"
-                  >
-                    Orçamento
-                  </a>
                 </div>
               </div>
               <div class="col s12 l6 hide-on-med-and-down">
@@ -363,7 +382,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer id="footer">
       <div class="center-align">
         <div class="footer">
           <img
@@ -374,11 +393,20 @@
           <div class="footer__content">
             <h5>Traga vida à sua ideia!</h5>
             <a
-              class="btn-orcamento"
+              onclick="return gtag_report_conversion('https://form.jotformz.com/92974452958677');"
               href="https://form.jotformz.com/92974452958677"
               target="_blank"
+              class="btn btn-large waves-effect white black-text"
+              style="text-decoration: none"
             >
-              Solicite um orçamento
+              Orçamento
+            </a>
+            <a
+              href="https://behance.net/joaojoaotx"
+              target="_blank"
+              class="white-text"
+            >
+              Ver Portfólio Completo
             </a>
             <ul class="row-social-icons">
               <li>
@@ -443,7 +471,7 @@
               </li>
               <li>
                 <a
-                  class="btn-orcamento"
+                  onclick="return gtag_report_conversion('https://form.jotformz.com/92974452958677');"
                   href="https://form.jotformz.com/92974452958677"
                 >
                   Orçamento
