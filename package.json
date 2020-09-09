@@ -17,7 +17,7 @@
     "url": "https://github.com/renansigolo/live-design.git"
   },
   "scripts": {
-    "postversion": "npm run deploy:prod",
+    "postversion": "npm run deploy",
     "clean": "rm -rf .firebase package-lock.json node_modules dist",
     "clean:install": "npm run clean && npm i",
     "build": "NODE_ENV=development gulp",
