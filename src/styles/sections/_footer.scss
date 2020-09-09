@@ -15,6 +15,12 @@ footer {
     align-items: center;
     flex-direction: column;
 
+    .btn-orcamento {
+      text-decoration: none;
+      font-weight: 500;
+      margin: 16px 0;
+    }
+    
     @media #{$medium-and-up} {
       padding-top: 20vh;
     }
