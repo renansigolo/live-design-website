@@ -28,7 +28,6 @@
     "prettier": "prettier --config ./.prettierrc.json --write '**/*.{html,scss,js,json,yml,md}'"
   },
   "dependencies": {
-    "firebase": "^7.19.1",
     "materialize-css": "~1.0.0",
     "smooth-scroll": "^16.1.3"
   },
@@ -52,6 +51,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "imagemin-guetzli": "^3.0.0",
     "imagemin-pngquant": "^9.0.1",
+    "firebase": "^7.20.0",
     "prettier": "^2.1.1"
   },
   "engines": {
