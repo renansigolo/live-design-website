@@ -7,10 +7,10 @@
 
 # dependencies
 /node_modules
-functions/node_modules
-functions/firebase-debug.log
+
 
 .DS_Store
 .firebase
+firebase-debug.log
 
 src/assets
