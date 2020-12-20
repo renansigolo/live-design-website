@@ -33,31 +33,31 @@
       padding-top: 3vh;
     }
 
-    // .btn {
-    //   position: relative;
-    //   padding: 0 2em;
-    //   border: none;
-    //   background: none;
-    //   outline: none;
-    //   color: black;
-    //   mix-blend-mode: screen;
-    //   text-transform: capitalize;
-    //   font-size: 1.2rem;
-    //   font-weight: 700;
-    //   @include scale-on-hover;
-    // }
+    .btn {
+      position: relative;
+      padding: 0 2em;
+      border: none;
+      background: none;
+      outline: none;
+      color: black;
+      mix-blend-mode: screen;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      font-weight: 700;
+      @include scale-on-hover;
+    }
 
-    // .btn::before {
-    //   position: absolute;
-    //   top: 0;
-    //   right: 0;
-    //   bottom: 0;
-    //   left: 0;
-    //   background: #fff;
-    //   border-radius: 50%;
-    //   content: '';
-    //   mix-blend-mode: color-burn;
-    // }
+    .btn::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #fff;
+      border-radius: 50%;
+      content: '';
+      mix-blend-mode: color-burn;
+    }
   }
 }
 
