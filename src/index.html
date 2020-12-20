@@ -43,24 +43,6 @@
       gtag('config', 'AW-840306545')
     </script>
 
-    <!-- Google Tag Manager -->
-    <!-- <script>
-      ;(function(w, d, s, l, i) {
-        w[l] = w[l] || []
-        w[l].push({
-          'gtm.start': new Date().getTime(),
-          event: 'gtm.js'
-        })
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : ''
-        j.async = true
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-        f.parentNode.insertBefore(j, f)
-      })(window, document, 'script', 'dataLayer', 'GTM-PVDSLZ9')
-    </script> -->
-    <!-- End Google Tag Manager -->
-
     <!-- Event snippet for Solicitações de Orçamento conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
       function gtag_report_conversion(url) {
@@ -80,17 +62,6 @@
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <!-- <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-PVDSLZ9"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden;"
-      ></iframe>
-    </noscript> -->
-    <!-- End Google Tag Manager (noscript) -->
-
     <div class="fixed-action-btn" id="btn-fixed">
       <a class="btn-floating btn-large waves-effect waves-light" href="#">
         <i class="large material-icons">arrow_upward</i>
@@ -132,7 +103,15 @@
                 <a href="#portfolio">Portfólio</a>
               </li>
               <li>
-                <a href="#footer">Orçamento</a>
+                <a
+                  onclick="return gtag_report_conversion('https://form.jotformz.com/92974452958677');"
+                  href="https://form.jotformz.com/92974452958677"
+                  target="_blank"
+                  class="btn-orcamento"
+                  rel="noopener"
+                >
+                  Orçamento
+                </a>
               </li>
               <li class="social-icons">
                 <a
@@ -189,7 +168,7 @@
             onclick="return gtag_report_conversion('https://form.jotformz.com/92974452958677');"
             href="https://form.jotformz.com/92974452958677"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
           >
             Orçamento
           </a>
@@ -396,7 +375,7 @@
               href="https://form.jotformz.com/92974452958677"
               target="_blank"
               class="btn btn-large btn-orcamento waves-effect white black-text"
-              rel="noopener noreferrer"
+              rel="noopener"
             >
               Solicite um Orçamento
             </a>
