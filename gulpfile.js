@@ -44,7 +44,7 @@ const scss = () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(cssPlugins))
     .pipe(
-      rename(function(path) {
+      rename(function (path) {
         if (path.extname === '.css') {
           path.basename = 'styles'
           path.basename += '.min'
@@ -60,7 +60,7 @@ const js = () => {
   return src('src/js/**/*.js', { sourcemaps: isDev })
     .pipe(concat('scripts.js'))
     .pipe(
-      rename(function(path) {
+      rename(function (path) {
         if (path.extname === '.js') {
           path.basename += '.min'
         }
@@ -80,7 +80,7 @@ const jsLibs = () => {
   return src(libPaths)
     .pipe(concat('libs.js'))
     .pipe(
-      rename(function(path) {
+      rename(function (path) {
         if (path.extname === '.js') {
           path.basename += '.min'
         }

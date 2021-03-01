@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Init Smooth Scrool script
   const smoothOptions = {
     speed: 300
@@ -7,8 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
   new SmoothScroll('a[href*="#"]', smoothOptions)
 
   // Init Sidebar
+
   const allSidenav = document.querySelectorAll('.sidenav')
   M.Sidenav.init(allSidenav)
+
+  const carousel = document.querySelectorAll('.carousel')
+  const carouselOptions = {
+    fullWidth: false,
+    indicators: true
+  }
+  M.Carousel.init(carousel, carouselOptions);
 
   // Close Sidebar on mobile after click
   let mobileMenu = document.querySelector('#mobile-menu')

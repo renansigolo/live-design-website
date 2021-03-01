@@ -1,0 +1,25 @@
+/* Stages Section
+  =============== */
+
+.stages {
+  padding: 2vh 0;
+  margin-bottom: 12vh;
+
+  @media #{$large-and-up} {
+    .l4 {
+      padding: 0 2rem;
+    }
+  }
+
+  &__content {
+    p,
+    ul {
+      color: var(--grey);
+      font-weight: 600;
+    }
+    ul:not(.browser-default) > li {
+      list-style: disc !important;
+      margin-left: 1rem;
+    }
+  }
+}

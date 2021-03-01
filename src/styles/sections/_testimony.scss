@@ -1,0 +1,37 @@
+/* Testimony Section
+  =============== */
+
+.testimony {
+  padding: 2vh 0;
+  margin-bottom: 12vh;
+  h2 {
+    margin-bottom: 0;
+  }
+
+  &__subtitle {
+    color: var(--grey);
+    font-weight: 600;
+    > p {
+      margin-top: 8px;
+    }
+  }
+  .col.m6 {
+    padding-bottom: 64px;
+    @media #{$medium-and-up} {
+      padding: 0 32px 32px 0;
+    }
+    @media #{$large-and-up} {
+      padding: 0 64px 64px 0;
+    }
+  }
+
+  img {
+    max-width: 120px;
+  }
+
+  &__footer {
+    span {
+      color: var(--pink);
+    }
+  }
+}

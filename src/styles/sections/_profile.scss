@@ -1,0 +1,51 @@
+/* Profile Section
+  =============== */
+
+.profile {
+  .row {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    @media #{$large-and-up} {
+      flex-direction: row;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: fit-content;
+
+    p {
+      color: var(--grey);
+      font-weight: 600;
+    }
+    @media #{$large-and-up} {
+      h2 {
+        white-space: nowrap;
+      }
+    }
+
+    // @media #{$small-and-down} {
+    //   br {
+    //     content: ' ';
+    //   }
+    //   br:after {
+    //     content: ' ';
+    //   }
+    // }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-height: 260px;
+    }
+  }
+}
