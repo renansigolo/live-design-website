@@ -17,6 +17,9 @@
       color: var(--grey);
       font-weight: 600;
     }
+    ul {
+      font-size: 1.20rem;
+    }
     ul:not(.browser-default) > li {
       list-style: disc !important;
       margin-left: 1rem;
