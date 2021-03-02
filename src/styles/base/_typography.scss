@@ -30,6 +30,22 @@
   font-weight: 700;
 }
 
+// $fonts: (
+//   'mosk-normal': '',
+//   'mosk-light': 300,
+//   'mosk-medium': 500,
+//   'mosk-semi-bold': 600,
+//   'mosk-bold': 700,
+// );
+
+// @each $name, $weight in $fonts {
+//   @font-face {
+//     font-family: Mosk;
+//     src: url('../fonts/#{$name}.ttf');
+//     font-weight: $weight;
+//   }
+// }
+
 h1 {
   font-size: 2.6rem;
   line-height: 140%;

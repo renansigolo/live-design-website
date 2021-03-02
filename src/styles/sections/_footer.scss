@@ -8,7 +8,7 @@ footer {
 
   .footer {
     padding-top: 10vh;
-    color: #fff;
+    color: var(--white);
     min-height: 60vh;
     display: flex;
     justify-content: center;
@@ -73,7 +73,7 @@ footer {
       }
 
       li a {
-        color: #fff;
+        color: var(--white);
         font-weight: 600;
       }
 
