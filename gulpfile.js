@@ -10,7 +10,7 @@ const cssnano = require('cssnano')
 const del = require('del')
 const htmlmin = require('gulp-htmlmin')
 const imagemin = require('gulp-imagemin')
-const imageminGuetzli = require('imagemin-guetzli')
+// const imageminGuetzli = require('imagemin-guetzli')
 const imageminPngquant = require('imagemin-pngquant')
 const postcss = require('gulp-postcss')
 const rename = require('gulp-rename')
@@ -33,8 +33,8 @@ const paths = {
   website: 'https://livedesign.com.br',
   styles: {
     input: 'src/styles',
-    output: 'dist/css/'
-  }
+    output: 'dist/css/',
+  },
 }
 
 // Watch SCSS files -> sourcemap, autroprefixer, minify with cssnano, rename .css to .min.css
@@ -74,7 +74,7 @@ const js = () => {
 const jsLibs = () => {
   const libPaths = [
     'node_modules/materialize-css/dist/js/materialize.min.js',
-    'node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js'
+    'node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js',
   ]
 
   return src(libPaths)
@@ -100,7 +100,7 @@ const minifyHtml = () => {
   return src('src/**/*.html')
     .pipe(
       htmlmin({
-        collapseWhitespace: true
+        collapseWhitespace: true,
       })
     )
     .pipe(dest(paths.output))
@@ -109,11 +109,11 @@ const minifyHtml = () => {
 // Create sitemap.xml
 const generateSitemap = () => {
   return src('src/**/*.html', {
-    read: false
+    read: false,
   })
     .pipe(
       sitemap({
-        siteUrl: paths.website
+        siteUrl: paths.website,
       })
     )
     .pipe(dest(paths.output))
@@ -126,8 +126,8 @@ const optimizeGif = () => {
       imagemin([
         imagemin.gifsicle({
           interlaced: true,
-          optimizationLevel: 3
-        })
+          optimizationLevel: 3,
+        }),
       ])
     )
     .pipe(dest(paths.output))
@@ -142,9 +142,7 @@ const optimizePng = () => {
 
 // Optimize Images - JPG ang JPEG
 const optimizeJpg = () => {
-  return src('src/**/*.{jpg,jpeg}')
-    .pipe(imagemin([imageminGuetzli()]))
-    .pipe(dest(paths.output))
+  return src('src/**/*.{jpg,jpeg}').pipe(imagemin()).pipe(dest(paths.output))
 }
 
 // Copy remaining files to dist
@@ -152,7 +150,7 @@ const copy = () => {
   return src([
     'src/**/*.{xml,txt,eot,ttf,woff,woff2,otf,ttf,php,css,js,json,map}',
     '!src/js/**/*',
-    `!${paths.styles.input}/**/*`
+    `!${paths.styles.input}/**/*`,
   ]).pipe(dest(paths.output))
 }
 
@@ -169,8 +167,8 @@ const watchFiles = () => {
 const startServer = () => {
   browserSync.init({
     server: {
-      baseDir: './src/'
-    }
+      baseDir: './src/',
+    },
   })
 
   watchFiles()
