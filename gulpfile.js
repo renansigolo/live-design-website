@@ -1,39 +1,39 @@
-'use strict'
+"use strict"
 
 /**************** Global Imports ****************/
 
-const { series, parallel, watch, src, dest } = require('gulp')
-const browserSync = require('browser-sync').create()
-const autoprefixer = require('autoprefixer')
-const concat = require('gulp-concat')
-const cssnano = require('cssnano')
-const del = require('del')
-const htmlmin = require('gulp-htmlmin')
-const imagemin = require('gulp-imagemin')
+const { series, parallel, watch, src, dest } = require("gulp")
+const browserSync = require("browser-sync").create()
+const autoprefixer = require("autoprefixer")
+const concat = require("gulp-concat")
+const cssnano = require("cssnano")
+const del = require("del")
+const htmlmin = require("gulp-htmlmin")
+const imagemin = require("gulp-imagemin")
 // const imageminGuetzli = require('imagemin-guetzli')
-const imageminPngquant = require('imagemin-pngquant')
-const postcss = require('gulp-postcss')
-const rename = require('gulp-rename')
-const sass = require('gulp-sass')
-const sitemap = require('gulp-sitemap')
+const imageminPngquant = require("imagemin-pngquant")
+const postcss = require("gulp-postcss")
+const rename = require("gulp-rename")
+const sass = require("gulp-sass")
+const sitemap = require("gulp-sitemap")
 
 /**************** Functions ****************/
 
 // Check Node Env
-let isDev = process.env.NODE_ENV === 'development' ? true : false
+let isDev = process.env.NODE_ENV === "development" ? true : false
 
 /**
  * Paths to project folders
  */
 
 const paths = {
-  input: 'src/',
-  output: 'dist/',
-  assets: 'src/assets',
-  website: 'https://livedesign.com.br',
+  input: "src/",
+  output: "dist/",
+  assets: "src/assets",
+  website: "https://livedesign.com.br",
   styles: {
-    input: 'src/styles',
-    output: 'dist/css/',
+    input: "src/styles",
+    output: "dist/css/",
   },
 }
 
@@ -41,13 +41,13 @@ const paths = {
 const cssPlugins = [autoprefixer(), cssnano()]
 const scss = () => {
   return src(`${paths.styles.input}/main.scss`, { sourcemaps: isDev })
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass().on("error", sass.logError))
     .pipe(postcss(cssPlugins))
     .pipe(
       rename(function (path) {
-        if (path.extname === '.css') {
-          path.basename = 'styles'
-          path.basename += '.min'
+        if (path.extname === ".css") {
+          path.basename = "styles"
+          path.basename += ".min"
         }
       })
     )
@@ -57,12 +57,12 @@ const scss = () => {
 
 // Watch JS files -> sourcemap, minifiy with uglify, concat
 const js = () => {
-  return src('src/js/**/*.js', { sourcemaps: isDev })
-    .pipe(concat('scripts.js'))
+  return src("src/js/**/*.js", { sourcemaps: isDev })
+    .pipe(concat("scripts.js"))
     .pipe(
       rename(function (path) {
-        if (path.extname === '.js') {
-          path.basename += '.min'
+        if (path.extname === ".js") {
+          path.basename += ".min"
         }
       })
     )
@@ -73,16 +73,16 @@ const js = () => {
 // Concat Minified JS libraries
 const jsLibs = () => {
   const libPaths = [
-    'node_modules/materialize-css/dist/js/materialize.min.js',
-    'node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js',
+    "node_modules/materialize-css/dist/js/materialize.min.js",
+    "node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js",
   ]
 
   return src(libPaths)
-    .pipe(concat('libs.js'))
+    .pipe(concat("libs.js"))
     .pipe(
       rename(function (path) {
-        if (path.extname === '.js') {
-          path.basename += '.min'
+        if (path.extname === ".js") {
+          path.basename += ".min"
         }
       })
     )
@@ -97,7 +97,7 @@ const clean = () => {
 
 // Minify HTML files
 const minifyHtml = () => {
-  return src('src/**/*.html')
+  return src("src/**/*.html")
     .pipe(
       htmlmin({
         collapseWhitespace: true,
@@ -108,7 +108,7 @@ const minifyHtml = () => {
 
 // Create sitemap.xml
 const generateSitemap = () => {
-  return src('src/**/*.html', {
+  return src("src/**/*.html", {
     read: false,
   })
     .pipe(
@@ -121,7 +121,7 @@ const generateSitemap = () => {
 
 // Optimize Images - GIF, SVG and ICO
 const optimizeGif = () => {
-  return src('src/**/*.{gif,svg,ico}')
+  return src("src/**/*.{gif,svg,ico}")
     .pipe(
       imagemin([
         imagemin.gifsicle({
@@ -135,39 +135,39 @@ const optimizeGif = () => {
 
 // Optimize Images - PNG
 const optimizePng = () => {
-  return src('src/**/*.png')
+  return src("src/**/*.png")
     .pipe(imagemin([imageminPngquant()]))
     .pipe(dest(paths.output))
 }
 
 // Optimize Images - JPG ang JPEG
 const optimizeJpg = () => {
-  return src('src/**/*.{jpg,jpeg}').pipe(imagemin()).pipe(dest(paths.output))
+  return src("src/**/*.{jpg,jpeg}").pipe(imagemin()).pipe(dest(paths.output))
 }
 
 // Copy remaining files to dist
 const copy = () => {
   return src([
-    'src/**/*.{xml,txt,eot,ttf,woff,woff2,otf,ttf,php,css,js,json,map}',
-    '!src/js/**/*',
+    "src/**/*.{xml,txt,eot,ttf,woff,woff2,otf,ttf,php,css,js,json,map}",
+    "!src/js/**/*",
     `!${paths.styles.input}/**/*`,
   ]).pipe(dest(paths.output))
 }
 
 // Watch
 const watchFiles = () => {
-  watch('src/**/*.html').on('change', browserSync.reload)
-  watch('src/images/**/*').on('change', browserSync.reload)
+  watch("src/**/*.html").on("change", browserSync.reload)
+  watch("src/images/**/*").on("change", browserSync.reload)
   watch(`${paths.styles.input}/**/*.scss`, scss)
-  watch('src/js/**/*.js', js)
-  watch('node_modules/**/*', jsLibs)
+  watch("src/js/**/*.js", js)
+  watch("node_modules/**/*", jsLibs)
 }
 
 // Serve
 const startServer = () => {
   browserSync.init({
     server: {
-      baseDir: './src/',
+      baseDir: "./src/",
     },
   })
 

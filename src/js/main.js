@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   // Init Smooth Scrool script
   const smoothOptions = {
     speed: 300,
@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Init Sidebar
 
-  const allSidenav = document.querySelectorAll('.sidenav')
+  const allSidenav = document.querySelectorAll(".sidenav")
   M.Sidenav.init(allSidenav)
 
-  const carousel = document.querySelectorAll('.carousel')
+  const carousel = document.querySelectorAll(".carousel")
   const carouselOptions = {
     fullWidth: false,
     indicators: true,
@@ -19,26 +19,26 @@ document.addEventListener('DOMContentLoaded', function () {
   M.Carousel.init(carousel, carouselOptions)
 
   // Close Sidebar on mobile after click
-  let mobileMenu = document.querySelector('#mobile-menu')
+  let mobileMenu = document.querySelector("#mobile-menu")
   let sideNav = M.Sidenav.getInstance(mobileMenu)
-  let mobileMenuItems = document.querySelectorAll('#mobile-menu li a')
+  let mobileMenuItems = document.querySelectorAll("#mobile-menu li a")
 
   mobileMenuItems.forEach((menuItem) => {
-    menuItem.addEventListener('click', () => {
+    menuItem.addEventListener("click", () => {
       sideNav.close()
     })
   })
 
   // Init Modal
-  const modalsSelected = document.querySelectorAll('.modal')
+  const modalsSelected = document.querySelectorAll(".modal")
   M.Modal.init(modalsSelected)
 
   // Show or Hide the button when scroll after portfolio
-  let btnFixed = document.querySelector('#btn-fixed')
-  let portfolio = document.querySelector('#portfolio')
+  let btnFixed = document.querySelector("#btn-fixed")
+  let portfolio = document.querySelector("#portfolio")
 
-  document.addEventListener('scroll', () => {
+  document.addEventListener("scroll", () => {
     btnFixed.style.transform =
-      window.pageYOffset >= portfolio.offsetTop ? 'scale(1)' : 'scale(0)'
+      window.pageYOffset >= portfolio.offsetTop ? "scale(1)" : "scale(0)"
   })
 })

@@ -33,10 +33,10 @@
 
     @media #{$small-and-down} {
       br {
-        content: ' ';
+        content: " ";
       }
       br:after {
-        content: ' ';
+        content: " ";
       }
     }
   }

@@ -9,8 +9,8 @@
   --green: #00cdc2;
   --pink: #ff0046;
   --white: #fff;
-  --bg-header: url('../images/backgrounds/bg-header.svg');
-  --bg-footer: url('../images/backgrounds/bg-footer.svg');
+  --bg-header: url("../images/backgrounds/bg-header.svg");
+  --bg-footer: url("../images/backgrounds/bg-footer.svg");
 }
 
 // Mixins
@@ -25,7 +25,7 @@ $default-size: 1.1 !default;
 // Global Elements
 html {
   scroll-behavior: smooth;
-  font-family: 'Mosk';
+  font-family: "Mosk";
 }
 
 body {

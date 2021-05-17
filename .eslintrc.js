@@ -3,14 +3,13 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends: 'eslint:recommended',
+  "ignorePatterns": ["**/*.min.*", ],
+  extends: "eslint:recommended",
   parserOptions: {
-    sourceType: 'module',
+    sourceType: "module",
   },
   rules: {
-    indent: ['error', 2],
-    'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single'],
-    allowArrowFunctions: true,
+    "no-undef": "off",
+    "allowArrowFunctions": "off",
   },
 }

@@ -39,21 +39,21 @@
       function gtag() {
         dataLayer.push(arguments)
       }
-      gtag('js', new Date())
-      gtag('config', 'AW-840306545')
+      gtag("js", new Date())
+      gtag("config", "AW-840306545")
     </script>
 
     <!-- Event snippet for Solicitações de Orçamento conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
       function gtag_report_conversion(url) {
         var callback = function () {
-          if (typeof url != 'undefined') {
+          if (typeof url != "undefined") {
             window.location = url
           }
         }
 
-        gtag('event', 'conversion', {
-          send_to: 'AW-840306545/jF4gCLidy7UBEPGe2JAD',
+        gtag("event", "conversion", {
+          send_to: "AW-840306545/jF4gCLidy7UBEPGe2JAD",
           event_callback: callback,
         })
         return false
@@ -383,7 +383,11 @@
           <div class="row">
             <div class="col s12 m6">
               <img
-                class="circle responsive-img hide-on-small-only hide-on-small-only"
+                class="
+                  circle
+                  responsive-img
+                  hide-on-small-only hide-on-small-only
+                "
                 loading="eager"
                 src="images/avatar/renan.jpg"
                 alt="Renan Sigolo Profile Picture"
