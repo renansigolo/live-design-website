@@ -15,7 +15,7 @@ const imageminPngquant = require("imagemin-pngquant")
 const postcss = require("gulp-postcss")
 const rename = require("gulp-rename")
 const sitemap = require("gulp-sitemap")
-const sass = require('gulp-sass')(require('sass'));
+const sass = require("gulp-sass")(require("sass"))
 
 /**************** Functions ****************/
 
