@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Init Smooth Scrool script
   const smoothOptions = {
-    speed: 300,
+    speed: 100,
   }
 
   new SmoothScroll('a[href*="#"]', smoothOptions)
 
   // Init Sidebar
-
   const allSidenav = document.querySelectorAll(".sidenav")
   M.Sidenav.init(allSidenav)
 

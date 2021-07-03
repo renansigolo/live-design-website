@@ -73,7 +73,7 @@ const js = () => {
 // Concat Minified JS libraries
 const jsLibs = () => {
   const libPaths = [
-    "node_modules/materialize-css/dist/js/materialize.min.js",
+    "node_modules/@materializecss/materialize/dist/js/materialize.min.js",
     "node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js",
   ]
 
