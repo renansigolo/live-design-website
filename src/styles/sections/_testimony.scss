@@ -4,6 +4,7 @@
 .testimony {
   padding: 2vh 0;
   margin-bottom: 12vh;
+
   h2 {
     margin-bottom: 0;
   }
@@ -26,15 +27,27 @@
   }
 
   img {
-    max-width: 70px;
+    max-width: 50px;
     @media #{$medium-and-up} {
       max-width: 120px;
     }
   }
 
   &__footer {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    margin-top: -1em;
+
     span {
       color: var(--pink);
+    }
+
+    p {
+      @media #{$small-and-down} {
+        margin-left: 1em;
+      }
     }
   }
 }
