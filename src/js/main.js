@@ -1,13 +1,10 @@
+/** Scroll to the About Section */
+const scrollToAboutSection = () => {
+  location.href = "#about"
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Init Smooth Scrool script
-  const smoothOptions = {
-    speed: 300,
-  }
-
-  new SmoothScroll('a[href*="#"]', smoothOptions)
-
   // Init Sidebar
-
   const allSidenav = document.querySelectorAll(".sidenav")
   M.Sidenav.init(allSidenav)
 

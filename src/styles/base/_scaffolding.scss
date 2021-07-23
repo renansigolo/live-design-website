@@ -13,6 +13,13 @@
   --bg-footer: url("../images/backgrounds/bg-footer.svg");
 }
 
+/**
+ * Enable smooth scrolling on the whole document
+ */
+html {
+  scroll-behavior: smooth;
+}
+
 // Mixins
 $default-size: 1.1 !default;
 @mixin scale-on-hover($size: $default-size) {

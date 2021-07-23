@@ -14,8 +14,8 @@ const imagemin = require("gulp-imagemin")
 const imageminPngquant = require("imagemin-pngquant")
 const postcss = require("gulp-postcss")
 const rename = require("gulp-rename")
-const sass = require("gulp-sass")
 const sitemap = require("gulp-sitemap")
+const sass = require("gulp-sass")(require("sass"))
 
 /**************** Functions ****************/
 
@@ -73,8 +73,7 @@ const js = () => {
 // Concat Minified JS libraries
 const jsLibs = () => {
   const libPaths = [
-    "node_modules/materialize-css/dist/js/materialize.min.js",
-    "node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js",
+    "node_modules/@materializecss/materialize/dist/js/materialize.min.js"
   ]
 
   return src(libPaths)
