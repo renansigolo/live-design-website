@@ -1,0 +1,82 @@
+/* Hero Section
+  =============== */
+.bg-hero {
+  background-image: var(--bg-header);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero {
+  color: var(--white);
+  min-height: 85vh;
+
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 75vh;
+  }
+
+  &__content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 29vh;
+
+    .title {
+      padding-top: 3vh;
+    }
+
+    .btn {
+      @include scale-on-hover;
+
+      background: none;
+      border: 0;
+      color: #000;
+      font-size: 1.2rem;
+      font-weight: 700;
+      mix-blend-mode: screen;
+      outline: none;
+      padding: 0 2em;
+      position: relative;
+      text-transform: capitalize;
+
+      @media #{$large-and-up} {
+        margin-top: 16px;
+      }
+    }
+
+    .btn::before {
+      background: var(--white);
+      border-radius: 50%;
+      bottom: 0;
+      content: '';
+      left: 0;
+      mix-blend-mode: color-burn;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
+.arrow-down {
+  align-items: center;
+  color: var(--grey);
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0 80px;
+
+  div {
+    color: var(--grey);
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  img {
+    transform: rotate(180deg);
+  }
+}

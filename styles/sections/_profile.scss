@@ -1,0 +1,43 @@
+/* Profile Section
+  =============== */
+
+.profile {
+  .row {
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+
+    @media #{$large-and-up} {
+      flex-direction: row;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: fit-content;
+
+    p {
+      color: var(--grey);
+      font-weight: 600;
+    }
+
+    @media #{$large-and-up} {
+      h2 {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-height: 260px;
+    }
+  }
+}

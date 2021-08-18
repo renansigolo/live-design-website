@@ -1,0 +1,20 @@
+/* Portfolio Section
+  =============== */
+
+.portfolio {
+  &__cases {
+    img {
+      height: 100%;
+      max-height: 380px;
+      object-fit: cover;
+      width: 100%;
+
+      &:hover {
+        @include scale-on-hover(1.01);
+
+        box-shadow: var(--shadow);
+        cursor: pointer;
+      }
+    }
+  }
+}

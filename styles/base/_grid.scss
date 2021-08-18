@@ -1,0 +1,28 @@
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@mixin grid($columns) {
+  display: grid;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+
+  @media (min-width: 600px) {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.grid-1 {
+  @include grid(1);
+}
+
+.grid-2 {
+  @include grid(2);
+}
+
+.grid-3 {
+  @include grid(3);
+}

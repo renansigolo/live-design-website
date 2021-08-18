@@ -1,63 +1,33 @@
 {
   "name": "live-design",
-  "version": "2.5.0",
-  "description": "Live Design Website",
-  "keywords": [
-    "live design, website"
-  ],
-  "homepage": "https://livedesign.com.br/",
-  "bugs": {
-    "url": "https://github.com/renansigolo/live-design/issues",
-    "email": "renan.sigolo@gmail.com"
-  },
-  "license": "Apache-2.0",
-  "author": "Renan Sigolo <renan.sigolo@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/renansigolo/live-design.git"
-  },
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build:prod": "NODE_ENV=production gulp",
-    "build": "NODE_ENV=development gulp",
-    "clean:install": "npm run clean && npm i",
-    "clean": "rm -rf .firebase package-lock.json node_modules dist",
-    "deploy:prod": "npm run build:prod && firebase deploy",
-    "deploy": "npm run build:prod && firebase hosting:channel:deploy develop",
-    "format": "prettier '**/*' --write --ignore-unknown",
-    "lint": "eslint .",
-    "postversion": "npm run deploy:prod && git push",
-    "server": "firebase serve",
-    "start": "NODE_ENV=development gulp watch"
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "next-sitemap && next export",
+    "start": "next start",
+    "fix": "next lint --fix && stylelint '**/*.scss' --fix",
+    "lint": "next lint && stylelint '**/*.scss'",
+    "deploy:staging": "npm run build && firebase hosting:channel:deploy staging",
+    "deploy:prod": "npm run build && firebase deploy",
+    "format": "prettier '**/*' --write --ignore-unknown"
   },
   "dependencies": {
-    "@materializecss/materialize": "^1.1.0-alpha"
+    "@material-ui/core": "^4.12.3",
+    "@materializecss/materialize": "^1.1.0-alpha",
+    "next": "11.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.8",
-    "@babel/preset-env": "^7.14.8",
-    "autoprefixer": "^10.3.1",
-    "browser-sync": "^2.27.4",
-    "cssnano": "^5.0.6",
-    "del": "^6.0.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^6.0.0",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-postcss": "^9.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0",
-    "gulp-sitemap": "^8.0.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "imagemin-pngquant": "^9.0.2",
-    "postcss": "^8.3.5",
-    "prettier": "^2.3.2",
-    "sass": "^1.35.2"
-  },
-  "engines": {
-    "node": ">=14.16.0",
-    "npm": ">=6.14.11",
-    "yarn": "NO LONGER USED - Please use npm"
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.0",
+    "next-sitemap": "^1.6.157",
+    "prettier": "2.3.2",
+    "sass": "^1.38.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^22.0.0"
   }
 }
