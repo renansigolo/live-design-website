@@ -2,6 +2,30 @@
 
 Source code of the Live Design website
 
+## Development
+
+If you're configuring this app for the first time
+
+1. Clone the project
+
+```
+git clone https://github.com/renansigolo/live-design-website.git
+```
+
+2. Grab the .env variables from the vercel server
+
+> You will need the [Vercel CLI](https://vercel.com/cli) installed on your local machine
+
+```
+vercel env pull
+```
+
+2. Rename you `.env` file to `.env.local`
+
+```
+mv .env .env.local
+```
+
 ## Usage
 
 ### Install Dependencies
