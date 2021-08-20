@@ -27,11 +27,15 @@
     }
   }
 
-  img {
-    max-width: 50px;
+  &__header {
+    .desk-only {
+      @media #{$small-and-down} {
+        display: none;
+      }
 
-    @media #{$medium-and-up} {
-      max-width: 120px;
+      @media #{$medium-and-up} {
+        max-width: 120px;
+      }
     }
   }
 
@@ -41,6 +45,12 @@
     justify-content: flex-start;
     margin-top: -1em;
     width: 100%;
+
+    @media #{$medium-and-up} {
+      img {
+        display: none !important;
+      }
+    }
 
     span {
       color: var(--pink);

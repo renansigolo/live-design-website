@@ -1,11 +1,8 @@
+import Image from 'next/image'
 import { gtagFormConversion } from '../lib/gtag'
+import BannerHero from '/public/images/banner-hero.svg'
 
 export default function Hero() {
-  /** Scroll to the About Section */
-  const scrollToAboutSection = () => {
-    location.href = '#about'
-  }
-
   return (
     <div className="bg-hero">
       <section id="hero" className="hero">
@@ -16,10 +13,10 @@ export default function Hero() {
                 <h1 className="title">
                   Somos um estúdio de design especializado
                   em&nbsp;projetos&nbsp;de <b>Identidade&nbsp;Visual.</b>
-                  <img
-                    src="images/icon-live-design-white.svg"
-                    height="40px"
-                    width="58px"
+                  <Image
+                    src="/images/icon-live-design-white.svg"
+                    height={40}
+                    width={58}
                     alt="Live Design Logo"
                   />
                 </h1>
@@ -35,10 +32,10 @@ export default function Hero() {
               </div>
             </div>
             <div className="col s12 l6 hide-on-med-and-down">
-              <img
+              <Image
                 className="hero-img"
                 loading="eager"
-                src="images/banner-hero.svg"
+                src={BannerHero}
                 alt="Banner Hero"
               />
             </div>
@@ -52,9 +49,10 @@ export default function Hero() {
         >
           <div className="arrow-down">
             <span>Saiba mais</span>
-            <img
-              src="images/icon-arrow-upward.svg"
-              height="40px"
+            <Image
+              src="/images/icon-arrow-upward.svg"
+              height={40}
+              width={40}
               alt="Arrow Down"
             />
           </div>

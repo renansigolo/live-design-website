@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Modal(props) {
   if (!props.show) {
     return null
@@ -6,25 +8,30 @@ export default function Modal(props) {
   return (
     <div className="modal-container" onClick={props.onClose}>
       <div id={`modal-${id}`} className="custom-modal">
-        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="grid-1 modal-content"
+          onClick={(e) => e.stopPropagation()}
+        >
           <h4>{title}</h4>
-          <img
-            className="responsive-img"
+          <Image
+            src={`/images/portfolio/${id}/thumbnail.png`}
+            alt={`Modal Image Thumbnail ${id}`}
+            width={512}
+            height={512}
+            layout={'intrinsic'}
+            objectFit={'cover'}
             loading="lazy"
-            width="512"
-            height="512"
-            src={`images/portfolio/${id}/thumbnail.png`}
-            alt="Modal Image"
           />
           {images.map((imageIndex, index) => (
-            <img
+            <Image
               key={index}
-              className="responsive-img"
+              src={`/images/portfolio/${id}/modal-${imageIndex + 1}.png`}
+              alt={`Modal Image ${imageIndex + 1}`}
+              layout="intrinsic"
+              width={512}
+              height={680}
+              objectFit="cover"
               loading="lazy"
-              width="512"
-              height="512"
-              src={`images/portfolio/${id}/modal-${imageIndex + 1}.png`}
-              alt="Modal Image"
             />
           ))}
           <div className="modal-footer">

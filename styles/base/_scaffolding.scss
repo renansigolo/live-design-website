@@ -21,7 +21,7 @@ $default-size: 1.1 !default;
 @mixin scale-on-hover($size: $default-size) {
   &:hover {
     transform: scale($size);
-    transition: all 0.5s;
+    transition: transform 0.5s;
   }
 }
 
@@ -61,12 +61,6 @@ section {
   bottom: 30px;
   position: fixed;
   right: 30px;
-}
-
-.arrow-down {
-  img {
-    transform: rotate(180deg);
-  }
 }
 
 .mt-8 {

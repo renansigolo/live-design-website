@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useState } from 'react'
 import Modal from './Modal'
 
@@ -56,7 +57,7 @@ export default function Portfolio() {
         <div className="portfolio__cases">
           <div className="grid-2">
             {modalData.map((item, index) => (
-              <img
+              <Image
                 key={index}
                 onClick={() => {
                   setModalContent(item)
@@ -64,10 +65,10 @@ export default function Portfolio() {
                 }}
                 className={`responsive-img modal-${index}`}
                 loading="lazy"
-                height="512"
-                width="512"
-                src={`images/portfolio/${item.id}/thumbnail.png`}
-                alt="Portfolio Image Placeholder"
+                width={632}
+                height={380}
+                src={`/images/portfolio/${item.id}/thumbnail.png`}
+                alt={`Portfolio Image Thumbnail of ${item.title}`}                
               />
             ))}
           </div>
