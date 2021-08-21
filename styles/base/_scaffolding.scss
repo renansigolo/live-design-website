@@ -9,9 +9,7 @@
   --white: #fff;
   --bg-header: url('../../public/images/bg-header.svg');
   --bg-footer: url('../../public/images/bg-footer.svg');
-  --shadow:
-    0 4px 5px 0 rgba(0, 0, 0, 0.14),
-    0 1px 10px 0 rgba(0, 0, 0, 0.12),
+  --shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
     0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 
@@ -21,27 +19,15 @@ $default-size: 1.1 !default;
 @mixin scale-on-hover($size: $default-size) {
   &:hover {
     transform: scale($size);
-    transition: all 0.5s;
+    transition: transform 0.5s;
   }
 }
 
 // Global Elements
 html {
-  font-family:
-    'Mosk',
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    'Noto Sans',
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
+  font-family: 'Mosk', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     'Noto Color Emoji';
   scroll-behavior: smooth;
 }
@@ -61,12 +47,6 @@ section {
   bottom: 30px;
   position: fixed;
   right: 30px;
-}
-
-.arrow-down {
-  img {
-    transform: rotate(180deg);
-  }
 }
 
 .mt-8 {

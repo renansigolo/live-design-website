@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import AvatarJoao from '/public/images/avatar/joao.jpg'
+
 export default function Profile() {
   return (
     <section id="profile" className="profile">
@@ -20,11 +23,13 @@ export default function Profile() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <Image
+                src={AvatarJoao}
+                alt="Profile Image Joao"
                 className="circle responsive-img"
-                loading="eager"
-                src="images/avatar/joao.jpg"
-                alt="Banner About"
+                height={260}
+                width={260}
+                placeholder="blur"
               />
             </a>
           </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export default function Testimony() {
   const testimonydata = [
     {
@@ -41,21 +42,25 @@ export default function Testimony() {
         </div>
         <div className="row">
           {testimonydata.map(({ id, fullName, company, description }) => (
-            <div className="col s12 m6" key={id}>
-              <img
-                className="circle responsive-img hide-on-small-only"
-                loading="lazy"
-                src={`images/avatar/${id}.jpg`}
-                alt={`${fullName} Profile Picture`}
-              />
+            <div className="col s12 m6 testimony__header" key={id}>
+              <div className="desk-only">
+                <Image
+                  className="circle desk-only"
+                  height={120}
+                  width={120}
+                  src={`/images/avatar/${id}.jpg`}
+                  alt={`${fullName} Profile Picture`}
+                />
+              </div>
 
               <p>&quot;{description}&quot;</p>
 
               <div className="testimony__footer">
-                <img
-                  className="circle hide-on-med-and-up"
-                  loading="lazy"
-                  src={`images/avatar/${id}.jpg`}
+                <Image
+                  className="circle profile-mobile"
+                  height={50}
+                  width={50}
+                  src={`/images/avatar/${id}.jpg`}
                   alt={`${fullName} Profile Picture`}
                 />
                 <p>

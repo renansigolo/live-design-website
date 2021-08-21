@@ -64,42 +64,43 @@ footer {
       }
     }
   }
+}
 
-  .footer-copyright {
-    padding: 18px 0;
+.copyright {
+  padding: 18px 0;
 
-    .container {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-      @media #{$medium-and-up} {
-        flex-direction: row;
+    @media #{$medium-and-up} {
+      flex-direction: row;
+    }
+  }
+
+  &__links {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      @include scale-on-hover;
+
+      a {
+        color: var(--white);
+        cursor: pointer;
+        font-weight: 600;
+        margin: 6px 0;
       }
     }
 
-    &__links {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
+    @media #{$medium-and-up} {
+      flex-direction: row;
 
       li {
-        @include scale-on-hover;
-
-        a {
-          color: var(--white);
-          font-weight: 600;
-          margin: 6px 0;
-        }
-      }
-
-      @media #{$medium-and-up} {
-        flex-direction: row;
-
-        li {
-          padding: 0 8px;
-        }
+        padding: 0 8px;
       }
     }
   }

@@ -4,6 +4,7 @@
 .portfolio {
   &__cases {
     img {
+      border-radius: 8px;
       height: 100%;
       max-height: 380px;
       object-fit: cover;

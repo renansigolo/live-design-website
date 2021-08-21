@@ -1,3 +1,3 @@
 module.exports = {
-  siteUrl: 'https://livedesign.com.br'
+  siteUrl: 'https://livedesign.com.br',
 }
