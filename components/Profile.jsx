@@ -23,11 +23,10 @@ export default function Profile() {
             >
               <Image
                 className="circle responsive-img"
-                loading="eager"
                 height={260}
                 width={260}
                 src="/images/avatar/joao.jpg"
-                alt="Banner About"
+                alt="Profile Image Joao"
               />
             </a>
           </div>

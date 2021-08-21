@@ -34,9 +34,9 @@ export default function Hero() {
             <div className="col s12 l6 hide-on-med-and-down">
               <Image
                 className="hero-img"
-                loading="eager"
                 src={BannerHero}
                 alt="Banner Hero"
+                loading="eager"
               />
             </div>
           </div>

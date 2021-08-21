@@ -46,7 +46,6 @@ export default function Testimony() {
               <div className="desk-only">
                 <Image
                   className="circle desk-only"
-                  loading="lazy"
                   height={120}
                   width={120}
                   src={`/images/avatar/${id}.jpg`}
@@ -59,7 +58,6 @@ export default function Testimony() {
               <div className="testimony__footer">
                 <Image
                   className="circle profile-mobile"
-                  loading="lazy"
                   height={50}
                   width={50}
                   src={`/images/avatar/${id}.jpg`}

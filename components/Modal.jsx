@@ -18,20 +18,18 @@ export default function Modal(props) {
             alt={`Modal Image Thumbnail ${id}`}
             width={512}
             height={512}
-            layout={'intrinsic'}
-            objectFit={'cover'}
-            loading="lazy"
+            layout="intrinsic"
+            objectFit="cover"
           />
           {images.map((imageIndex, index) => (
             <Image
               key={index}
               src={`/images/portfolio/${id}/modal-${imageIndex + 1}.png`}
               alt={`Modal Image ${imageIndex + 1}`}
-              layout="intrinsic"
               width={512}
               height={680}
+              layout="intrinsic"
               objectFit="cover"
-              loading="lazy"
             />
           ))}
           <div className="modal-footer">

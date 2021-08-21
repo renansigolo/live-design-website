@@ -9,7 +9,6 @@ export default function About() {
           <div className="col s12 l6 hide-on-small-and-down">
             <Image
               className="responsive-img"
-              loading="eager"
               src={BannerAbout}
               alt="Banner About"
             />

@@ -64,7 +64,6 @@ export default function Portfolio() {
                   setShow(true)
                 }}
                 className={`responsive-img modal-${index}`}
-                loading="lazy"
                 width={632}
                 height={380}
                 src={`/images/portfolio/${item.id}/thumbnail.png`}
