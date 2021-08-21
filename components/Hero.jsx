@@ -36,7 +36,7 @@ export default function Hero() {
                 className="hero-img"
                 src={BannerHero}
                 alt="Banner Hero"
-                loading="eager"
+                priority={true}
               />
             </div>
           </div>
