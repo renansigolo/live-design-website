@@ -5,12 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap && next export",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "fix": "next lint --fix && stylelint '**/*.scss' --fix",
     "lint": "next lint && stylelint '**/*.scss'",
-    "deploy:staging": "npm run build && firebase hosting:channel:deploy staging",
-    "deploy:prod": "npm run build && firebase deploy",
     "format": "prettier '**/*' --write --ignore-unknown"
   },
   "dependencies": {
