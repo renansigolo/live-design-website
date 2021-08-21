@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { shimmerUrl } from '../lib/shimmer'
 
 export default function Modal(props) {
   if (!props.show) {
@@ -20,6 +21,8 @@ export default function Modal(props) {
             height={512}
             layout="intrinsic"
             objectFit="cover"
+            placeholder="blur"
+            blurDataURL={shimmerUrl}
           />
           {images.map((imageIndex, index) => (
             <Image
@@ -30,6 +33,8 @@ export default function Modal(props) {
               height={680}
               layout="intrinsic"
               objectFit="cover"
+              placeholder="blur"
+              blurDataURL={shimmerUrl}
             />
           ))}
           <div className="modal-footer">
