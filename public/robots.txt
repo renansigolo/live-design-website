@@ -2,8 +2,5 @@
 User-agent: *
 Allow: /
 
-# Host
-Host: https://livedesign.com.br
-
 # Sitemaps
 Sitemap: https://livedesign.com.br/sitemap.xml
