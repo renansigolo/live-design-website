@@ -22,6 +22,7 @@
   "devDependencies": {
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
+    "eslint-config-prettier": "^8.3.0",
     "next-sitemap": "^1.6.164",
     "prettier": "2.3.2",
     "sass": "^1.38.1",

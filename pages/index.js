@@ -30,7 +30,11 @@ export default function Home() {
 
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
 
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         {/* {process.env.NODE_ENV === 'production' ? (
