@@ -3,6 +3,7 @@
   "version": "3.0.1",
   "private": true,
   "scripts": {
+    "clean": "rm -rf package-lock.json node_modules .next",
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",
@@ -14,17 +15,18 @@
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@materializecss/materialize": "^1.1.0-alpha",
-    "next": "11.1.0",
+    "next": "^11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "sharp": "^0.29.0"
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.0",
+    "eslint-config-next": "^11.1.2",
+    "eslint-config-prettier": "^8.3.0",
     "next-sitemap": "^1.6.164",
     "prettier": "2.3.2",
-    "sass": "^1.38.1",
+    "sass": "^1.38.2",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-config-standard": "^22.0.0"
