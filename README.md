@@ -20,12 +20,6 @@ git clone https://github.com/renansigolo/live-design-website.git
 vercel env pull
 ```
 
-2. Rename you `.env` file to `.env.local`
-
-```
-mv .env .env.local
-```
-
 ## Usage
 
 ### Install Dependencies

@@ -1,3 +1,4 @@
 module.exports = {
-  siteUrl: 'https://livedesign.com.br',
-}
+  siteUrl: process.env.SITE_URL || "https://livedesign.com.br",
+  generateRobotsTxt: true
+};
