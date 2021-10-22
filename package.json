@@ -27,7 +27,7 @@
     "next-sitemap": "1.6.189",
     "prettier": "2.4.1",
     "sass": "1.42.1",
-    "stylelint": "13.13.1",
+    "stylelint": "14.0.0",
     "stylelint-config-sass-guidelines": "8.0.0",
     "stylelint-config-standard": "22.0.0"
   },
