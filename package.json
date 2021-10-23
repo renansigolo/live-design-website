@@ -21,7 +21,7 @@
     "sharp": "0.29.1"
   },
   "devDependencies": {
-    "eslint": "7.32.0",
+    "eslint": "8.1.0",
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "8.3.0",
     "next-sitemap": "1.6.189",
