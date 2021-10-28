@@ -3,18 +3,18 @@
 
 // Generate Font Faces
 $fonts: (
-  'mosk-normal': '',
-  'mosk-light': 300,
-  'mosk-medium': 500,
-  'mosk-semi-bold': 600,
-  'mosk-bold': 700,
+  "mosk-normal": "",
+  "mosk-light": 300,
+  "mosk-medium": 500,
+  "mosk-semi-bold": 600,
+  "mosk-bold": 700,
 );
 
 @each $name, $weight in $fonts {
   @font-face {
     font-family: Mosk;
     font-weight: $weight;
-    src: url('../../public/fonts/#{$name}.ttf');
+    src: url("../../public/fonts/#{$name}.ttf");
   }
 }
 
