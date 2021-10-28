@@ -9,6 +9,7 @@
     "fix": "next lint --fix && stylelint '**/*.scss' --fix",
     "format": "prettier '**/*' --write --ignore-unknown",
     "lint": "next lint && stylelint '**/*.scss'",
+    "postversion": "git push && git push --tags",
     "postbuild": "next-sitemap",
     "start": "next start"
   },
