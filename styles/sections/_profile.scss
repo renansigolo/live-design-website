@@ -15,8 +15,7 @@
 
   &__content {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     max-width: fit-content;
 
     p {

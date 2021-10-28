@@ -13,23 +13,26 @@
     "start": "next start"
   },
   "dependencies": {
-    "@material-ui/core": "4.12.3",
-    "@materializecss/materialize": "1.1.0-alpha",
-    "next": "11.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "sharp": "0.29.1"
+    "@material-ui/core": "^4.12.3",
+    "@materializecss/materialize": "^1.1.0-alpha",
+    "next": "^12.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sharp": "^0.29.2"
   },
   "devDependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
-    "eslint-config-prettier": "8.3.0",
-    "next-sitemap": "1.6.189",
-    "prettier": "2.4.1",
-    "sass": "1.42.1",
-    "stylelint": "13.13.1",
-    "stylelint-config-sass-guidelines": "8.0.0",
-    "stylelint-config-standard": "22.0.0"
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^12.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "next-sitemap": "^1.6.192",
+    "postcss": "^8.3.11",
+    "postcss-scss": "^4.0.1",
+    "prettier": "^2.4.1",
+    "sass": "^1.43.4",
+    "stylelint": "^14.0.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-config-standard-scss": "^2.0.0"
   },
   "engines": {
     "node": ">=14.15.0",
