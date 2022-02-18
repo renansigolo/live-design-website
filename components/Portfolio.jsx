@@ -71,6 +71,7 @@ export default function Portfolio() {
                 height={380}
                 placeholder="blur"
                 blurDataURL={shimmerUrl}
+                loading="eager"
               />
             ))}
           </div>

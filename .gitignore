@@ -40,3 +40,4 @@ firebase-debug.log
 
 # Next Sitemap
 sitemap.xml
+public/sitemap*

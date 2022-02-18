@@ -23,6 +23,7 @@ export default function Modal(props) {
             objectFit="cover"
             placeholder="blur"
             blurDataURL={shimmerUrl}
+            loading="eager"
           />
           {images.map((imageIndex, index) => (
             <Image
