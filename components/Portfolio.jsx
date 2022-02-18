@@ -1,4 +1,6 @@
+import Image from 'next/image'
 import { useState } from 'react'
+import { shimmerUrl } from '../lib/shimmer'
 import Modal from './Modal'
 
 const modalData = [
@@ -56,7 +58,7 @@ export default function Portfolio() {
         <div className="portfolio__cases">
           <div className="grid-2">
             {modalData.map((item, index) => (
-              <img
+              <Image
                 key={index}
                 onClick={() => {
                   setModalContent(item)
@@ -67,7 +69,9 @@ export default function Portfolio() {
                 className={`responsive-img modal-${index}`}
                 width={632}
                 height={380}
-                loading="lazy"
+                placeholder="blur"
+                blurDataURL={shimmerUrl}
+                loading="eager"
               />
             ))}
           </div>
