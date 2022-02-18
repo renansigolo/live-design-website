@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import { shimmerUrl } from '../lib/shimmer'
-
 export default function Modal(props) {
   if (!props.show) {
     return null
@@ -14,28 +11,16 @@ export default function Modal(props) {
           onClick={(e) => e.stopPropagation()}
         >
           <h4>{title}</h4>
-          <Image
+          <img
             src={`/images/portfolio/${id}/thumbnail.png`}
             alt={`Modal Image Thumbnail ${id}`}
-            width={512}
-            height={512}
-            layout="intrinsic"
-            objectFit="cover"
-            placeholder="blur"
-            blurDataURL={shimmerUrl}
-            loading="eager"
           />
           {images.map((imageIndex, index) => (
-            <Image
+            <img
               key={index}
               src={`/images/portfolio/${id}/modal-${imageIndex + 1}.png`}
               alt={`Modal Image ${imageIndex + 1}`}
-              width={512}
-              height={680}
-              layout="intrinsic"
-              objectFit="cover"
-              placeholder="blur"
-              blurDataURL={shimmerUrl}
+              loading="lazy"
             />
           ))}
           <div className="modal-footer">

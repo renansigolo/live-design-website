@@ -1,10 +1,10 @@
-import Image from 'next/image'
 import { useState } from 'react'
 import { gtagFormConversion } from '../lib/gtag'
-import IconBehance from '/public/images/social-media/behance.svg'
-import IconFacebook from '/public/images/social-media/facebook.svg'
-import IconInstagram from '/public/images/social-media/instagram.svg'
-import IconLiveDesign from '/public/images/icon-live-design.svg'
+
+const IconBehance = 'images/social-media/behance.svg'
+const IconFacebook = 'images/social-media/facebook.svg'
+const IconInstagram = 'images/social-media/instagram.svg'
+const IconLiveDesign = 'images/icon-live-design.svg'
 
 const navItems = [
   {
@@ -51,21 +51,21 @@ const SocialMediaLinks = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image src={IconInstagram} height={20} alt="Instagram Icon" />
+        <img src={IconInstagram} height={20} alt="Instagram Icon" />
       </a>
       <a
         href="https://facebook.com/livedsgn"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image src={IconFacebook} height={20} alt="Facebook Icon" />
+        <img src={IconFacebook} height={20} alt="Facebook Icon" />
       </a>
       <a
         href="https://behance.net/joaojoaotx"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image src={IconBehance} height={17} alt="Behance Icon" />
+        <img src={IconBehance} height={17} alt="Behance Icon" />
       </a>
     </>
   )
@@ -141,7 +141,7 @@ export default function Navigation() {
         <nav className="navbar">
           <div className="nav-wrapper">
             <div className="navbar-logo">
-              <Image src={IconLiveDesign} width={38} alt="Live Design Icon" />
+              <img src={IconLiveDesign} width={38} alt="Live Design Icon" />
               <strong className="navbar-logo__label black-text">
                 Traga vida à sua ideia!
               </strong>

@@ -1,17 +1,16 @@
-import Image from 'next/image'
 import { gtagFormConversion } from '../lib/gtag'
-import LogoLiveDesignWhite from '/public/images/logo-live-design-white.svg'
-import IconLiveDesignWhite from '/public/images/icon-live-design-white.svg'
-import IconBehance from '/public/images/social-media/behance-wht.svg'
-import IconFacebook from '/public/images/social-media/facebook-wht.svg'
-import IconInstagram from '/public/images/social-media/instagram-wht.svg'
+const IconLiveDesignWhite = 'images/icon-live-design-white.svg'
+const LogoLiveDesignWhite = 'images/logo-live-design-white.svg'
+const IconBehance = 'images/social-media/behance-wht.svg'
+const IconFacebook = 'images/social-media/facebook-wht.svg'
+const IconInstagram = 'images/social-media/instagram-wht.svg'
 
 export default function Footer() {
   return (
     <footer id="footer">
       <div className="center-align">
         <div className="footer">
-          <Image src={IconLiveDesignWhite} height={90} alt="Live Design Logo" />
+          <img src={IconLiveDesignWhite} height={90} alt="Live Design Logo" />
           <div className="footer__content">
             <h2>Traga vida à sua ideia!</h2>
             <a
@@ -38,7 +37,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image src={IconInstagram} alt="Instagram Icon" height={20} />
+                  <img src={IconInstagram} alt="Instagram Icon" height={20} />
                 </a>
               </li>
               <li>
@@ -47,7 +46,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image src={IconFacebook} alt="Facebook Icon" height={20} />
+                  <img src={IconFacebook} alt="Facebook Icon" height={20} />
                 </a>
               </li>
               <li>
@@ -56,7 +55,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image src={IconBehance} alt="Behance Icon" height={19} />
+                  <img src={IconBehance} alt="Behance Icon" height={19} />
                 </a>
               </li>
             </ul>
@@ -64,11 +63,7 @@ export default function Footer() {
         </div>
         <div className="copyright hide-on-med-and-down">
           <div className="container">
-            <Image
-              src={LogoLiveDesignWhite}
-              height={25}
-              alt="Live Design Logo"
-            />
+            <img src={LogoLiveDesignWhite} height={25} alt="Live Design Logo" />
 
             <ul className="copyright__links">
               <li>

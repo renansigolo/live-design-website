@@ -1,15 +1,12 @@
-import Image from 'next/image'
-import BannerAbout from '/public/images/banner-about.svg'
-
 export default function About() {
   return (
     <section id="about" className="about">
       <div className="container">
         <div className="row">
           <div className="col s12 l6 hide-on-small-and-down">
-            <Image
+            <img
               className="responsive-img"
-              src={BannerAbout}
+              src="images/banner-about.svg"
               alt="Banner About"
             />
           </div>

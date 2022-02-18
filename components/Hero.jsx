@@ -1,6 +1,8 @@
-import Image from 'next/image'
 import { gtagFormConversion } from '../lib/gtag'
-import BannerHero from '/public/images/banner-hero.svg'
+
+const BannerHero = 'images/banner-hero.svg'
+const IconWhite = 'images/icon-live-design-white.svg'
+const IconArrowUpward = 'images/icon-arrow-upward.svg'
 
 export default function Hero() {
   return (
@@ -13,8 +15,8 @@ export default function Hero() {
                 <h1 className="title">
                   Somos um estúdio de design especializado
                   em&nbsp;projetos&nbsp;de <b>Identidade&nbsp;Visual.</b>
-                  <Image
-                    src="/images/icon-live-design-white.svg"
+                  <img
+                    src={IconWhite}
                     height={40}
                     width={58}
                     alt="Live Design Logo"
@@ -32,11 +34,11 @@ export default function Hero() {
               </div>
             </div>
             <div className="col s12 l6 hide-on-med-and-down">
-              <Image
+              <img
                 className="hero-img"
                 src={BannerHero}
+                loading="eager"
                 alt="Banner Hero"
-                priority={true}
               />
             </div>
           </div>
@@ -49,8 +51,8 @@ export default function Hero() {
         >
           <div className="arrow-down">
             <span>Saiba mais</span>
-            <Image
-              src="/images/icon-arrow-upward.svg"
+            <img
+              src={IconArrowUpward}
               height={40}
               width={40}
               alt="Arrow Down"
