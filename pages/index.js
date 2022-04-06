@@ -29,6 +29,7 @@ export default function Home() {
         <meta name="apple-mobile-web-app-title" content="Live Design" />
 
         <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="manifest" href="/manifest.json" />
         <link
           rel="apple-touch-icon"
