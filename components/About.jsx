@@ -16,20 +16,16 @@ export default function About() {
           <div className="col s12 l6 about__content">
             <span>Sobre nós</span>
             <h2>
-              A Live Design cria projetos de
-              <br />
-              identidade visual com o objetivo
-              <br />
-              de agregar valor à marca e se
-              <br />
-              conectar ao seu público alvo.
+              A&nbsp;Live&nbsp;Design&nbsp;cria&nbsp;projetos&nbsp;de
+              identidade&nbsp;visual&nbsp;com
+              o&nbsp;objetivo&nbsp;de&nbsp;agregar&nbsp;valor
+              à&nbsp;marca&nbsp;e&nbsp;se&nbsp;conectar
+              ao&nbsp;seu&nbsp;público&nbsp;alvo.
             </h2>
             <p>
-              Todo o projeto é baseado em pesquisas e feito
-              <br />
-              estratégicamente para transmitir a essência
-              <br />
-              da sua marca ao seu público alvo.
+              Todo&nbsp;o&nbsp;projeto&nbsp;é&nbsp;baseado&nbsp;em&nbsp;pesquisas&nbsp;e&nbsp;feito
+              estratégicamente&nbsp;para&nbsp;transmitir&nbsp;a&nbsp;essência
+              da&nbsp;sua&nbsp;marca&nbsp;ao&nbsp;seu&nbsp;público&nbsp;alvo.
             </p>
           </div>
         </div>
