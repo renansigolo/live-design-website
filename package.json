@@ -16,23 +16,23 @@
   },
   "dependencies": {
     "@materializecss/materialize": "1.1.0-alpha",
-    "next": "12.1.4",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "sharp": "0.30.3"
+    "next": "12.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sharp": "0.30.7"
   },
   "devDependencies": {
-    "eslint": "8.12.0",
-    "eslint-config-next": "12.1.4",
+    "eslint": "8.22.0",
+    "eslint-config-next": "12.2.5",
     "eslint-config-prettier": "8.5.0",
-    "next-sitemap": "2.5.17",
-    "postcss": "8.4.12",
-    "postcss-scss": "4.0.3",
-    "prettier": "2.6.2",
-    "sass": "1.49.11",
-    "stylelint": "14.6.1",
+    "next-sitemap": "3.1.20",
+    "postcss": "8.4.16",
+    "postcss-scss": "4.0.4",
+    "prettier": "2.7.1",
+    "sass": "1.54.4",
+    "stylelint": "14.10.0",
     "stylelint-config-sass-guidelines": "9.0.1",
-    "stylelint-config-standard-scss": "3.0.0"
+    "stylelint-config-standard-scss": "5.0.0"
   },
   "engines": {
     "node": "^14.15.0 || >=16.13.0",
