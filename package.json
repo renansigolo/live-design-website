@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "6.2.0",
+    "@materializecss/materialize": "1.1.0-alpha",
     "modern-normalize": "1.1.0"
   },
   "devDependencies": {
@@ -32,7 +33,7 @@
     "eslint-plugin-import": "2.26.0",
     "prettier": "2.7.1",
     "prettier-plugin-go-template": "0.0.13",
-    "stylelint": "14.12.1",
+    "stylelint": "14.13.0",
     "stylelint-config-prettier": "9.0.3",
     "stylelint-config-recommended-scss": "7.0.0",
     "stylelint-config-sass-guidelines": "9.0.1"

@@ -1,0 +1,61 @@
+/* Modals Web
+  =============== */
+
+.modal-container {
+  align-items: center;
+  background-color: #00000050;
+  bottom: 0;
+  display: flex !important;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.custom-modal {
+  background-color: #fafafa;
+  border-radius: 2px;
+  box-shadow: var(--shadow);
+  left: 0;
+  margin: auto;
+  max-height: 86%;
+  min-width: 350px;
+  overflow-y: auto;
+  padding: 0;
+  right: 0;
+  width: 55%;
+  will-change: top, opacity;
+
+  a {
+    align-items: center;
+    display: inline-flex;
+
+    i {
+      padding-left: 8px;
+    }
+  }
+
+  .modal-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 32px 0 16px;
+    padding: 0 16px;
+    width: 100%;
+  }
+}
+
+.modal-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    border-radius: 8px !important;
+    margin: 5px 0;
+    padding: 0 8px !important;
+    width: 70%;
+  }
+}

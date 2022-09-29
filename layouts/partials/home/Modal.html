@@ -1,0 +1,47 @@
+{{/* import Image from 'next/image'
+  import { shimmerUrl } from '../lib/shimmer'
+
+  export default function Modal(props) {
+  if (!props.show) {
+  return null
+  }
+  const { id, title, url, images } = props.content
+  return (
+*/}}
+
+{{ $modalImg := resources.Get "images/_template/placeholder-1024x1024-profile.png" }}
+{{/* {{ $modalImg := resources.Get "images/portfolio/$s/thumbnail.png" .id }} */}}
+{{/* {{ $modalImgLoop := resources.Get "images/portfolio/${id}/modal-${imageIndex + 1}.png" .id }} */}}
+
+<div className="modal-container" onClick="{props.onClose}">
+  <div id="{`modal-${id}`}" className="custom-modal">
+    {{/* onClick={(e) => e.stopPropagation()} */}}
+    <div className="grid-1 modal-content">
+      <h4>{title}</h4>
+      {{/* alt="Modal Image Thumbnail {{ id }}" */}}
+      <img
+        src="{{ $modalImg.RelPermalink }}"
+        alt="Modal Image Thumbnail ID"
+        width="{{ $modalImg.Width }}"
+        height="{{ $modalImg.Height }}"
+        layout="intrinsic"
+        objectFit="cover"
+        loading="eager"
+      />
+      {{/* {images.map((imageIndex) => ( */}}
+      {{/* src="{{ $modalImgLoop.RelPermalink }}" */}}
+      {{/* <img
+        src="{{ $modalImgLoop.RelPermalink
+      }}"
+      alt="Modal Image {{ imageIndex + 1 }}" width="512" height="680" layout="intrinsic" objectFit="cover"
+      placeholder="blur" blurDataURL="{shimmerUrl}" /> */}}
+      {{/* ))} */}}
+      <div className="modal-footer">
+        <a href="{url}" className="modal-close btn-flat" target="_blank" rel="noopener noreferrer">
+          Ver mais
+          <i className="material-icons">open_in_new</i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

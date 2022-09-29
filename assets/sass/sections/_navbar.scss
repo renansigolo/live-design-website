@@ -1,0 +1,123 @@
+/* Navigation
+  =============== */
+
+.nav-active {
+  top: 56px;
+  transform: translateX(0%);
+  transition: transform 0.5s;
+
+  @media #{$medium-and-up} {
+    top: 64px;
+  }
+}
+
+.overflow-active {
+  align-items: center;
+  background-color: #00000050;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 56px;
+  z-index: 100;
+
+  @media #{$medium-and-up} {
+    top: 64px;
+  }
+
+  @media #{$large-and-up} {
+    display: none;
+  }
+}
+
+// Desktop Navbar
+.navbar {
+  background: transparent;
+  background-size: 100%;
+  box-shadow: none;
+
+  ul {
+    align-items: center;
+    display: flex;
+  }
+
+  div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a {
+    @include scale-on-hover;
+
+    color: #000;
+    display: inline-block;
+    font-weight: 600;
+
+    &::after {
+      background: #000;
+      content: "";
+      display: block;
+      height: 2px;
+      margin-top: -18px;
+      transition: width 0.3s;
+      width: 0;
+    }
+
+    &:nth-last-child(1) {
+      &:hover::after {
+        transition: width 0.3s;
+        width: 100%;
+      }
+
+      &:hover {
+        background-color: transparent;
+        outline: 0;
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  .social-icons {
+    align-items: center;
+    display: flex;
+
+    a {
+      display: inline-flex;
+    }
+  }
+
+  .navbar-logo {
+    align-items: center;
+    display: flex;
+    padding: 0 0.75rem;
+
+    &__label {
+      padding-left: 5px;
+      white-space: nowrap;
+    }
+  }
+}
+
+.sidenav {
+  top: 56px;
+  transition: transform 0.5s;
+
+  @media #{$medium-and-up} {
+    top: 64px;
+  }
+
+  @media #{$large-and-up} {
+    display: none;
+  }
+
+  .social-icons {
+    padding-left: 20px;
+
+    a {
+      padding: 10px !important;
+    }
+  }
+}

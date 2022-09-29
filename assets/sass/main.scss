@@ -1,7 +1,24 @@
-@import "node_modules/modern-normalize/modern-normalize";
+// Google Icons
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
-@import "global";
+// Materialize
+@import "node_modules/@materializecss/materialize/sass/materialize";
 
-@import "components/profile";
-@import "components/grid";
-@import "components/footer";
+// Live Design theme
+@import "base/typography";
+@import "base/scaffolding";
+@import "base/grid";
+@import "base/buttons";
+
+// Sections
+@import "sections/navbar";
+@import "sections/hero";
+@import "sections/portfolio";
+@import "sections/about";
+@import "sections/stages";
+@import "sections/profile";
+@import "sections/testimony";
+@import "sections/footer";
+
+// Components
+@import "components/modals";

@@ -3,7 +3,7 @@
   <div class="grid">
     {{ range .Site.Data }}
       {{ range .grid }}
-        {{ $src := resources.Get (replace .id " " ""  | printf "images/grid/%s.png" | lower) }}
+        {{ $src := resources.Get (replace .id " " ""  | printf "images/_template/grid/%s.png" | lower) }}
         {{ $alt := (print .title " preview") }}
 
         {{ $tinyw := default "500x webp" }}

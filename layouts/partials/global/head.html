@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="{{ .Site.Params.Description }}" />
   <meta name="theme-color" content="{{ .Site.Params.ThemeColor }}" />
+  <meta name="msapplication-TileColor" content="{{ .Site.Params.ThemeColor }}" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -13,12 +14,12 @@
   <link type="image/svg+xml" href="favicon.svg" rel="icon" />
   <link href="favicon.ico" rel="icon" />
 
-  {{/* Manifest */}}
-  <link href="site.webmanifest" rel="manifest" />
-
   {{/* Apple */}}
   <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
   <link href="safari-pinned-tab.svg" rel="mask-icon" color="{{ .Site.Params.ThemeColor }}" />
+
+  {{/* Manifest */}}
+  <link href="site.webmanifest" rel="manifest" />
 
   {{/* Styles */}}
   {{ $options := (dict "targetPath" "styles.min.css" "outputStyle" "compressed") }}
