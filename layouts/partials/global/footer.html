@@ -1,14 +1,14 @@
-{{ $LogoLiveDesignWhite := resources.Get "images/logo-live-design-white.svg" }}
-{{ $IconLiveDesignWhite := resources.Get "images/icon-live-design-white.svg" }}
-{{ $IconBehance := resources.Get "images/social-media/behance-wht.svg" }}
-{{ $IconFacebook := resources.Get "images/social-media/facebook-wht.svg" }}
-{{ $IconInstagram := resources.Get "images/social-media/instagram-wht.svg" }}
+{{ $logoLiveDesignWhite := "images/logo-live-design-white.svg" }}
+{{ $iconLiveDesignWhite := "images/icon-live-design-white.svg" }}
+{{ $iconBehance := "images/social-media/behance-wht.svg" }}
+{{ $iconFacebook := "images/social-media/facebook-wht.svg" }}
+{{ $iconInstagram := "images/social-media/instagram-wht.svg" }}
 
 
 <footer id="footer">
   <div class="center-align">
     <div class="footer">
-      <img src="{{ $IconLiveDesignWhite.RelPermalink }}" height="90" alt="Live Design Logo" />
+      <img src="{{ $logoLiveDesignWhite }}" height="90" alt="Live Design Logo" />
       <div class="footer__content">
         <h2>Traga vida à sua ideia!</h2>
         {{/* TODO: onClick={() => gtagFormConversion()} */}}
@@ -21,17 +21,17 @@
         <ul class="row-social-icons">
           <li>
             <a href="https://instagram.com/live.dsgn" target="_blank" rel="noopener noreferrer">
-              <img src="{{ $IconInstagram.RelPermalink }}" alt="Instagram Icon" height="20" />
+              <img src="{{ $iconInstagram }}" alt="Instagram Icon" height="20" />
             </a>
           </li>
           <li>
             <a href="https://facebook.com/livedsgn" target="_blank" rel="noopener noreferrer">
-              <img src="{{ $IconFacebook.RelPermalink }}" alt="Facebook Icon" height="20" />
+              <img src="{{ $iconFacebook }}" alt="Facebook Icon" height="20" />
             </a>
           </li>
           <li>
             <a href="https://behance.net/joaojoaotx" target="_blank" rel="noopener noreferrer">
-              <img src="{{ $IconBehance.RelPermalink }}" alt="Behance Icon" height="19" />
+              <img src="{{ $iconBehance }}" alt="Behance Icon" height="19" />
             </a>
           </li>
         </ul>
@@ -39,7 +39,7 @@
     </div>
     <div class="copyright hide-on-med-and-down">
       <div class="container">
-        <img simg="{{ $LogoLiveDesignWhite.RelPermalink }}" height="25" alt="Live Design Logo" />
+        <img src="{{ $logoLiveDesignWhite }}" height="25" alt="Live Design Logo" />
 
         <ul class="copyright__links">
           <li>
