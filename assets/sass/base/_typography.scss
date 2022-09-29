@@ -14,7 +14,7 @@ $fonts: (
   @font-face {
     font-family: Mosk;
     font-weight: $weight;
-    src: url("../../public/fonts/#{$name}.ttf");
+    src: url("fonts/#{$name}.ttf");
   }
 }
 

@@ -11,25 +11,25 @@ seja cada vez mais bem vista no mercado.', }, { id: 'pedro', fullName: 'Pedro Bo
 description: 'Estamos muito satisfeitos com todo o trabalho que foi feito junto à Robin desde o começo, a atenção
 dedicada e o tempo para sanar todas as nossas dúvidas e demandas. Temos que valorizar esse tipo de trabalho, super
 profissional e transparente.', }, ] return (
-<section id="testimony" className="testimony grey lighten-5">
-  <div className="container">
-    <div className="row">
+<section id="testimony" class="testimony grey lighten-5">
+  <div class="container">
+    <div class="row">
       <h2>Depoimentos</h2>
-      <p className="testimony__subtitle">O que os clientes estão dizendo sobre a Live Design.</p>
+      <p class="testimony__subtitle">O que os clientes estão dizendo sobre a Live Design.</p>
     </div>
-    <div className="row">
+    <div class="row">
       {testimonydata.map(({ id, fullName, company, description }) => (
-      <div className="col s12 m6 testimony__header" key="{id}">
-        <div className="desk-only">
-          <Image className="circle desk-only" height={120} width={120} src={`/images/avatar/${id}.jpg`}
-          alt={`${fullName} Profile Picture`} />
+      <div class="col s12 m6 testimony__header" key="{id}">
+        <div class="desk-only">
+          <Image class="circle desk-only" height={120} width={120} src={`/images/avatar/${id}.jpg`} alt={`${fullName}
+          Profile Picture`} />
         </div>
 
         <p>&quot;{description}&quot;</p>
 
-        <div className="testimony__footer">
-          <Image className="circle profile-mobile" height={50} width={50} src={`/images/avatar/${id}.jpg`}
-          alt={`${fullName} Profile Picture`} />
+        <div class="testimony__footer">
+          <Image class="circle profile-mobile" height={50} width={50} src={`/images/avatar/${id}.jpg`} alt={`${fullName}
+          Profile Picture`} />
           <p>
             {fullName}
             <br />

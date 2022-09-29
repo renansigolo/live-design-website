@@ -3,9 +3,9 @@ when scroll after portfolio */ const toggleVisibility = () => { const btnFixed =
 const portfolio = document.querySelector('#portfolio') document.addEventListener('scroll', () => {
 btnFixed.style.transform = window.pageYOffset >= portfolio.offsetTop ? 'scale(1)' : 'scale(0)' }) } toggleVisibility()
 }, []) return (
-<div className="fixed-action-btn" id="btn-fixed">
-  <a className="btn-floating btn-large waves-effect waves-light" href="#">
-    <i className="large material-icons">arrow_upward</i>
+<div class="fixed-action-btn" id="btn-fixed">
+  <a class="btn-floating btn-large waves-effect waves-light" href="#">
+    <i class="large material-icons">arrow_upward</i>
   </a>
 </div>
 ) }

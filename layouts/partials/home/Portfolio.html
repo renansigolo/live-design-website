@@ -16,15 +16,15 @@ images: [1, 2], }, { id: 'ocl-engenheiro-civil', title: 'OCL Engenheiro Civil', 
 'Olivier Semijoias', url: 'https://www.behance.net/gallery/92522585/Olivier-Semijoias-Identidade-Visual', images: [0, 1,
 2, 3], }, ] export default function Portfolio() { const [show, setShow] = useState(false) const [modalContent,
 setModalContent] = useState('') return (
-<section id="portfolio" className="portfolio">
-  <div className="container">
+<section id="portfolio" class="portfolio">
+  <div class="container">
     <h2>Portfólio</h2>
     <Modal onClose={() => setShow(false)} show={show} content={modalContent} />
-    <div className="portfolio__cases">
-      <div className="grid-2">
+    <div class="portfolio__cases">
+      <div class="grid-2">
         {modalData.map((item, index) => ( <Image key={index} onClick={() => { setModalContent(item) setShow(true) }}
         src={`/images/portfolio/${item.id}/thumbnail.png`} alt={`Portfolio Image Thumbnail of ${item.title}`}
-        className={`responsive-img modal-${index}`} width={632} height={380} placeholder="blur" blurDataURL={shimmerUrl}
+        class={`responsive-img modal-${index}`} width={632} height={380} placeholder="blur" blurDataURL={shimmerUrl}
         loading="eager" /> ))}
       </div>
     </div>
