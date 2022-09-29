@@ -19,3 +19,9 @@
 .modal a {
   margin-top: 1rem;
 }
+
+.tagOrcamento {
+  &:hover {
+    cursor: pointer;
+  }
+}
