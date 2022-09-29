@@ -1,0 +1,32 @@
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <h2>Portfólio</h2>
+
+    <div class="portfolio__cases">
+      <div class="grid-2">
+        <!-- <Modal onClose={ setShow(false)} show={show} content={modalContent} /> -->
+        {{ range .Site.Data }}
+          {{ range .portfolio }}
+            {{/* onclick={() => {
+              setModalContent(item)
+              setShow(true)
+            }}
+            */}}
+            {{ $imgSrc := resources.Get (printf "images/portfolio/%s/thumbnail.png" .id) }}
+            {{ $alt := printf "Portfolio Image Thumbnail of %s" .title }}
+            {{ $classIndex := printf "responsive-img modal-%s" .id }}
+
+
+            <img
+              src="{{ $imgSrc.RelPermalink }}"
+              alt="{{ $alt }}"
+              className="{{ $classIndex }}"
+              width="632"
+              height="380"
+            />
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

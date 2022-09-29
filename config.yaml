@@ -9,6 +9,21 @@ params:
   description: "Projetos de Identidade Visual"
   themeColor: "#ffffff"
 
+# Menu settings
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: "#main-section"
+
+    - identifier: about
+      name: Sobre
+      url: "#about"
+
+    - identifier: portfolio
+      name: Portfólio
+      url: "#portfolio"
+
 # Build Configuration
 cleanDestinationDir: true
 disableHugoGeneratorInject: true

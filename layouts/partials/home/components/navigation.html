@@ -1,0 +1,47 @@
+{{ $iconLiveDesign := "images/icon-live-design.svg" }}
+
+
+<header className="container" id="header">
+  {{/* Desktop Navigation */}}
+  <div className="valign-wrapper">
+    <nav className="navbar">
+      <div className="nav-wrapper">
+        <div className="navbar-logo">
+          <img src="{{ $iconLiveDesign }}" width="38" alt="Ícone da Live Design" />
+          <strong className="navbar-logo__label black-text">Traga vida à sua ideia!</strong>
+        </div>
+
+        {{/* onClick="toggleOpen(activeSidebar)" */}}
+        <a href="#" data-target="mobile-menu" className="sidenav-trigger hide-on-large-only black-text">
+          <i className="material-icons">menu</i>
+        </a>
+
+        <ul className="right hide-on-med-and-down">
+          {{/* Navigation Items */}}
+          {{ range .Site.Menus.main }}
+            <li>
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+          <li>
+            <a class="tagOrcamento" rel="noopener noreferrer">Orçamento</a>
+          </li>
+
+          {{/* Social Media Icons */}}
+          <ul className="social-icons">
+            {{ range .Site.Data }}
+              {{ range .socialMedia }}
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+                  <img src="{{ .iconUrl }}" height="{{ .height }}" alt="{{ .id }}" />
+                </a>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  {{/* Mobile Navigation */}}
+  {{/* <MobileNav activeSidebar="{activeSidebar}" toggleSidebar="{toggleOpen}" /> */}}
+</header>

@@ -9,4 +9,4 @@ module.exports = {
     'max-nesting-depth': null,
     'no-descending-specificity': null,
   },
-};
+}

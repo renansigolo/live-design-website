@@ -1,9 +1,17 @@
 {{ define "main" }}
   <main>
-    {{ partial "home/hero.html" . }}
-    {{ partial "home/about.html" . }}
-    {{ partial "home/stages.html" . }}
-    {{ partial "home/profile.html" . }}
-    {{ partial "home/testimony.html" . }}
+    {{ partial "home/components/navigation.html" . }}
+
+    {{/* Home Sections */}}
+    {{ partial "home/sections/hero.html" . }}
+    {{ partial "home/sections/about.html" . }}
+    {{ partial "home/sections/stages.html" . }}
+    {{ partial "home/sections/profile.html" . }}
+    {{ partial "home/sections/testimony.html" . }}
+    {{ partial "home/sections/portfolio.html" . }}
+
+    {{/* Home Components */}}
+    {{ partial "home/components/button-to-top.html" . }}
+    {{/* {{ partial "home/components/modal.html" . }} */}}
   </main>
 {{ end }}

@@ -1,0 +1,32 @@
+<div class="modal-container">
+  {{ range .Site.Data }}
+    {{ range .portfolio }}
+      {{ $portfolioPath := printf "images/portfolio/%s" .id }}
+      {{ $modalThumb := resources.Get (printf "images/portfolio/%s/thumbnail.png" .id) }}
+      {{ $modalId := printf "modal-%s" .id }}
+      {{ $alt := printf "Modal Image Thumbnail %s" .id }}
+
+
+      <div id="{{ $modalId }}" class="custom-modal">
+        <div class="grid-1 modal-content">
+          <h4>{{ .title }} {{ .length }}</h4>
+          <img alt="{{ $alt }}" src="{{ $modalThumb.RelPermalink }}" width="512" height="512" />
+          {{ range seq .length }}
+            {{ $filename := printf "/modal-%d.png" . }}
+            {{ $imgSrc := resources.Get (printf "%s" $filename | printf "%s%s" $portfolioPath ) }}
+            {{ $altThumb := printf "Modal Image Thumbnail %d" . }}
+            <img src="{{ $imgSrc.RelPermalink }}" alt="{{ $altThumb }}" width="512" height="680" />
+          {{ end }}
+
+
+          <div class="modal-footer">
+            <a href="{{ .url }}" class="modal-close btn-flat" target="_blank" rel="noopener noreferrer">
+              Ver mais
+              <i class="material-icons">open_in_new</i>
+            </a>
+          </div>
+        </div>
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
