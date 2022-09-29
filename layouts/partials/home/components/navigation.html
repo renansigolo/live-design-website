@@ -35,15 +35,8 @@
             <a class="tagOrcamento" rel="noopener noreferrer">Orçamento</a>
           </li>
 
-          {{/* Social Media Icons */}}
           <ul class="social-icons">
-            {{ range .Site.Data }}
-              {{ range .socialMedia }}
-                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
-                  <img src="{{ .iconUrl }}" height="{{ .height }}" alt="{{ .id }}" />
-                </a>
-              {{ end }}
-            {{ end }}
+            {{ partial "home/components/social-media-links" . }}
           </ul>
         </ul>
       </div>
@@ -51,5 +44,19 @@
   </div>
 
   {{/* Mobile Navigation */}}
-  {{/* <MobileNav activeSidebar="{activeSidebar}" toggleSidebar="{toggleOpen}" /> */}}
+  <div id="mobile-menu-background"></div>
+  <ul id="mobile-menu" class="sidenav">
+    {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+    {{ end }}
+    <li>
+      <a onclick="gtagFormConversion()" rel="noopener noreferrer"> Orçamento </a>
+    </li>
+
+    <ul class="social-icons valign-wrapper">
+      {{ partial "home/components/social-media-links" . }}
+    </ul>
+  </ul>
 </header>

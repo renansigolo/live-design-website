@@ -1,0 +1,8 @@
+{{/* Social Media Links */}}
+{{ range .Site.Data }}
+  {{ range .socialMedia }}
+    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ .iconUrl }}" height="{{ .height }}" alt="{{ .id }}" />
+    </a>
+  {{ end }}
+{{ end }}
