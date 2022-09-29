@@ -1,92 +1,63 @@
-# Live Design
+# Hugo Template Renan Sigolo
 
-Source code of the Live Design website
+A project template for [Hugo](https://gohugo.io/) static site generator.
 
-## Development
+## Built With
 
-If you're configuring this app for the first time
+- [Hugo](https://gohugo.io/) - The static site generator
+- [Stylelint](https://stylelint.io/) - A mighty, modern linter that helps you avoid errors and enforce conventions in your styles
+- [ESLint](https://eslint.org/) - The pluggable linting utility for JavaScript and JSX
+- [Prettier](https://prettier.io/) - An opinionated code formatter
+- [Commitlint](https://commitlint.js.org/#/) - Lint commit messages
 
-1. Clone the project
+## Dependencies
 
-```
-git clone https://github.com/renansigolo/live-design-website.git
-```
-
-2. Grab the .env variables from the vercel server
-
-> You will need the [Vercel CLI](https://vercel.com/cli) installed on your local machine
-
-```
-vercel env pull
-```
-
-## Usage
-
-### Install Dependencies
-
-```bash
-npm i
-```
-
-### Development server
-
-```bash
-npm run dev
-```
-
-## Testing
-
-```bash
-npm run lint
-```
-
-## Build
-
-```bash
-npm run build
-```
-
-## Author
-
-- [Renan Sigolo](https://www.renansigolo.com/)
-
-## License
-
-The code is open source and available under the [Apache License 2.0](LICENSE.md).
-
-## Next.js Documentation
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+- [modern-normalize](https://github.com/sindresorhus/modern-normalize.git) - Normalize browsers' default style
 
 ## Getting Started
 
-First, run the development server:
+1. Search and Replace the following values:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+   - `YOUR_PROJECT_ID`
+   - `YOUR_PROJECT_NAME`
+   - `YOUR_PROJECT_DESCRIPTION`
+   - `YOUR_PROJECT_THEME_COLOR`
+   - `YOUR_PROJECT_DOMAIN`
+   - `G-XXXXXXXXXX`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Generate and Replace the following icons: **(WIP)**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+   > You can use such tools to help you generate them such as [RealFaviconGenerator](https://realfavicongenerator.net) and [FAVIC-O-MATIC](https://favicomatic.com)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+   | Name    | Description       |   Size    | Aspect Ratio | Format | Transparency |
+   | ------- | ----------------- | :-------: | :----------: | :----: | :----------: |
+   | favicon | The original icon | 1024x1024 |     1:1      |  svg   |      ✅      |
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   ## Genreal Icons
 
-## Learn More
+   | Icon path                         |                           sizes                           | purpose |
+   | --------------------------------- | :-------------------------------------------------------: | :-----: |
+   | static/favicon.ico                | `16x16` `32x32` `48x48` <br /> `24x24` `64x64` (optional) |         |
+   | static/favicon.svg                |                             -                             |         |
+   | static/safari-pinned-tab.svg      |                             -                             |         |
+   | static/apple-touch-icon.png       |                          180x180                          |         |
+   | static/android-chrome-192x192.png |                          192x192                          |         |
+   | static/android-chrome-512x512.png |                          512x512                          |         |
+   | static/favicon-16x16.png          |                           16x16                           |         |
+   | static/favicon-32x32.png          |                           32x32                           |         |
+   | static/mstile-150x150.png         |                          150x150                          |         |
+   | static/safari-pinned-tab.svg      |                             -                             | Safari  |
 
-To learn more about Next.js, take a look at the following resources:
+   ## Manifest Icons
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   | Icon path                  |     sizes     | purpose |
+   | -------------------------- | :-----------: | :-----: |
+   | icons/icon-72x72.png       |     72x72     |         |
+   | icons/icon-96x96.png       |     96x96     |         |
+   | icons/icon-128x128.png     |    128x128    |         |
+   | icons/icon-144x144.png     |    144x144    |         |
+   | icons/icon-152x152.png     |    152x152    |         |
+   | icons/icon-192x192.png     |    192x192    |         |
+   | icons/icon-512x512.png     |    512x512    |         |
+   | icons/maskable-512x512.png |    512x512    |         |
+   | favicon.svg                | image/svg+xml |         |

@@ -1,0 +1,41 @@
+footer {
+  .social {
+    border-top: 1px solid var(--gray-500);
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    min-width: 100%;
+    place-content: center;
+  }
+
+  .social ul {
+    display: flex;
+    flex-direction: row;
+    height: 1rem;
+    list-style: none;
+    min-width: 100%;
+    padding: 0;
+    place-content: center;
+  }
+
+  .social li {
+    color: var(--gray-500);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    transition-duration: 200ms;
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+      filter, backdrop-filter, -webkit-text-decoration-color,
+      -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    width: 1rem;
+  }
+
+  .social li:hover {
+    transform: scale(1.25);
+  }
+
+  svg:hover {
+    color: var(--green-600);
+  }
+}

@@ -1,0 +1,44 @@
+<head>
+  {{/* Meta Tags */}}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ .Site.Params.Description }}" />
+  <meta name="theme-color" content="{{ .Site.Params.ThemeColor }}" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+  {{/* Favicon */}}
+  <link type="image/svg+xml" href="favicon.svg" rel="icon" />
+  <link href="favicon.ico" rel="icon" />
+
+  {{/* Manifest */}}
+  <link href="site.webmanifest" rel="manifest" />
+
+  {{/* Apple */}}
+  <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="safari-pinned-tab.svg" rel="mask-icon" color="{{ .Site.Params.ThemeColor }}" />
+
+  {{/* Styles */}}
+  {{ $options := (dict "targetPath" "styles.min.css" "outputStyle" "compressed") }}
+  {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | fingerprint }}
+  <link href="{{ $style.Permalink }}" rel="stylesheet" />
+
+  {{/* Vendors */}}
+  {{ $vendors := resources.Match "js/vendors/*.js" }}
+  {{ $jsVendors := $vendors | resources.Concat "vendors.js" | minify | fingerprint }}
+  <script src="{{ $jsVendors.Permalink }}" type="text/javascript" defer></script>
+
+  {{/* Scripts */}}
+  {{ $jsMain := resources.Get "js/main.js" | js.Build | minify | fingerprint }}
+  <script src="{{ $jsMain.Permalink }}" type="text/javascript" defer></script>
+
+  {{/* Google Analytics */}}
+  {{ if hugo.IsProduction }}
+    {{ template "_internal/google_analytics.html" . }}
+  {{ end }}
+
+  {{/* Page Title */}}
+  <title>{{ .Page.Title }}</title>
+</head>

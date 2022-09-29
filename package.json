@@ -1,51 +1,47 @@
 {
-  "name": "live-design",
-  "version": "3.1.0",
-  "private": true,
+  "name": "hugo-template-renan-sigolo",
+  "version": "1.0.0",
+  "description": "Hugo Template Renan Sigolo",
+  "keywords": [
+    "template",
+    "static",
+    "site",
+    "generator",
+    "hugo"
+  ],
+  "author": "Renan Sigolo <renan.sigolo@gmail.com>",
+  "license": "MIT",
+  "main": "index.html",
   "scripts": {
-    "build": "next build",
-    "clean": "rm -rf package-lock.json node_modules .next",
-    "dev": "next dev",
+    "build": "hugo",
+    "clean": "rm -rf package-lock.json node_modules $TMPDIR/hugo_cache/",
+    "deploy": "npm run build && firebase deploy",
+    "fix": "npm run lint:js -- --fix && npm run lint:scss -- --fix",
+    "format:check": "prettier --check .",
     "format": "prettier '**/*' --write --ignore-unknown",
-    "lint:fix": "next lint --fix && stylelint '**/*.scss' --fix",
-    "lint": "next lint && stylelint '**/*.scss'",
-    "postbuild": "next-sitemap",
-    "postversion": "git push && git push --tags",
-    "start": "next start",
-    "svgo": "npx svgo --multipass -f public/images -r"
+    "lint:js": "eslint 'assets/js/**/*.js'",
+    "lint:scss": "stylelint 'assets/sass/**/*.scss'",
+    "prepare": "scripts/prepare.sh",
+    "start": "hugo serve -D",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@materializecss/materialize": "1.1.0-alpha",
-    "next": "12.2.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sharp": "0.30.7"
+    "@fortawesome/fontawesome-free": "6.2.0",
+    "modern-normalize": "1.1.0"
   },
   "devDependencies": {
-    "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5",
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
+    "@commitlint/prompt-cli": "17.1.2",
+    "eslint": "8.24.0",
+    "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-prettier": "8.5.0",
-    "next-sitemap": "3.1.20",
-    "postcss": "8.4.16",
-    "postcss-scss": "4.0.4",
+    "eslint-plugin-import": "2.26.0",
     "prettier": "2.7.1",
-    "sass": "1.54.4",
-    "stylelint": "14.10.0",
-    "stylelint-config-sass-guidelines": "9.0.1",
-    "stylelint-config-standard-scss": "5.0.0"
-  },
-  "engines": {
-    "node": "^14.15.0 || >=16.13.0",
-    "npm": ">=6.14.8",
-    "yarn": "NO LONGER USED - Please use npm"
-  },
-  "browserslist": [
-    "last 1 Chrome version",
-    "last 1 Firefox version",
-    "last 2 Edge major versions",
-    "last 2 Safari major versions",
-    "last 2 iOS major versions",
-    "Firefox ESR",
-    "not IE 11"
-  ]
+    "prettier-plugin-go-template": "0.0.13",
+    "stylelint": "14.12.1",
+    "stylelint-config-prettier": "9.0.3",
+    "stylelint-config-recommended-scss": "7.0.0",
+    "stylelint-config-sass-guidelines": "9.0.1"
+  }
 }

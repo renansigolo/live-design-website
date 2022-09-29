@@ -1,0 +1,61 @@
+---
+grid:
+  - id: "placeholder-1920x1080-image-1"
+    title: "Title 1"
+    description: "Description 1"
+    url: "url-1.com"
+
+  - id: "placeholder-1920x1080-image-2"
+    title: "Title 2"
+    description: "Description 2"
+    url: "url-2.com"
+
+  - id: "placeholder-1920x1080-image-3"
+    title: "Title 3"
+    description: "Description 3"
+    url: "url-3.com"
+
+  - id: "placeholder-1920x1080-image-4"
+    title: "Title 4"
+    description: "Description 4"
+    url: "url-4.com"
+
+  - id: "placeholder-1920x1080-image-5"
+    title: "Title 5"
+    description: "Description 5"
+    url: "url-5.com"
+
+  - id: "placeholder-1920x1080-image-6"
+    title: "Title 6"
+    description: "Description 6"
+    url: "url-6.com"
+
+  - id: "placeholder-1920x1080-image-7"
+    title: "Title 7"
+    description: "Description 7"
+    url: "url-7.com"
+
+  - id: "placeholder-1920x1080-image-8"
+    title: "Title 8"
+    description: "Description 8"
+    url: "url-8.com"
+
+  - id: "placeholder-1920x1080-image-9"
+    title: "Title 9"
+    description: "Description 9"
+    url: "url-9.com"
+
+  - id: "placeholder-1920x1080-image-10"
+    title: "Title 10"
+    description: "Description 10"
+    url: "url-10.com"
+
+  - id: "placeholder-1920x1080-image-11"
+    title: "Title 11"
+    description: "Description 11"
+    url: "url-11.com"
+
+  - id: "placeholder-1920x1080-image-12"
+    title: "Title 12"
+    description: "Description 12"
+    url: "url-12.com"
