@@ -1,16 +1,9 @@
 {
-  "name": "hugo-template-renan-sigolo",
-  "version": "1.0.0",
+  "name": "live-design-website",
+  "version": "4.0.0",
   "description": "Hugo Template Renan Sigolo",
-  "keywords": [
-    "template",
-    "static",
-    "site",
-    "generator",
-    "hugo"
-  ],
   "author": "Renan Sigolo <renan.sigolo@gmail.com>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "main": "index.html",
   "scripts": {
     "build": "hugo",

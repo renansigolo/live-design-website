@@ -1,13 +1,13 @@
 # Site
-baseURL: "https://YOUR_PROJECT_DOMAIN"
+baseURL: "https://livedesign.com.br"
 languageCode: "pt-BR"
-title: "YOUR_PROJECT_TITLE"
-googleAnalytics: "G-XXXXXXXXXX"
+title: "Live Design"
+googleAnalytics: "UA-104410576-1"
 
 # Custom variables
 params:
-  description: "YOUR_PROJECT_DESCRIPTION"
-  themeColor: "YOUR_PROJECT_THEME_COLOR"
+  description: "Projetos de Identidade Visual"
+  themeColor: "#ffffff"
 
 # Build Configuration
 cleanDestinationDir: true

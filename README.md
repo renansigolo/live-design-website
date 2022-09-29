@@ -18,12 +18,12 @@ A project template for [Hugo](https://gohugo.io/) static site generator.
 
 1. Search and Replace the following values:
 
-   - `YOUR_PROJECT_ID`
-   - `YOUR_PROJECT_NAME`
-   - `YOUR_PROJECT_DESCRIPTION`
-   - `YOUR_PROJECT_THEME_COLOR`
-   - `YOUR_PROJECT_DOMAIN`
-   - `G-XXXXXXXXXX`
+   - `live-design-website`
+   - `Live Design`
+   - `Projetos de Identidade Visual`
+   - `#ffffff`
+   - `livedesign.com.br`
+   - `UA-104410576-1`
 
 1. Generate and Replace the following icons: **(WIP)**
 
