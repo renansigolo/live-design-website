@@ -1,5 +1,5 @@
-/* Grid
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Grid */
+
 @mixin grid($columns) {
   display: grid;
   gap: 8px;

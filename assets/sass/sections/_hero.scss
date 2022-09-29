@@ -1,5 +1,4 @@
-/* Hero Section
-  =============== */
+/* Hero Section */
 .bg-hero {
   background-image: var(--bg-header);
   background-position: bottom center;
@@ -60,6 +59,11 @@
       top: 0;
     }
   }
+}
+
+#learn-more {
+  display: grid;
+  place-items: center;
 }
 
 .arrow-down {

@@ -1,6 +1,14 @@
 {{ $iconLiveDesign := "images/icon-live-design.svg" }}
 
 
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+/>
 <header className="container" id="header">
   {{/* Desktop Navigation */}}
   <div className="valign-wrapper">
@@ -11,9 +19,9 @@
           <strong className="navbar-logo__label black-text">Traga vida à sua ideia!</strong>
         </div>
 
-        {{/* onClick="toggleOpen(activeSidebar)" */}}
         <a href="#" data-target="mobile-menu" className="sidenav-trigger hide-on-large-only black-text">
-          <i className="material-icons">menu</i>
+          {{/* <i className="material-icons">menu</i> */}}
+          <span class="material-symbols-outlined">menu</span>
         </a>
 
         <ul className="right hide-on-med-and-down">
