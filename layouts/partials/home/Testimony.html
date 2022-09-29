@@ -1,16 +1,3 @@
-import Image from 'next/image' export default function Testimony() { const testimonydata = [ { id: 'renan', fullName:
-'Renan Sigolo', company: 'My ADHD', description: 'Um trabalho incrível com criatividade, inovação e profissionalismo.
-Amei as artes criadas pela Live Design incorporando a identidade visual que minha marca estava precisando!', }, { id:
-'renata', fullName: 'Renata Cunha', company: 'Paçocão', description: 'Quero agradecer mais uma vez o desenvolvimento da
-Identidade Visual da Paçocão. O João pensou em todos os detalhes, além da paciência e ótimas ideias quando solicitavamos
-algumas alterações. Ficou tudo muito lindo. Adoramos!', }, { id: 'agk', fullName: 'Juliana Leite', company: 'AGK
-Corretora de Câmbio S.A.', description: 'A Live Design tornou-se nossa parceira no ano de 2020 em meio à tantas mudanças
-e foi essencial para o processo de modernização que hoje, se tornou possível graças à parceiros como o João. Um trabalho
-executado com excelência, rapidez, tecnologia e trazendo conceitos inovadores de Design, fazendo com que nossa marca
-seja cada vez mais bem vista no mercado.', }, { id: 'pedro', fullName: 'Pedro Boralli', company: 'Robinpack',
-description: 'Estamos muito satisfeitos com todo o trabalho que foi feito junto à Robin desde o começo, a atenção
-dedicada e o tempo para sanar todas as nossas dúvidas e demandas. Temos que valorizar esse tipo de trabalho, super
-profissional e transparente.', }, ] return (
 <section id="testimony" class="testimony grey lighten-5">
   <div class="container">
     <div class="row">
@@ -18,26 +5,36 @@ profissional e transparente.', }, ] return (
       <p class="testimony__subtitle">O que os clientes estão dizendo sobre a Live Design.</p>
     </div>
     <div class="row">
-      {testimonydata.map(({ id, fullName, company, description }) => (
-      <div class="col s12 m6 testimony__header" key="{id}">
-        <div class="desk-only">
-          <Image class="circle desk-only" height={120} width={120} src={`/images/avatar/${id}.jpg`} alt={`${fullName}
-          Profile Picture`} />
-        </div>
+      {{ range .Site.Data }}
+        {{ range .testimony }}
+          {{ $imgUrl := resources.Get (printf "images/avatar/%s.jpg" .id) }}
+          {{ $alt := printf "foto do perfil %s" .id }}
 
-        <p>&quot;{description}&quot;</p>
 
-        <div class="testimony__footer">
-          <Image class="circle profile-mobile" height={50} width={50} src={`/images/avatar/${id}.jpg`} alt={`${fullName}
-          Profile Picture`} />
-          <p>
-            {fullName}
-            <br />
-            <span>{company}</span>
-          </p>
-        </div>
-      </div>
-      ))}
+          <div class="col s12 m6 testimony__header">
+            <div class="desk-only">
+              <img
+                class="circle desk-only"
+                height="120"
+                width="120"
+                src="{{ $imgUrl.RelPermalink }}"
+                alt="{{ $alt }}"
+              />
+            </div>
+
+            <p>&quot;{{ .description }}&quot;</p>
+
+            <div class="testimony__footer">
+              <img class="circle profile-mobile" height="50" width="50" src="{{ $imgUrl }}" alt="{{ $alt }}" />
+              <p>
+                {{ .fullName }}
+                <br />
+                <span>{{ .company }}</span>
+              </p>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
     </div>
   </div>
 </section>
