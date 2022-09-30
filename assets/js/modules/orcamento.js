@@ -1,10 +1,10 @@
 // Record the gtag event when someone clicks on the chosen link or button.
-const orcamentoElements = document.querySelectorAll('.tagOrcamento')
+const orcamentoElements = document.querySelectorAll('.gtag-orcamento')
 orcamentoElements.forEach((element) => {
   element.addEventListener('click', () => {
     const url = 'https://form.jotformz.com/92974452958677'
     const callback = function () {
-      if (typeof url !== undefined) {
+      if (typeof url !== 'undefined') {
         window.open(url, '_blank')
       }
     }
