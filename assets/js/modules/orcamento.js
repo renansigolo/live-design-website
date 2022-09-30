@@ -15,4 +15,5 @@ orcamentoElements.forEach((element) => {
     })
     return false
   })
+  console.log('orcamento.js loaded')
 })

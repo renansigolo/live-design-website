@@ -2,6 +2,11 @@
 
 A project template for [Hugo](https://gohugo.io/) static site generator.
 
+## Dependencies
+
+- [modern-normalize](https://github.com/sindresorhus/modern-normalize.git) - Normalize browsers' default style
+- [Material Symbols](https://fonts.google.com/icons)
+
 ## Built With
 
 - [Hugo](https://gohugo.io/) - The static site generator
@@ -9,10 +14,7 @@ A project template for [Hugo](https://gohugo.io/) static site generator.
 - [ESLint](https://eslint.org/) - The pluggable linting utility for JavaScript and JSX
 - [Prettier](https://prettier.io/) - An opinionated code formatter
 - [Commitlint](https://commitlint.js.org/#/) - Lint commit messages
-
-## Dependencies
-
-- [modern-normalize](https://github.com/sindresorhus/modern-normalize.git) - Normalize browsers' default style
+- [Git Hooks](https://git-scm.com/docs/githooks) - Scripts that Git executes before or after events such as: commit, push, and receive
 
 ## Getting Started
 

@@ -10,11 +10,10 @@
     "clean": "rm -rf package-lock.json node_modules $TMPDIR/hugo_cache/",
     "deploy": "npm run build && firebase deploy",
     "fix": "npm run lint:scss -- --fix && npm run lint:js -- --fix",
-    "format:check": "prettier --check .",
     "format": "prettier '**/*' --write --ignore-unknown",
     "lint:js": "eslint 'assets/js/**/*.js'",
     "lint:scss": "stylelint 'assets/sass/**/*.scss'",
-    "prepare": "scripts/prepare.sh",
+    "postinstall": "scripts/setup-hooks.sh",
     "start": "hugo serve -D",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
