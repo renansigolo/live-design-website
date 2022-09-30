@@ -3,11 +3,10 @@
     {{ range .portfolio }}
       {{ $portfolioPath := printf "images/portfolio/%s" .id }}
       {{ $modalThumb := resources.Get (printf "images/portfolio/%s/thumbnail.png" .id) }}
-      {{ $modalId := printf "modal-%s" .id }}
       {{ $alt := printf "Modal Image Thumbnail %s" .id }}
 
 
-      <div id="{{ $modalId }}" class="custom-modal">
+      <div id="modal-{{ .id }}" class="modal custom-modal" role="dialog">
         <div class="grid-1 modal-content">
           <h4>{{ .title }} {{ .length }}</h4>
           <img alt="{{ $alt }}" src="{{ $modalThumb.RelPermalink }}" width="512" height="512" />

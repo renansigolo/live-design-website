@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #00000050;
   bottom: 0;
-  display: flex !important;
+  display: none;
   justify-content: center;
   left: 0;
   position: fixed;
@@ -50,6 +50,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  overflow-y: auto !important;
 
   img {
     border-radius: 8px !important;

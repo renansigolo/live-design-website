@@ -8,7 +8,16 @@
             {{ $imgSrc := resources.Get (printf "images/portfolio/%s/thumbnail.png" .id) }}
             {{ $alt := printf "Portfolio Image Thumbnail of %s" .title }}
             {{ $classIndex := printf "responsive-img modal-%s" .id }}
-            <img src="{{ $imgSrc.RelPermalink }}" alt="{{ $alt }}" class="{{ $classIndex }}" width="632" height="380" />
+            <a href="#modal-{{ .id }}" class="modal-trigger">
+              <img
+                data-modal="modal-{{ .id }}"
+                src="{{ $imgSrc.RelPermalink }}"
+                alt="{{ $alt }}"
+                class="{{ $classIndex }}"
+                width="632"
+                height="380"
+              />
+            </a>
           {{ end }}
         {{ end }}
       </div>

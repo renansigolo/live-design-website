@@ -1,4 +1,5 @@
-import './modules/gtag'
-import './modules/portfolio'
-import './modules/scroll'
 import './modules/sidebar'
+
+import './modules/gtag'
+import './modules/modal'
+import './modules/scroll'
