@@ -6,6 +6,7 @@ module.exports = {
       options: {
         parser: 'go-template',
         printWidth: 120,
+        singleQuote: false,
       },
     },
     {
