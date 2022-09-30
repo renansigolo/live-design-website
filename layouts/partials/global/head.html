@@ -31,9 +31,9 @@
   <script src="{{ $jsMain.Permalink }}" type="text/javascript" defer></script>
 
   {{/* Google Analytics */}}
-  {{/* {{ if hugo.IsProduction }} */}}
-  {{ template "_internal/google_analytics.html" . }}
-  {{/* {{ end }} */}}
+  {{ if hugo.IsProduction }}
+    {{ template "_internal/google_analytics.html" . }}
+  {{ end }}
   {{/* Page Title */}}
   <title>{{ .Page.Title }}</title>
 </head>
