@@ -1,4 +1,5 @@
-/* Hero Section */
+/* Hero Section
+  =============== */
 .bg-hero {
   background-image: var(--bg-header);
   background-position: bottom center;
@@ -9,6 +10,10 @@
 .hero {
   color: var(--white);
   min-height: 85vh;
+
+  &-img {
+    max-width: 462px;
+  }
 
   .container {
     align-items: center;
@@ -59,11 +64,6 @@
       top: 0;
     }
   }
-}
-
-.learn-more {
-  display: grid;
-  place-items: center;
 }
 
 .arrow-down {

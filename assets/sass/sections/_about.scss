@@ -5,6 +5,10 @@
     align-items: center;
     display: flex;
     justify-content: center;
+
+    img {
+      max-width: 492px;
+    }
   }
 
   &__content {

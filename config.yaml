@@ -15,14 +15,17 @@ menu:
     - identifier: home
       name: Home
       url: "#main-section"
+      weight: 1
 
     - identifier: about
       name: Sobre
       url: "#about"
+      weight: 2
 
     - identifier: portfolio
       name: Portfólio
       url: "#portfolio"
+      weight: 3
 
 # Build Configuration
 cleanDestinationDir: true

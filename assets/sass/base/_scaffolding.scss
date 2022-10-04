@@ -1,6 +1,6 @@
 /* Scaffolding */
 
-// Variables
+// Global Defaults
 :root {
   --grey: #808080;
   --green: #00cdc2;
@@ -24,15 +24,16 @@ $default-size: 1.1 !default;
 
 // Global Elements
 html {
-  font-family: Mosk, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   scroll-behavior: smooth;
+  tab-size: 0 !important;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  font-family: Mosk, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   min-height: 100vh;
 }
 
