@@ -1,13 +1,15 @@
 /* Footer */
 
 .row-social-icons {
+  align-items: center;
   display: flex;
   justify-content: center;
 
-  li {
+  a {
     @include scale-on-hover;
+    height: 44px;
 
-    padding: 0 12px;
+    width: 44px;
   }
 }
 

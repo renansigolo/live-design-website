@@ -12,14 +12,14 @@ socialMedia:
   - id: Instagram
     url: https://instagram.com/live.dsgn
     iconUrl: images/social-media/instagram.svg
-    height: 20
+    width: 20
 
   - id: Facebook
     url: https://facebook.com/livedsgn
     iconUrl: images/social-media/facebook.svg
-    height: 20
+    width: 20
 
   - id: Behance
     url: https://behance.net/joaojoaotx
     iconUrl: images/social-media/behance.svg
-    height: 17
+    width: 28
