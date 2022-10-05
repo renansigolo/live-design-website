@@ -6,7 +6,7 @@
         {{ $portfolioPath := printf "images/portfolio/%s" .id }}
         {{ $portfolioThumbnail := resources.Get (printf "images/portfolio/%s/thumbnail.png" .id) }}
         {{ $portfolioThumbnailAlt := printf "Modal Image Thumbnail %s" .id }}
-        {{ $portfolioImageSrc := ($portfolioThumbnail.Crop "620x620 webp").RelPermalink }}
+        {{ $portfolioImageSrc := ($portfolioThumbnail.Resize "620x620 webp").RelPermalink }}
         <img
           class="portfolio-thumbnail"
           alt="{{ $portfolioThumbnailAlt }}"
