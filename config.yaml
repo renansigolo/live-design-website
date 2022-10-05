@@ -34,3 +34,5 @@ enableRobotsTXT: true
 publishdir: "dist"
 minify: true
 disableKinds: [taxonomy, term, RSS]
+build:
+  noJSConfigInAssets: true

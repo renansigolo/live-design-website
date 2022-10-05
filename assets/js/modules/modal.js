@@ -1,26 +1,30 @@
-let modalId
-let modalElement
-
 const modalTriggers = document.querySelectorAll('.modal-trigger')
-const modalContainer = document.querySelector('.modal-container')
+const allDialogs = document.querySelectorAll('dialog')
+const allDialogLinks = document.querySelectorAll('.dialog-footer a')
 
 document.addEventListener('DOMContentLoaded', () => {
   modalTriggers.forEach((el) => {
-    el.addEventListener('click', (ref) => {
-      modalId = ref.target.dataset.modal
-      modalElement = document.querySelector(`#${modalId}`)
+    el.addEventListener('click', (evt) => {
+      const modalId = evt.target.dataset.modal
+      const modalElement = document.querySelector(`#${modalId}`)
 
-      modalElement.style.display = 'flex'
-      modalContainer.style.display = 'flex'
+      modalElement.showModal()
       document.body.style.overflow = 'hidden'
     })
   })
 
-  modalContainer.addEventListener('click', (ref) => {
-    if (ref.target === modalContainer) {
-      modalContainer.style.display = 'none'
-      document.body.style.overflow = ''
-    }
-    modalElement.style.display = 'none'
+  allDialogs.forEach((dialog) => {
+    dialog.addEventListener('click', (evt) => {
+      if (evt.target === dialog) {
+        dialog.close()
+        document.body.style.overflow = ''
+      }
+    })
+  })
+
+  allDialogLinks.forEach((el) => {
+    el.addEventListener('click', (evt) => {
+      window.open(evt.target.dataset.dialogUrl, '_blank')
+    })
   })
 })
