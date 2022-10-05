@@ -11,6 +11,7 @@ $fonts: (
 
 @each $name, $weight in $fonts {
   @font-face {
+    font-display: swap;
     font-family: Mosk;
     font-weight: $weight;
     src: url("fonts/#{$name}.ttf");

@@ -1,24 +1,3 @@
-import { googleAnalyticsId } from '@params' // eslint-disable-line import/no-unresolved
-
-// Google Analytics Helper Functions
-export const GA_TRACKING_ID = googleAnalyticsId
-
-// https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-export const pageview = (url) => {
-  window.gtag('config', GA_TRACKING_ID, {
-    page_path: url,
-  })
-}
-
-// https://developers.google.com/analytics/devguides/collection/gtagjs/events
-export const event = ({ action, category, label, value }) => {
-  window.gtag('event', action, {
-    event_category: category,
-    event_label: label,
-    value,
-  })
-}
-
 // Record the gtag event when someone clicks on the chosen link or button.
 const orcamentoElements = document.querySelectorAll('.gtag-orcamento')
 orcamentoElements.forEach((element) => {

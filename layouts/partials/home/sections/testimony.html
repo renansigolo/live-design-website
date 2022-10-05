@@ -8,7 +8,7 @@
       {{ range .Site.Data }}
         {{ range .testimony }}
           {{ $imgUrl := resources.Get (printf "images/avatars/%s.jpg" .id) }}
-          {{ $src := ($imgUrl.Resize "500x webp").RelPermalink }}
+          {{ $src := ($imgUrl.Resize "200x webp").RelPermalink }}
           {{ $alt := printf "Foto do perfil de %s" .id }}
 
 
