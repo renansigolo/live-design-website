@@ -6,8 +6,10 @@ googleAnalytics: "G-RWJZJJGP3H"
 
 # Custom variables
 params:
+  title: "Live Design"
   description: "Projetos de Identidade Visual"
   themeColor: "#ffffff"
+  images: [site-feature-image.png]
 
 # Menu settings
 menu:

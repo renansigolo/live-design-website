@@ -21,9 +21,11 @@
 
   a {
     align-items: center;
+    align-items: stretch;
     display: inline-flex;
 
     i {
+      font-size: 40px;
       padding-left: 8px;
     }
   }
@@ -55,5 +57,9 @@
     margin: 32px 0 16px;
     padding: 0 16px;
     width: 100%;
+
+    img {
+      padding: 0 !important;
+    }
   }
 }
