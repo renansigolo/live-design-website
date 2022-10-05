@@ -36,3 +36,4 @@ minify: true
 disableKinds: [taxonomy, term, RSS]
 build:
   noJSConfigInAssets: true
+  writeStats: true

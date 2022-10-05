@@ -1,6 +1,7 @@
 .firebase
 dist
 firebase-debug.log
+hugo_stats.json
 node_modules
 package-lock.json
 resources

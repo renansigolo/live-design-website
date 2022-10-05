@@ -14,13 +14,20 @@
 
           <div class="col s12 m6 testimony__header">
             <div class="desk-only">
-              <img class="circle desk-only" src="{{ $src }}" alt="{{ $alt }}" height="120" width="120" />
+              <img class="circle desk-only" src="{{ $src }}" alt="{{ $alt }}" height="120" width="120" loading="lazy" />
             </div>
 
             <p>&quot;{{ .description }}&quot;</p>
 
             <div class="testimony__footer">
-              <img class="circle profile-mobile" src="{{ $src }}" alt="{{ $alt }}" height="50" width="50" />
+              <img
+                class="circle profile-mobile"
+                src="{{ $src }}"
+                alt="{{ $alt }}"
+                height="50"
+                width="50"
+                loading="lazy"
+              />
               <p>
                 {{ .fullName }}
                 <br />

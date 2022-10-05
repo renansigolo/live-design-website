@@ -13,6 +13,7 @@
           src="{{ $portfolioImageSrc }}"
           width="620"
           height="620"
+          loading="lazy"
         />
 
         {{ range seq .length }}
@@ -25,6 +26,7 @@
             alt="{{ $modalAlt }}"
             width="{{ $modalImage.Width }}"
             height="{{ $modalImage.Height }}"
+            loading="lazy"
           />
         {{ end }}
 
