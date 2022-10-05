@@ -1,5 +1,4 @@
-{{ $avatarJoao := resources.Get "images/avatar/joao.jpg" }}
-{{ $avatarJoao := $avatarJoao.Resize "260x" }}
+{{ $avatarJoao := ((resources.Get "images/avatars/joao.jpg").Resize "500x webp").RelPermalink }}
 
 
 <section id="profile" class="profile">
@@ -16,7 +15,7 @@
       <div class="col s12 l5 profile__image">
         <a href="https://www.behance.net/joaojoaotx" target="_blank" rel="noopener noreferrer">
           <img
-            src="{{ $avatarJoao.RelPermalink }}"
+            src="{{ $avatarJoao }}"
             alt="Imagem do João Teixeira"
             class="circle responsive-img"
             height="260"

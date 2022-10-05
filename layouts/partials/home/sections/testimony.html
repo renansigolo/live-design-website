@@ -1,4 +1,4 @@
-<section id="testimony" class="testimony grey lighten-5">
+<section class="testimony grey lighten-5" id="testimony">
   <div class="container">
     <div class="row">
       <h2>Depoimentos</h2>
@@ -7,25 +7,20 @@
     <div class="row">
       {{ range .Site.Data }}
         {{ range .testimony }}
-          {{ $imgUrl := resources.Get (printf "images/avatar/%s.jpg" .id) }}
-          {{ $alt := printf "foto do perfil %s" .id }}
+          {{ $imgUrl := resources.Get (printf "images/avatars/%s.jpg" .id) }}
+          {{ $src := ($imgUrl.Resize "500x webp").RelPermalink }}
+          {{ $alt := printf "Foto do perfil de %s" .id }}
 
 
           <div class="col s12 m6 testimony__header">
             <div class="desk-only">
-              <img
-                class="circle desk-only"
-                height="120"
-                width="120"
-                src="{{ $imgUrl.RelPermalink }}"
-                alt="{{ $alt }}"
-              />
+              <img class="circle desk-only" src="{{ $src }}" alt="{{ $alt }}" height="120" width="120" />
             </div>
 
             <p>&quot;{{ .description }}&quot;</p>
 
             <div class="testimony__footer">
-              <img class="circle profile-mobile" height="50" width="50" src="{{ $imgUrl }}" alt="{{ $alt }}" />
+              <img class="circle profile-mobile" src="{{ $src }}" alt="{{ $alt }}" height="50" width="50" />
               <p>
                 {{ .fullName }}
                 <br />
