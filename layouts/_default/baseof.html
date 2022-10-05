@@ -9,5 +9,12 @@
 
     {{ partial "global/footer.html" . }}
     {{ partial "home/components/modal.html" . }}
+
   </body>
+
+  {{/* Google Analytics and Open Graph */}}
+  {{ if hugo.IsProduction }}
+    {{ template "_internal/google_analytics.html" . }}
+    {{ template "_internal/opengraph.html" . }}
+  {{ end }}
 </html>

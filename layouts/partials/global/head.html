@@ -32,12 +32,6 @@
   {{ $js := resources.Get "js/main.js" | js.Build $jsParams | minify | fingerprint }}
   <script src="{{ $js.Permalink }}" type="text/javascript" integrity="{{ $js.Data.Integrity }}" defer></script>
 
-  {{/* Google Analytics and Open Graph */}}
-  {{ if hugo.IsProduction }}
-    {{ template "_internal/google_analytics.html" . }}
-    {{ template "_internal/opengraph.html" . }}
-  {{ end }}
-
   {{/* Page Title */}}
   <title>{{ .Page.Title }}</title>
 </head>
