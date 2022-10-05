@@ -1,5 +1,7 @@
+import { googleAnalyticsId } from '@params' // eslint-disable-line import/no-unresolved
+
 // Google Analytics Helper Functions
-export const GA_TRACKING_ID = 'G-RWJZJJGP3H'
+export const GA_TRACKING_ID = googleAnalyticsId
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url) => {
