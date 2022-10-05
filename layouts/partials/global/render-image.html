@@ -1,0 +1,15 @@
+{{/* Get Image Resource */}}
+{{ $image := resources.Get (urlize .imgPath) }}
+{{/* Resize Image to WebP */}}
+{{ $webp := $image.Resize (printf "%dx%d webp" $image.Width $image.Height) }}
+
+{{/* Render Image */}}
+<img
+  class="responsive-img modal-{{ .id }}"
+  data-modal="modal-{{ .id }}"
+  src="{{ $webp.RelPermalink }}"
+  alt="{{ .alt }}"
+  width="{{ $webp.Width }}"
+  height="{{ $webp.Height }}"
+  loading="lazy"
+/>

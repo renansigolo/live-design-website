@@ -1,24 +1,30 @@
 {{ range .Site.Data }}
   {{ range .portfolio }}
-    {{ $portfolioPath := printf "images/portfolio/%s" .id }}
-    {{ $modalThumb := resources.Get (printf "images/portfolio/%s/thumbnail.png" .id) }}
-    {{ $alt := printf "Modal Image Thumbnail %s" .id }}
-
-
     <dialog id="modal-{{ .id }}" class="custom-dialog" role="dialog">
       <div class="grid-1 dialog-content">
-        <h4>{{ .title }} {{ .length }}</h4>
-        <img alt="{{ $alt }}" src="{{ $modalThumb.RelPermalink }}" width="512" height="512" />
+        <h4>{{ .title }}</h4>
+        {{ $portfolioPath := printf "images/portfolio/%s" .id }}
+        {{ $portfolioThumbnail := resources.Get (printf "images/portfolio/%s/thumbnail.png" .id) }}
+        {{ $portfolioThumbnailAlt := printf "Modal Image Thumbnail %s" .id }}
+        {{ $portfolioImageSrc := ($portfolioThumbnail.Crop "620x620 webp").RelPermalink }}
+        <img
+          class="portfolio-thumbnail"
+          alt="{{ $portfolioThumbnailAlt }}"
+          src="{{ $portfolioImageSrc }}"
+          width="620"
+          height="620"
+        />
 
         {{ range seq .length }}
-          {{ $filename := printf "/modal-%d.png" . }}
-          {{ $imgSrc := resources.Get (printf "%s" $filename | printf "%s%s" $portfolioPath ) }}
-          {{ $altThumb := printf "Modal Image Thumbnail %d" . }}
+          {{ $modalFilename := printf "/modal-%d.png" . }}
+          {{ $modalImage := resources.Get (printf "%s" $modalFilename | printf "%s%s" $portfolioPath ) }}
+          {{ $modalAlt := printf "Modal Image Thumbnail %d" . }}
+          {{ $modalImageSrc := ($modalImage.Resize (printf "%dx%d webp" $modalImage.Width $modalImage.Height)).RelPermalink }}
           <img
-            src="{{ $imgSrc.RelPermalink }}"
-            alt="{{ $altThumb }}"
-            width="{{ $imgSrc.Width }}"
-            height="{{ $imgSrc.Height }}"
+            src="{{ $modalImageSrc }}"
+            alt="{{ $modalAlt }}"
+            width="{{ $modalImage.Width }}"
+            height="{{ $modalImage.Height }}"
           />
         {{ end }}
 

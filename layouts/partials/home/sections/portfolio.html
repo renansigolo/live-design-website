@@ -5,25 +5,13 @@
       <div class="grid-2">
         {{ range .Site.Data }}
           {{ range .portfolio }}
-            {{ $image := resources.Get (printf "images/portfolio/%s/thumbnail.png" .id) }}
-            {{ $webp := $image.Resize (printf "%dx%d webp" $image.Width $image.Height) }}
-            {{ $jpeg := $image.Resize (printf "%dx%d jpeg" $image.Width $image.Height) }}
+            {{ $imgPath := (printf "images/portfolio/%s/thumbnail.png" .id) }}
             {{ $alt := printf "Portfolio Image Thumbnail of %s" .title }}
 
 
             <a href="#modal-{{ .id }}" class="modal-trigger">
-              <picture>
-                <source srcset="{{ $webp.RelPermalink }}" type="image/webp" />
-                <img
-                  data-modal="modal-{{ .id }}"
-                  src="{{ $jpeg.RelPermalink }}"
-                  alt="{{ $alt }}"
-                  class="responsive-img modal-{{ .id }}"
-                  width="632"
-                  height="380"
-                  decoding="async"
-                />
-              </picture>
+              {{ $partialData := dict "imgPath" $imgPath "alt" $alt "id" .id }}
+              {{ partial "global/render-image.html" $partialData }}
             </a>
           {{ end }}
         {{ end }}

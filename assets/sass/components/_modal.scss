@@ -34,6 +34,10 @@
     flex-direction: column;
     overflow-y: auto !important;
 
+    .portfolio-thumbnail {
+      aspect-ratio: 1/1;
+    }
+
     img {
       border-radius: 8px !important;
       height: auto;
