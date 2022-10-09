@@ -34,6 +34,8 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin-inline: auto;
+    max-width: 620px;
     overflow-y: auto !important;
 
     .portfolio-thumbnail {
