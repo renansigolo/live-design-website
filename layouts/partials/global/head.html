@@ -23,8 +23,7 @@
 
   {{/* Styles */}}
   {{ $scss := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS }}
-  {{ $optionsPostCSS := dict "noMap" true "inlineImports" true }}
-  {{ $style := $scss | minify | fingerprint "md5" | resources.PostCSS $optionsPostCSS }}
+  {{ $style := $scss | resources.PostCSS | minify | fingerprint "md5" }}
   <link href="{{ $style.Permalink }}" rel="stylesheet" />
 
   {{/* Scripts */}}
