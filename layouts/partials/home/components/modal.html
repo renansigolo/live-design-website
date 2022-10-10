@@ -1,6 +1,6 @@
 {{ range .Site.Data }}
   {{ range .portfolio }}
-    <dialog id="modal-{{ .id }}" class="custom-dialog" role="dialog">
+    <dialog class="custom-dialog" id="modal-{{ .id }}" role="dialog">
       <div class="grid-1 dialog-content">
         <h4>{{ .title }}</h4>
         {{ $portfolioPath := printf "images/portfolio/%s" .id }}
@@ -9,8 +9,8 @@
         {{ $portfolioImageSrc := ($portfolioThumbnail.Resize "620x620 webp").RelPermalink }}
         <img
           class="portfolio-thumbnail"
-          alt="{{ $portfolioThumbnailAlt }}"
           src="{{ $portfolioImageSrc }}"
+          alt="{{ $portfolioThumbnailAlt }}"
           width="620"
           height="620"
           loading="lazy"
@@ -33,7 +33,7 @@
 
         <div class="dialog-footer">
           <form method="dialog">
-            <a class="btn-flat" target="_blank" rel="noopener noreferrer" role="button" data-dialog-url="{{ .url }}">
+            <a class="btn-flat" data-dialog-url="{{ .url }}" role="button" target="_blank" rel="noopener noreferrer">
               Ver mais
               <i><img src="images/material-symbols/open-in-new.svg" alt="Open in new" height="24" width="24" /></i>
             </a>

@@ -2,7 +2,7 @@
 {{ range .Site.Data }}
   {{ range .socialMedia }}
     <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
-      <img src="{{ .iconUrl }}" width="{{ .width }}" height="20" alt="{{ .id }}" />
+      <img src="{{ .iconUrl }}" alt="{{ .id }}" width="{{ .width }}" height="20" />
     </a>
   {{ end }}
 {{ end }}

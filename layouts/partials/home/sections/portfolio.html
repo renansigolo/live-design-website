@@ -1,4 +1,4 @@
-<section id="portfolio" class="portfolio">
+<section class="portfolio" id="portfolio">
   <div class="container">
     <h2>Portfólio</h2>
     <div class="portfolio__cases">
@@ -10,7 +10,7 @@
             {{ $alt := printf "Portfolio Image Thumbnail of %s" .title }}
 
 
-            <a href="#modal-{{ .id }}" class="modal-trigger">
+            <a class="modal-trigger" href="#modal-{{ .id }}">
               <img
                 class="responsive-img modal-{{ .id }}"
                 data-modal="modal-{{ .id }}"

@@ -27,8 +27,8 @@
 
         <a
           class="card"
-          aria-label="{{ .description }}"
           href="https://{{ .url }}"
+          aria-label="{{ .description }}"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -39,12 +39,12 @@
             <source media="(min-width: 1600px)" srcset="{{ with $large.RelPermalink }}{{ . }}{{ end }}" />
 
             <img
-              alt="{{ $alt }}"
-              title="{{ $alt }}"
+              class="card-image"
               src="{{ $src }}"
+              title="{{ $alt }}"
+              alt="{{ $alt }}"
               height="{{ $src.Height }}"
               width="{{ $src.Width }}"
-              class="card-image"
               loading="lazy"
             />
           </picture>

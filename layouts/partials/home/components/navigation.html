@@ -4,13 +4,13 @@
     <nav class="navbar">
       <div class="nav-wrapper">
         <div class="navbar-logo">
-          <img src="images/icon-live-design.svg" width="38" height="26" alt="Ícone da Live Design" />
+          <img src="images/icon-live-design.svg" alt="Ícone da Live Design" width="38" height="26" />
           <strong class="navbar-logo__label black-text">Traga vida à sua ideia!</strong>
         </div>
 
-        <a href="#" data-target="mobile-menu" class="sidenav-trigger hide-on-large-only black-text">
+        <a class="sidenav-trigger hide-on-large-only black-text" data-target="mobile-menu" href="#">
           <i class="material-symbols-outlined"
-            ><img src="images/material-symbols/menu.svg" height="24" width="24" alt="Menu"
+            ><img src="images/material-symbols/menu.svg" alt="Menu" height="24" width="24"
           /></i>
         </a>
 
@@ -35,7 +35,7 @@
 
   {{/* Mobile Navigation */}}
   <div id="mobile-menu-background"></div>
-  <ul id="mobile-menu" class="sidenav">
+  <ul class="sidenav" id="mobile-menu">
     {{ range .Site.Menus.main }}
       <li>
         <a href="{{ .URL }}">{{ .Name }}</a>
