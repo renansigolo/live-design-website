@@ -29,7 +29,7 @@
   {{/* Scripts */}}
   {{ $jsParams := dict "targetPath" "main.js" "params" (dict "googleAnalyticsId" site.Config.Services.GoogleAnalytics.ID) }}
   {{ $js := resources.Get "js/main.js" | js.Build $jsParams | minify | fingerprint "md5" }}
-  <script src="{{ $js.Permalink }}" type="text/javascript" integrity="{{ $js.Data.Integrity }}" defer></script>
+  <script src="{{ $js.Permalink }}" type="module" integrity="{{ $js.Data.Integrity }}" defer></script>
 
   {{/* Page Title */}}
   <title>{{ .Page.Title }}</title>
