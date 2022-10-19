@@ -10,6 +10,8 @@ params:
   description: "Projetos de Identidade Visual"
   themeColor: "#ffffff"
   images: [site-feature-image.png]
+  jotformUrl: https://form.jotformz.com/92974452958677
+  googleTagId: AW-840306545/jF4gCLidy7UBEPGe2JAD
 
 # Menu settings
 menu:

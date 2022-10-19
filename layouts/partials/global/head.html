@@ -27,7 +27,8 @@
   <link href="{{ $style.Permalink }}" rel="stylesheet" />
 
   {{/* Scripts */}}
-  {{ $jsParams := dict "targetPath" "main.js" "params" (dict "googleAnalyticsId" site.Config.Services.GoogleAnalytics.ID) }}
+  {{ $configParams := dict "googleAnalyticsId" site.Config.Services.GoogleAnalytics.ID "params" .Site.Params "isProd" hugo.IsProduction }}
+  {{ $jsParams := dict "targetPath" "main.js" "params" $configParams }}
   {{ $js := resources.Get "js/main.js" | js.Build $jsParams | minify | fingerprint }}
   <script src="{{ $js.Permalink }}" type="module" integrity="{{ $js.Data.Integrity }}" defer></script>
 
