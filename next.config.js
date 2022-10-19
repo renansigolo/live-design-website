@@ -1,4 +1,17 @@
+// const ContentSecurityPolicy = `
+//   base-uri 'none';
+//   default-src 'self';
+//   object-src 'none';
+//   script-src 'self';
+//   script-src-elem 'self' https://*.googletagmanager.com 'unsafe-inline';
+//   require-trusted-types-for 'script';
+// `
+
 const securityHeaders = [
+  // {
+  //   key: 'Content-Security-Policy',
+  //   value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
+  // },
   {
     key: 'Referrer-Policy',
     value: 'no-referrer-when-downgrade',
