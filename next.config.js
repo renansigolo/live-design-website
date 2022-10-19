@@ -36,17 +36,6 @@ const securityHeaders = [
 
 /** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: true,
-  swcMinify: true,
-  compiler: {
-    removeConsole: {
-      exclude: ['error'],
-    },
-  },
-  i18n: {
-    locales: ['pt-BR'],
-    defaultLocale: 'pt-BR',
-  },
   async headers() {
     return [
       {
