@@ -22,15 +22,15 @@
     "@fortawesome/fontawesome-free": "6.2.0",
     "@fullhuman/postcss-purgecss": "5.0.0",
     "@materializecss/materialize": "1.1.0-alpha",
-    "cssnano": "5.1.13",
+    "cssnano": "5.1.14",
     "modern-normalize": "1.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.1.2",
-    "@commitlint/config-conventional": "17.1.0",
-    "@commitlint/prompt-cli": "17.1.2",
+    "@commitlint/cli": "17.2.0",
+    "@commitlint/config-conventional": "17.2.0",
+    "@commitlint/prompt-cli": "17.2.0",
     "@csstools/postcss-sass": "5.0.1",
-    "cssnano-preset-advanced": "5.3.8",
+    "cssnano-preset-advanced": "5.3.9",
     "eslint": "8.26.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-prettier": "8.5.0",
@@ -44,7 +44,7 @@
     "prettier-plugin-go-template": "0.0.13",
     "stylelint": "14.14.0",
     "stylelint-config-prettier": "9.0.3",
-    "stylelint-config-recommended-scss": "7.0.0",
+    "stylelint-config-recommended-scss": "8.0.0",
     "stylelint-config-sass-guidelines": "9.0.1"
   }
 }
