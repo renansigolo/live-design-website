@@ -1,0 +1,45 @@
+{{ range .Site.Data }}
+  {{ range .portfolio }}
+    <dialog class="custom-dialog" id="modal-{{ .id }}" role="dialog">
+      <div class="grid-1 dialog-content">
+        <h4>{{ .title }}</h4>
+        {{ $portfolioPath := printf "images/portfolio/%s" .id }}
+        {{ $portfolioThumbnail := resources.Get (printf "images/portfolio/%s/thumbnail.png" .id) }}
+        {{ $portfolioThumbnailAlt := printf "Modal Image Thumbnail %s" .id }}
+        {{ $portfolioImageSrc := ($portfolioThumbnail.Resize "620x620 webp").RelPermalink }}
+        <img
+          class="portfolio-thumbnail"
+          src="{{ $portfolioImageSrc }}"
+          alt="{{ $portfolioThumbnailAlt }}"
+          width="620"
+          height="620"
+          loading="lazy"
+        />
+
+        {{ range seq .length }}
+          {{ $modalFilename := printf "/modal-%d.png" . }}
+          {{ $modalImage := resources.Get (printf "%s" $modalFilename | printf "%s%s" $portfolioPath ) }}
+          {{ $modalAlt := printf "Modal Image Thumbnail %d" . }}
+          {{ $modalImageSrc := ($modalImage.Resize (printf "%dx%d webp" $modalImage.Width $modalImage.Height)).RelPermalink }}
+          <img
+            src="{{ $modalImageSrc }}"
+            alt="{{ $modalAlt }}"
+            width="{{ $modalImage.Width }}"
+            height="{{ $modalImage.Height }}"
+            loading="lazy"
+          />
+        {{ end }}
+
+
+        <div class="dialog-footer">
+          <form method="dialog">
+            <a class="btn-flat" data-dialog-url="{{ .url }}" role="button" target="_blank" rel="noopener noreferrer">
+              Ver mais
+              <i><img src="images/material-symbols/open-in-new.svg" alt="Open in new" height="24" width="24" /></i>
+            </a>
+          </form>
+        </div>
+      </div>
+    </dialog>
+  {{ end }}
+{{ end }}

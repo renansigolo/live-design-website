@@ -1,0 +1,29 @@
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <h2>Portfólio</h2>
+    <div class="portfolio__cases">
+      <div class="grid-2">
+        {{ range .Site.Data }}
+          {{ range .portfolio }}
+            {{ $image := resources.Get (printf "images/portfolio/%s/thumbnail.png" .id | urlize) }}
+            {{ $image := $image.Resize (printf "%dx%d webp" $image.Width $image.Height) }}
+            {{ $alt := printf "Portfolio Image Thumbnail of %s" .title }}
+
+
+            <a class="modal-trigger" href="#modal-{{ .id }}">
+              <img
+                class="responsive-img modal-{{ .id }}"
+                data-modal="modal-{{ .id }}"
+                src="{{ $image.RelPermalink }}"
+                alt="{{ $alt }}"
+                width="{{ $image.Width }}"
+                height="{{ $image.Height }}"
+                loading="lazy"
+              />
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

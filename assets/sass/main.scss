@@ -1,0 +1,21 @@
+// Materialize
+@import "node_modules/@materializecss/materialize/sass/materialize";
+
+// Live Design theme
+@import "base/typography";
+@import "base/scaffolding";
+@import "base/grid";
+@import "base/buttons";
+
+// Sections
+@import "sections/navbar";
+@import "sections/hero";
+@import "sections/portfolio";
+@import "sections/about";
+@import "sections/stages";
+@import "sections/profile";
+@import "sections/testimony";
+@import "sections/footer";
+
+// Components
+@import "components/modal";

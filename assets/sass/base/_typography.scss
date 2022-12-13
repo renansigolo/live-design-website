@@ -1,0 +1,38 @@
+/* Typography */
+
+// Generate Font Faces
+$fonts: (
+  "mosk-normal": "",
+  "mosk-light": 300,
+  "mosk-medium": 500,
+  "mosk-semi-bold": 600,
+  "mosk-bold": 700,
+);
+
+@each $name, $weight in $fonts {
+  @font-face {
+    font-display: swap;
+    font-family: Mosk;
+    font-weight: $weight;
+    src: url("fonts/#{$name}.ttf");
+  }
+}
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 140%;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,52 @@
+<header class="container" id="header">
+  {{/* Desktop Navigation */}}
+  <div class="valign-wrapper">
+    <nav class="navbar">
+      <div class="nav-wrapper">
+        <div class="navbar-logo">
+          <img src="images/icon-live-design.svg" alt="Ícone da Live Design" width="38" height="26" />
+          <strong class="navbar-logo__label black-text">Traga vida à sua ideia!</strong>
+        </div>
+
+        <a class="sidenav-trigger hide-on-large-only black-text" data-target="mobile-menu" href="#">
+          <i class="material-symbols-outlined"
+            ><img src="images/material-symbols/menu.svg" alt="Menu" height="24" width="24"
+          /></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down">
+          {{/* Navigation Items */}}
+          {{ range .Site.Menus.main }}
+            <li>
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+          <li>
+            <a class="gtag-orcamento" data-js-gtag-orcamento rel="noopener noreferrer">Orçamento</a>
+          </li>
+
+          <ul class="social-icons">
+            {{ partial "home/components/social-media-links" . }}
+          </ul>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  {{/* Mobile Navigation */}}
+  <div id="mobile-menu-background"></div>
+  <ul class="sidenav" id="mobile-menu">
+    {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+    {{ end }}
+    <li>
+      <a class="gtag-orcamento" rel="noopener noreferrer">Orçamento</a>
+    </li>
+
+    <ul class="social-icons valign-wrapper">
+      {{ partial "home/components/social-media-links" . }}
+    </ul>
+  </ul>
+</header>

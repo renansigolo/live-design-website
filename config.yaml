@@ -1,0 +1,43 @@
+# Site
+baseURL: "https://live-design.web.app"
+languageCode: "pt-BR"
+title: "Live Design"
+googleAnalytics: "G-RWJZJJGP3H"
+
+# Custom variables
+params:
+  title: "Live Design"
+  description: "Projetos de Identidade Visual"
+  themeColor: "#ffffff"
+  images: [site-feature-image.png]
+  jotformUrl: https://form.jotformz.com/92974452958677
+  googleTagId: AW-840306545/jF4gCLidy7UBEPGe2JAD
+
+# Menu settings
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: "#main-section"
+      weight: 1
+
+    - identifier: about
+      name: Sobre
+      url: "#about"
+      weight: 2
+
+    - identifier: portfolio
+      name: Portfólio
+      url: "#portfolio"
+      weight: 3
+
+# Build Configuration
+cleanDestinationDir: true
+disableHugoGeneratorInject: true
+enableRobotsTXT: true
+publishdir: "dist"
+minify: true
+disableKinds: [taxonomy, term, RSS]
+build:
+  noJSConfigInAssets: true
+  writeStats: true

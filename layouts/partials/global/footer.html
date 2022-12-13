@@ -1,0 +1,58 @@
+{{ $logoLiveDesignWhite := "images/logo-live-design-white.svg" }}
+{{ $iconLiveDesignWhite := "images/icon-live-design-white.svg" }}
+{{ $iconBehance := "images/social-media/behance-wht.svg" }}
+{{ $iconFacebook := "images/social-media/facebook-wht.svg" }}
+{{ $iconInstagram := "images/social-media/instagram-wht.svg" }}
+
+
+<footer id="footer">
+  <div class="center-align">
+    <div class="footer">
+      <img src="{{ $iconLiveDesignWhite }}" alt="Live Design Logo" width="130" height="90" loading="lazy" />
+      <div class="footer__content">
+        <h2>Traga vida à sua ideia!</h2>
+        <a
+          class="btn btn-large btn-orcamento waves-effect white black-text gtag-orcamento"
+          data-js-gtag-orcamento
+          rel="noopener noreferrer"
+        >
+          Solicite um Orçamento
+        </a>
+        <a class="white-text" href="https://behance.net/joaojoaotx" target="_blank" rel="noopener noreferrer">
+          Ver Portfólio Completo
+        </a>
+        <ul class="row-social-icons">
+          <a href="https://instagram.com/live.dsgn" target="_blank" rel="noopener noreferrer">
+            <img src="{{ $iconInstagram }}" alt="Instagram Icon" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://facebook.com/livedsgn" target="_blank" rel="noopener noreferrer">
+            <img src="{{ $iconFacebook }}" alt="Facebook Icon" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://behance.net/joaojoaotx" target="_blank" rel="noopener noreferrer">
+            <img src="{{ $iconBehance }}" alt="Behance Icon" width="30" height="20" loading="lazy" />
+          </a>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright hide-on-med-and-down">
+      <div class="container">
+        <img src="{{ $logoLiveDesignWhite }}" alt="Live Design Logo" width="200" height="25" loading="lazy" />
+
+        <ul class="copyright__links">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#about">Sobre</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfólio</a>
+          </li>
+          <li>
+            <a class="gtag-orcamento" data-js-gtag-orcamento>Orçamento</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,53 @@
+/* Scaffolding */
+
+// Global Defaults
+:root {
+  --grey: #808080;
+  --green: #00cdc2;
+  --pink: #ff0046;
+  --white: #fff;
+  --bg-header: url("images/bg-header.svg");
+  --bg-footer: url("images/bg-footer.svg");
+  --shadow: 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%),
+    0 2px 4px -1px rgb(0 0 0 / 30%);
+}
+
+// Mixins
+$default-size: 1.1 !default;
+
+@mixin scale-on-hover($size: $default-size) {
+  &:hover {
+    transform: scale($size);
+    transition: transform 0.5s;
+  }
+}
+
+// Global Elements
+html {
+  scroll-behavior: smooth;
+  tab-size: 0 !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Mosk, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  min-height: 100vh;
+}
+
+section {
+  margin-bottom: 12vh;
+}
+
+// Global Classes
+.move-to-top {
+  bottom: 30px;
+  position: fixed;
+  right: 30px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}

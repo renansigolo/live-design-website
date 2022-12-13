@@ -1,0 +1,29 @@
+{{ $avatarJoao := ((resources.Get "images/avatars/joao.jpg").Resize "500x webp").RelPermalink }}
+
+
+<section class="profile" id="profile">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 l7 profile__content">
+        <h2>Quem trará vida à sua ideia?</h2>
+        <p>
+          Me chamo João Teixeira, sou formado em Publicidade pela Universidade Anhembi Morumbi e tenho mais de 5 anos de
+          experiência na área de criação e design. Me especializei na criação de projetos de marca, abri meu próprio
+          estúdio de design e comecei a dar vida às ideias de profissionais e empresas dos mais diversos segmentos.
+        </p>
+      </div>
+      <div class="col s12 l5 profile__image">
+        <a href="https://www.behance.net/joaojoaotx" target="_blank" rel="noopener noreferrer">
+          <img
+            class="circle responsive-img"
+            src="{{ $avatarJoao }}"
+            alt="Imagem do João Teixeira"
+            height="260"
+            width="260"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

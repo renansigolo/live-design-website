@@ -1,0 +1,25 @@
+navigation:
+  - title: Home
+    url: "#main-section"
+
+  - title: About
+    url: "#about"
+
+  - title: Portfólio
+    url: "#portfolio"
+
+socialMedia:
+  - id: Instagram
+    url: https://instagram.com/live.dsgn
+    iconUrl: images/social-media/instagram.svg
+    width: 20
+
+  - id: Facebook
+    url: https://facebook.com/livedsgn
+    iconUrl: images/social-media/facebook.svg
+    width: 20
+
+  - id: Behance
+    url: https://behance.net/joaojoaotx
+    iconUrl: images/social-media/behance.svg
+    width: 28

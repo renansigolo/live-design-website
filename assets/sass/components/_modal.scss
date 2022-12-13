@@ -1,0 +1,67 @@
+/* Modal */
+
+.custom-dialog {
+  background-color: #fafafa;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: var(--shadow);
+  justify-content: center;
+  left: 0;
+  margin: auto;
+  max-height: 86%;
+  min-width: 350px;
+  padding: 0;
+  right: 0;
+  width: 55%;
+  will-change: top, opacity;
+
+  &::backdrop {
+    background-color: #00000050;
+  }
+
+  a {
+    align-items: center;
+    align-items: stretch;
+    display: inline-flex;
+
+    i {
+      font-size: 40px;
+      padding-left: 8px;
+    }
+  }
+
+  .dialog-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    max-width: 620px;
+    overflow-y: auto !important;
+
+    .portfolio-thumbnail {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+
+    img {
+      border-radius: 8px !important;
+      height: auto;
+      margin: 5px 0;
+      padding: 0 8px !important;
+      width: 70%;
+    }
+  }
+
+  .dialog-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 32px 0 16px;
+    padding: 0 16px;
+    width: 100%;
+
+    img {
+      padding: 0 !important;
+    }
+  }
+}

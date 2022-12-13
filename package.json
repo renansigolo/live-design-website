@@ -1,51 +1,49 @@
 {
-  "name": "live-design",
-  "version": "3.1.0",
-  "private": true,
+  "name": "live-design-website",
+  "version": "4.0.0",
+  "description": "Live Design Website",
+  "author": "Renan Sigolo <renan.sigolo@gmail.com>",
+  "license": "Apache-2.0",
+  "main": "index.html",
   "scripts": {
-    "build": "next build",
-    "clean": "rm -rf package-lock.json node_modules .next",
-    "dev": "next dev",
-    "format": "prettier '**/*' --write --ignore-unknown",
-    "lint:fix": "next lint --fix && stylelint '**/*.scss' --fix",
-    "lint": "next lint && stylelint '**/*.scss'",
-    "postbuild": "next-sitemap",
-    "postversion": "git push && git push --tags",
-    "start": "next start",
-    "svgo": "npx svgo --multipass -f public/images -r"
+    "build": "hugo",
+    "clean": "rm -rf package-lock.json node_modules resources dist .firebase $TMPDIR/hugo_cache/",
+    "deploy": "npm run build && firebase deploy",
+    "fix": "npm run lint:js -- --fix && npm run lint:style -- --fix",
+    "format": "node scripts/sort-html.js && prettier '**/*' --write --ignore-unknown",
+    "lint:js": "eslint 'assets/js/**/*.js'",
+    "lint:style": "stylelint 'assets/**/*.{scss,css}'",
+    "postinstall": "scripts/setup-hooks.sh",
+    "preview": "hugo --baseURL='/' && npx serve dist",
+    "start": "hugo serve -D",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "6.2.1",
+    "@fullhuman/postcss-purgecss": "5.0.0",
     "@materializecss/materialize": "1.1.0-alpha",
-    "next": "12.2.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sharp": "0.30.7"
+    "cssnano": "5.1.14",
+    "modern-normalize": "1.1.0"
   },
   "devDependencies": {
-    "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5",
+    "@commitlint/cli": "17.3.0",
+    "@commitlint/config-conventional": "17.3.0",
+    "@commitlint/prompt-cli": "17.3.0",
+    "@csstools/postcss-sass": "5.0.1",
+    "cssnano-preset-advanced": "5.3.9",
+    "eslint": "8.29.0",
+    "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-prettier": "8.5.0",
-    "next-sitemap": "3.1.20",
-    "postcss": "8.4.16",
-    "postcss-scss": "4.0.4",
-    "prettier": "2.7.1",
-    "sass": "1.54.4",
-    "stylelint": "14.10.0",
-    "stylelint-config-sass-guidelines": "9.0.1",
-    "stylelint-config-standard-scss": "5.0.0"
-  },
-  "engines": {
-    "node": "^14.15.0 || >=16.13.0",
-    "npm": ">=6.14.8",
-    "yarn": "NO LONGER USED - Please use npm"
-  },
-  "browserslist": [
-    "last 1 Chrome version",
-    "last 1 Firefox version",
-    "last 2 Edge major versions",
-    "last 2 Safari major versions",
-    "last 2 iOS major versions",
-    "Firefox ESR",
-    "not IE 11"
-  ]
+    "eslint-plugin-import": "2.26.0",
+    "postcss": "8.4.20",
+    "postcss-cli": "10.1.0",
+    "posthtml": "0.16.6",
+    "posthtml-attrs-sorter": "1.1.0",
+    "prettier": "2.8.1",
+    "prettier-plugin-go-template": "0.0.13",
+    "stylelint": "14.16.0",
+    "stylelint-config-prettier": "9.0.4",
+    "stylelint-config-recommended-scss": "8.0.0",
+    "stylelint-config-sass-guidelines": "9.0.1"
+  }
 }

@@ -1,0 +1,64 @@
+/* Testimony Section */
+
+.testimony {
+  margin-bottom: 12vh;
+  padding: 2vh 0;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  &__subtitle {
+    color: var(--grey);
+    font-weight: 600;
+    margin-top: 8px;
+  }
+
+  .col.m6 {
+    padding-bottom: 16px;
+
+    @media #{$medium-and-up} {
+      padding: 0 32px 32px 0;
+    }
+
+    @media #{$large-and-up} {
+      padding: 0 64px 64px 0;
+    }
+  }
+
+  &__header {
+    .desk-only {
+      @media #{$small-and-down} {
+        display: none;
+      }
+
+      @media #{$medium-and-up} {
+        max-width: 120px;
+      }
+    }
+  }
+
+  &__footer {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -1em;
+    width: 100%;
+
+    @media #{$medium-and-up} {
+      img {
+        display: none !important;
+      }
+    }
+
+    span {
+      color: var(--pink);
+    }
+
+    p {
+      @media #{$small-and-down} {
+        margin-left: 1em;
+      }
+    }
+  }
+}

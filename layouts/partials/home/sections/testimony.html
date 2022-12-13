@@ -1,0 +1,42 @@
+<section class="testimony grey lighten-5" id="testimony">
+  <div class="container">
+    <div class="row">
+      <h2>Depoimentos</h2>
+      <p class="testimony__subtitle">O que os clientes estão dizendo sobre a Live Design.</p>
+    </div>
+    <div class="row">
+      {{ range .Site.Data }}
+        {{ range .testimony }}
+          {{ $imgUrl := resources.Get (printf "images/avatars/%s.jpg" .id) }}
+          {{ $src := ($imgUrl.Resize "200x webp").RelPermalink }}
+          {{ $alt := printf "Foto do perfil de %s" .id }}
+
+
+          <div class="col s12 m6 testimony__header">
+            <div class="desk-only">
+              <img class="circle desk-only" src="{{ $src }}" alt="{{ $alt }}" height="120" width="120" loading="lazy" />
+            </div>
+
+            <p>&quot;{{ .description }}&quot;</p>
+
+            <div class="testimony__footer">
+              <img
+                class="circle profile-mobile"
+                src="{{ $src }}"
+                alt="{{ $alt }}"
+                height="50"
+                width="50"
+                loading="lazy"
+              />
+              <p>
+                {{ .fullName }}
+                <br />
+                <span>{{ .company }}</span>
+              </p>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
