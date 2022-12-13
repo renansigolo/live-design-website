@@ -1,6 +1,6 @@
-# Hugo Template Renan Sigolo
+# Live Design
 
-A project template for [Hugo](https://gohugo.io/) static site generator.
+Source code of the Live Design website
 
 ## Dependencies
 
@@ -16,50 +16,48 @@ A project template for [Hugo](https://gohugo.io/) static site generator.
 - [Commitlint](https://commitlint.js.org/#/) - Lint commit messages
 - [Git Hooks](https://git-scm.com/docs/githooks) - Scripts that Git executes before or after events such as: commit, push, and receive
 
-## Getting Started
+## Development
 
-1. Search and Replace the following values:
+If you're configuring this app for the first time
 
-   - `live-design-website`
-   - `Live Design`
-   - `Projetos de Identidade Visual`
-   - `#ffffff`
-   - `livedesign.com.br`
-   - `UA-104410576-1`
+1. Clone the project
 
-1. Generate and Replace the following icons: **(WIP)**
+```
+git clone https://github.com/renansigolo/live-design-website.git
+```
 
-   > You can use such tools to help you generate them such as [RealFaviconGenerator](https://realfavicongenerator.net) and [FAVIC-O-MATIC](https://favicomatic.com)
+## Usage
 
-   | Name    | Description       |   Size    | Aspect Ratio | Format | Transparency |
-   | ------- | ----------------- | :-------: | :----------: | :----: | :----------: |
-   | favicon | The original icon | 1024x1024 |     1:1      |  svg   |      ✅      |
+### Install Dependencies
 
-   ## Genreal Icons
+```bash
+npm i
+```
 
-   | Icon path                         |                           sizes                           | purpose |
-   | --------------------------------- | :-------------------------------------------------------: | :-----: |
-   | static/favicon.ico                | `16x16` `32x32` `48x48` <br /> `24x24` `64x64` (optional) |         |
-   | static/favicon.svg                |                             -                             |         |
-   | static/safari-pinned-tab.svg      |                             -                             |         |
-   | static/apple-touch-icon.png       |                          180x180                          |         |
-   | static/android-chrome-192x192.png |                          192x192                          |         |
-   | static/android-chrome-512x512.png |                          512x512                          |         |
-   | static/favicon-16x16.png          |                           16x16                           |         |
-   | static/favicon-32x32.png          |                           32x32                           |         |
-   | static/mstile-150x150.png         |                          150x150                          |         |
-   | static/safari-pinned-tab.svg      |                             -                             | Safari  |
+### Development server
 
-   ## Manifest Icons
+```bash
+npm start
+```
 
-   | Icon path                  |     sizes     | purpose |
-   | -------------------------- | :-----------: | :-----: |
-   | icons/icon-72x72.png       |     72x72     |         |
-   | icons/icon-96x96.png       |     96x96     |         |
-   | icons/icon-128x128.png     |    128x128    |         |
-   | icons/icon-144x144.png     |    144x144    |         |
-   | icons/icon-152x152.png     |    152x152    |         |
-   | icons/icon-192x192.png     |    192x192    |         |
-   | icons/icon-512x512.png     |    512x512    |         |
-   | icons/maskable-512x512.png |    512x512    |         |
-   | favicon.svg                | image/svg+xml |         |
+## Linting
+
+```bash
+npm run lint:js
+npm run lint:style
+npm run format
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Author
+
+- [Renan Sigolo](https://www.renansigolo.com/)
+
+## License
+
+The code is open source and available under the [Apache License 2.0](LICENSE.md).
